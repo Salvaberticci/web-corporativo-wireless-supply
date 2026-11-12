@@ -2,6 +2,17 @@
 
 Todas las versiones relevantes de este proyecto se documentan aquí. El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y el versionado semántico.
 
+## [2.1.1] — 2026-11-12
+
+### Corregido
+
+- El 404 servido en rutas anidadas resolvía sus assets contra la ruta inexistente. El HTML fuente calcula una base dinámica para XAMPP/subdirectorios y el build de Vercel inyecta una base estática `/` para evitar preloads incorrectos.
+
+### QA
+
+- 404 probado en `/foo/bar` y `/ruta-inexistente`: estado 404, CSS/JS/logo cargados y sin errores de recursos.
+- `npm run build` y `npm run build:vercel` sin errores.
+
 ## [2.1.0] — 2026-11-12
 
 ### Añadido

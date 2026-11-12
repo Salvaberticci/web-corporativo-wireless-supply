@@ -2,6 +2,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <script id="base-404">
+    (function () {
+      if (window.location.protocol === 'file:') return;
+      var path = window.location.pathname;
+      var root = path.indexOf('/web-corporativa-wireless/') === 0 ? '/web-corporativa-wireless/' : '/';
+      document.write('<base href="' + root + '">');
+    }());
+  </script>
+
   <title>Señal perdida (404) | Wireless Supply C.A.</title>
   <meta name="description" content="La ruta solicitada no existe. Vuelve al inicio, revisa los planes de fibra óptica o contacta a Wireless Supply C.A.">
   <meta name="robots" content="noindex, follow">

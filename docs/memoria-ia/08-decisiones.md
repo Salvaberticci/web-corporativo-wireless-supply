@@ -77,6 +77,13 @@
 - **Decisión:** quitar el fondo, borde y sombra del contenedor, subir la imagen a 56 px en móvil y 64 px en desktop, y añadir un `drop-shadow` cian sutil para separarla del fondo oscuro.
 - **Consecuencias:** el logo gana presencia sin aumentar el ancho del header; el footer conserva su tratamiento aclarado. Si el cliente entrega un logo para fondos oscuros, sustituir el PNG y revisar el glow.
 
+## ADR-014 — Base del 404 para rutas anidadas
+
+- **Fecha:** 2026-11-12
+- **Contexto:** Vercel sirve `404.html` para cualquier ruta; con rutas anidadas los assets relativos se resolvían contra la ruta inexistente y la página quedaba sin estilos.
+- **Decisión:** el HTML fuente calcula una base dinámica (`/` o `/web-corporativa-wireless/`) antes de cargar los assets para conservar la portabilidad local. El build de Vercel reemplaza ese script por `<base href="/">` estático, de modo que el preload scanner resuelva todo desde la raíz y no emita preloads fallidos.
+- **Consecuencias:** el 404 funciona en producción para rutas de cualquier profundidad y sigue siendo portable en XAMPP; si el sitio se despliega en otro subdirectorio, ajustar la detección de `base-404` o el build.
+
 ## ADR-013 — Capa de impacto visual v2.1 sin dependencias nuevas
 
 - **Fecha:** 2026-11-12

@@ -4,7 +4,7 @@
 
 ## Fase actual
 
-**Fase 9 — Impacto visual v2.1:** implementada y verificada en local. Pendiente de publicar en GitHub y Vercel.
+**Fase 9 — Impacto visual v2.1:** `v2.1.0` implementada y publicada. El ajuste `v2.1.1` del 404 en rutas anidadas está pendiente de publicar y verificar.
 
 ## Hecho
 
@@ -48,11 +48,12 @@
 - Menú móvil, filtros de planes y prefill `?plan=500M` verificados en la URL de producción.
 - **v2.1:** 7 páginas × 320/390/768/1024/1280/1920 sin overflow; imágenes con `clip-path` reveladas; `hiddenReveals`, `hiddenStagger` y `hiddenImages` en 0 tras el scroll.
 - **v2.1:** consola y red limpias en las 7 páginas; menú, filtros, prefill y 404 verificados con navegador headless.
+- **v2.1.1:** 404 con rutas anidadas (`/foo/bar`) y de un segmento, con estado 404, CSS/JS/logo cargados y sin errores de recursos.
 
 ## Siguiente
 
-- Publicar `v2.1.0` en GitHub y desplegar en Vercel.
-- Verificar el despliegue de producción y el 404 real.
+- Publicar `v2.1.1` en GitHub y verificar el despliegue final en Vercel.
+- Verificar el 404 real en una ruta anidada.
 - Configurar el dominio definitivo y sus certificados en Vercel.
 - Sustituir el número de WhatsApp placeholder por el oficial.
 - Completar redes sociales, datos de contacto y fotos reales.
