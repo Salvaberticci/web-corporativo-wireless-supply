@@ -27,6 +27,7 @@
 
 - **Header:** menú móvil por debajo de 1024 px; nav desktop desde `lg` (1024 px); CTA “Factibilidad” solo desde `xl` (1280 px). Los enlaces usan `whitespace-nowrap` y el logo y el grupo de acciones llevan `shrink-0` para no solaparse.
 - **Titulares a 320 px:** `display-lg-mobile` arranca en `1.875rem` (30 px) y `h1`, `h2` y `h3` tienen `overflow-wrap: break-word`; así “Telecomunicaciones” cabe sin cortes arbitrarios.
+- **Logo del header:** sin contenedor; 56 px en móvil y 64 px en desktop, con `drop-shadow` cian sutil. No reduce el ancho disponible porque elimina el padding de la antigua píldora.
 - **Touch targets:** toggle del menú 44×44 px, WhatsApp del header `min-h-11` y tabs de planes `min-h-11` (44 px). Mantener este mínimo al añadir controles.
 - **Tabla de planes:** `.table-shell` tiene scroll horizontal interno intencional; la primera columna es sticky y `.table-hint` avisa en móvil. No cuenta como overflow global.
 - **QA medida:** 320, 360, 390, 768, 1024, 1280 y 1920 px sin overflow de documento. La tabla se valida dentro de su contenedor.

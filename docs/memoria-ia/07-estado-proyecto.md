@@ -4,7 +4,7 @@
 
 ## Fase actual
 
-**Fase 8 — QA, documentación y cierre v2.0.0:** completada. El rediseño queda etiquetado como `v2.0.0` para revisión del cliente.
+**Fase 8 — QA, documentación y cierre:** completada. Rediseño `v2.0.0` y ajuste de logo `v2.0.1` listos para revisión del cliente.
 
 ## Hecho
 
@@ -13,6 +13,7 @@
 - Capa visual cyber-premium en `assets/css/estilos.css`: fondos, rejilla, ruido, cristal, botones, cards, formularios, tabla y estados de foco.
 - Remapeo de los tokens heredados `light-*` a la paleta oscura sin reescribir todo el HTML.
 - Header responsive: menú móvil por debajo de 1024 px, nav desktop desde 1024 px y CTA “Factibilidad” desde 1280 px.
+- Logo del header sin píldora blanca: 56 px en móvil, 64 px en desktop y glow cian sutil; el logo del footer se mantiene igual.
 - Home rediseñada: canvas de red, badge, titular con gradiente, contadores, marquee tecnológico, banda de métricas, proceso de contratación y CTA final.
 - `sobre-nosotros.html`, `servicios.html`, `planes.html`, `contacto.html` y `legal.html` actualizadas con reveals, stagger, tilt, contadores y CTAs.
 - `planes.html`: filtros con `aria-pressed`, tabs de 44 px de alto mínimo, tabla con scroll interno, primera columna sticky y aviso móvil.
@@ -29,6 +30,7 @@
 - Las 7 páginas responden 200; sin errores de consola, requests fallidos ni enlaces internos rotos.
 - Sin overflow horizontal en 320, 360, 390, 768, 1024, 1280 y 1920 px.
 - Header probado a 768, 1024, 1100, 1280 y 1920: sin solapamiento y sin saltos de línea.
+- Logo del header verificado a 390, 1024, 1280 y 1920: sin overflow, sin solapamiento y header de 85/93 px.
 - Menú móvil probado a 390 y 768: apertura, foco inicial, focus trap, Escape, scroll lock y cierre al pasar a 1024.
 - Filtros de planes: 4 cards, segmentos pymes/corporativo, `aria-pressed` correcto y tabs de 44 px.
 - Formularios: prefill `?plan=500M`, payload completo y número placeholder `584120000000` intacto.

@@ -70,3 +70,10 @@
 - **Decisión:** `overflow-wrap: break-word` en `h1`, `h2` y `h3`, y mínimo del clamp móvil en `1.875rem` (30 px).
 - **Consecuencias:** la palabra cabe sin cortes arbitrarios; si se añaden términos más largos, revisar la escala en 320 px.
 
+## ADR-011 — Logo del header sin contenedor
+
+- **Fecha:** 2026-11-12
+- **Contexto:** el logo del header estaba dentro de una píldora blanca con borde y sombra; el cliente lo percibía pequeño y recargado.
+- **Decisión:** quitar el fondo, borde y sombra del contenedor, subir la imagen a 56 px en móvil y 64 px en desktop, y añadir un `drop-shadow` cian sutil para separarla del fondo oscuro.
+- **Consecuencias:** el logo gana presencia sin aumentar el ancho del header; el footer conserva su tratamiento aclarado. Si el cliente entrega un logo para fondos oscuros, sustituir el PNG y revisar el glow.
+

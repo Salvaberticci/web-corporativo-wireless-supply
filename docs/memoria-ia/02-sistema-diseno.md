@@ -81,6 +81,7 @@ Añadir una capa de ruido sutil al fondo global y una rejilla de 48 px con opaci
 - **Botón primario:** gradiente cian→azul, texto oscuro, brillo al hover, icono que se desplaza.
 - **Botón secundario:** cristal con borde cian, texto claro.
 - **Botón fantasma:** solo texto + flecha.
+- **Logo del header:** PNG original sin contenedor, 56 px en móvil y 64 px en desktop, con `drop-shadow` cian sutil. El footer usa la versión aclarada.
 - **Card:** superficie de cristal, borde 1 px, hover con elevación y spotlight.
 - **Badge técnico:** monoespaciada, fondo cian 10%, borde cian 30%.
 - **Section label:** punto cian + texto monoespaciado en mayúsculas.

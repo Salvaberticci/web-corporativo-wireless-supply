@@ -2,6 +2,19 @@
 
 Todas las versiones relevantes de este proyecto se documentan aquí. El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y el versionado semántico.
 
+## [2.0.1] — 2026-11-12
+
+### Cambiado
+
+- Logo del header sin la píldora blanca: se eliminaron fondo, borde y sombra del contenedor.
+- Logo del header ampliado a 56 px en móvil y 64 px en desktop, con un `drop-shadow` cian sutil para destacar sobre el fondo oscuro.
+- El logo del footer conserva su tratamiento original.
+
+### QA
+
+- Header verificado a 390, 1024, 1280 y 1920 px: sin overflow, sin solapamiento y con altura de 85 px en móvil y 93 px en desktop.
+- `npm run build` sin errores.
+
 ## [2.0.0] — 2026-11-12
 
 ### Añadido
