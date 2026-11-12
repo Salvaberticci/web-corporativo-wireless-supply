@@ -11,8 +11,12 @@ Desktop.ini
 # Dependencias y builds
 node_modules/
 dist/
+public/
 npm-debug.log*
 yarn-error.log*
+
+# Vercel
+.vercel/
 
 # Temporales
 *.log

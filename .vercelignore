@@ -1,0 +1,9 @@
+# Solo se publica lo que genera scripts/build-vercel.js
+_source/
+docs/
+node_modules/
+public/
+.git/
+AGENTS.md
+CHANGELOG.md
+README.md
