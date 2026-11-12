@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Carpetas internas que no deben indexarse
+Disallow: /_source/
+Disallow: /docs/
+
+Sitemap: https://wirelesssupply.com.ve/sitemap.xml

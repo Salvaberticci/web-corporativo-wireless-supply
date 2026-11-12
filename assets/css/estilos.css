@@ -1,0 +1,144 @@
+/* ==========================================================================
+   Wireless Supply C.A. — Estilos personalizados compartidos
+   Conserva las reglas que estaban inline en las 6 páginas del export de Stitch.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Base: iconos de Material Symbols
+   -------------------------------------------------------------------------- */
+.material-symbols-outlined,
+.material-symbols-rounded,
+.material-symbols-sharp,
+.material-icons {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  line-height: 1 !important;
+  box-sizing: content-box;
+  overflow: hidden;
+  white-space: nowrap;
+  direction: ltr;
+  vertical-align: middle;
+}
+
+/* --------------------------------------------------------------------------
+   Patrón de rejilla tecnológica
+   -------------------------------------------------------------------------- */
+.grid-pattern {
+  background-size: 36px 36px;
+  background-image: linear-gradient(to right, rgba(41, 143, 194, 0.05) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(41, 143, 194, 0.05) 1px, transparent 1px);
+}
+
+/* --------------------------------------------------------------------------
+   Anclas: compensar el header sticky
+   -------------------------------------------------------------------------- */
+html {
+  scroll-padding-top: 88px;
+}
+
+/* --------------------------------------------------------------------------
+   Inicio: animaciones del hero y tarjetas tecnológicas
+   -------------------------------------------------------------------------- */
+@keyframes fiber-pulse {
+  0%, 100% { transform: translateX(-100%); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translateX(100%); opacity: 0; }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes cyber-glow {
+  0%, 100% { box-shadow: 0 0 15px rgba(41, 143, 194, 0.3), inset 0 0 10px rgba(0, 210, 255, 0.1); }
+  50% { box-shadow: 0 0 25px rgba(0, 210, 255, 0.6), inset 0 0 15px rgba(0, 210, 255, 0.25); }
+}
+
+@keyframes beam-flow {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}
+
+.animate-float {
+  animation: float-slow 4s ease-in-out infinite;
+}
+
+.animate-cyber-glow {
+  animation: cyber-glow 3s ease-in-out infinite;
+}
+
+.fiber-beam {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, transparent, #00D2FF, #298fc2, transparent);
+  animation: beam-flow 2.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.tech-card-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.tech-card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 35px -10px rgba(41, 143, 194, 0.25);
+}
+
+/* --------------------------------------------------------------------------
+   Contacto: pulso del botón de WhatsApp
+   -------------------------------------------------------------------------- */
+@keyframes pulse-whatsapp {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4); }
+  70% { box-shadow: 0 0 0 16px rgba(16, 185, 129, 0); }
+}
+
+.whatsapp-glow {
+  animation: pulse-whatsapp 2s infinite;
+}
+
+/* --------------------------------------------------------------------------
+   Planes: badges, brillo cian y tarjetas
+   -------------------------------------------------------------------------- */
+@keyframes float-badge {
+  0%, 100% { transform: translate(-50%, 0px); }
+  50% { transform: translate(-50%, -4px); }
+}
+
+@keyframes pulse-cyan {
+  0%, 100% { box-shadow: 0 0 10px rgba(0, 210, 255, 0.2); }
+  50% { box-shadow: 0 0 25px rgba(0, 210, 255, 0.6); }
+}
+
+.badge-float {
+  animation: float-badge 3s ease-in-out infinite;
+}
+
+.cyan-glow-box {
+  animation: pulse-cyan 3s ease-in-out infinite;
+}
+
+.plan-card {
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.plan-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 30px -10px rgba(41, 143, 194, 0.3);
+}
+
+/* --------------------------------------------------------------------------
+   Accesibilidad: respetar preferencia de movimiento reducido
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .animate-float,
+  .animate-cyber-glow,
+  .whatsapp-glow,
+  .badge-float,
+  .cyan-glow-box,
+  .fiber-beam {
+    animation: none;
+  }
+}

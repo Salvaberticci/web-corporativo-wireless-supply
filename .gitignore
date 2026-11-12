@@ -1,0 +1,24 @@
+# Sistema operativo
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Editores
+.vscode/
+.idea/
+*.swp
+
+# Dependencias y builds
+node_modules/
+dist/
+npm-debug.log*
+yarn-error.log*
+
+# Temporales
+*.log
+*.tmp
+.cache/
+
+# Entornos
+.env
+.env.*
