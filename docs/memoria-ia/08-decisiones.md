@@ -77,6 +77,13 @@
 - **Decisión:** quitar el fondo, borde y sombra del contenedor, subir la imagen a 56 px en móvil y 64 px en desktop, y añadir un `drop-shadow` cian sutil para separarla del fondo oscuro.
 - **Consecuencias:** el logo gana presencia sin aumentar el ancho del header; el footer conserva su tratamiento aclarado. Si el cliente entrega un logo para fondos oscuros, sustituir el PNG y revisar el glow.
 
+## ADR-015 — Cache busting de assets
+
+- **Fecha:** 2026-11-12
+- **Contexto:** tras desplegar `v2.1.0`, el navegador del cliente seguía mostrando CSS/JS antiguos pese a que Vercel servía la versión nueva.
+- **Decisión:** versionar las referencias a CSS, JS y vendor con `?v=2.1.2` en las 7 páginas. La versión se actualiza en cada release que cambie assets.
+- **Consecuencias:** el navegador descarga la versión nueva aunque tenga caché; hay que recordar subir el sufijo al publicar cambios de CSS/JS.
+
 ## ADR-014 — Base del 404 para rutas anidadas
 
 - **Fecha:** 2026-11-12

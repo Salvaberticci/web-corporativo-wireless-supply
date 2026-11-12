@@ -2,6 +2,18 @@
 
 Todas las versiones relevantes de este proyecto se documentan aquí. El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y el versionado semántico.
 
+## [2.1.2] — 2026-11-12
+
+### Cambiado
+
+- CSS, JS y vendor de las 7 páginas referenciados con `?v=2.1.2` para forzar la actualización en navegadores y CDN y evitar que se siga viendo la versión anterior en caché.
+
+### QA
+
+- Las 7 páginas cargan los assets con la versión nueva.
+- `npm run build` y `npm run build:vercel` sin errores.
+- Producción verificada con HTML, CSS y JS nuevos.
+
 ## [2.1.1] — 2026-11-12
 
 ### Corregido

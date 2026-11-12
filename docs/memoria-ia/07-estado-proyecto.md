@@ -4,7 +4,7 @@
 
 ## Fase actual
 
-**Fase 9 — Impacto visual v2.1:** completada. `v2.1.0` y el ajuste `v2.1.1` desplegados y verificados en producción.
+**Fase 9 — Impacto visual v2.1:** `v2.1.0` y `v2.1.1` desplegadas y verificadas. `v2.1.2` añade cache busting a los assets y queda pendiente de verificar en producción.
 
 ## Hecho
 
@@ -30,6 +30,7 @@
 - **v2.1:** capa CSS de impacto en `estilos.css` con shimmer del degradado, scanline del hero, barrido de métricas, borde cónico, brillo de botones secundarios, destello de contadores, glitch 404 y entrada al filtrar planes.
 - **v2.1:** hooks `data-hero`, `data-hero-item`, `data-scramble`, `data-image-reveal` y `data-parallax` aplicados en las 7 páginas.
 - **v2.1.1:** el 404 calcula una base dinámica en el HTML fuente y el build de Vercel inyecta `<base href="/">` para que las rutas anidadas carguen CSS, JS, logo y enlaces desde la raíz.
+- **v2.1.2:** assets CSS/JS/vendor versionados con `?v=2.1.2` en las 7 páginas para invalidar cachés de navegador y CDN.
 
 ## QA ejecutada
 
