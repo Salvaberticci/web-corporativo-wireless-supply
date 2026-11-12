@@ -4,7 +4,7 @@
 
 ## Fase actual
 
-**Fase 9 — Impacto visual v2.1:** `v2.1.0` y `v2.1.1` desplegadas y verificadas. `v2.1.2` añade cache busting a los assets y queda pendiente de verificar en producción.
+**Fase 9 — Impacto visual v2.1:** completada. `v2.1.0`, `v2.1.1` y `v2.1.2` desplegadas y verificadas en producción.
 
 ## Hecho
 
@@ -31,6 +31,7 @@
 - **v2.1:** hooks `data-hero`, `data-hero-item`, `data-scramble`, `data-image-reveal` y `data-parallax` aplicados en las 7 páginas.
 - **v2.1.1:** el 404 calcula una base dinámica en el HTML fuente y el build de Vercel inyecta `<base href="/">` para que las rutas anidadas carguen CSS, JS, logo y enlaces desde la raíz.
 - **v2.1.2:** assets CSS/JS/vendor versionados con `?v=2.1.2` en las 7 páginas para invalidar cachés de navegador y CDN.
+- **Producción v2.1.2:** 7 páginas 200 con assets `?v=2.1.2`, CSS/JS nuevos cargados, sin overflow ni errores de consola ni requests fallidos; 404 anidado con estado 404 y assets versionados.
 
 ## QA ejecutada
 
