@@ -19,6 +19,11 @@ Todas las versiones relevantes de este proyecto se documentan aquí. El formato 
 - En modo normal: el botón no aparece y las animaciones siguen activas.
 - Sin errores de consola ni overflow.
 
+### Despliegue
+
+- Producción: `https://web-corporativo-wireless-supply.vercel.app`.
+- Botón y modo forzado verificados en producción con `prefers-reduced-motion: reduce`.
+
 ## [2.1.2] — 2026-11-12
 
 ### Cambiado
