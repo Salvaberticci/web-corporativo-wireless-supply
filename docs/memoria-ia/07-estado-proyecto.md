@@ -4,7 +4,7 @@
 
 ## Fase actual
 
-**Fase 9 — Impacto visual v2.1:** `v2.1.0` implementada y publicada. El ajuste `v2.1.1` del 404 en rutas anidadas está pendiente de publicar y verificar.
+**Fase 9 — Impacto visual v2.1:** completada. `v2.1.0` y el ajuste `v2.1.1` desplegados y verificados en producción.
 
 ## Hecho
 
@@ -29,6 +29,7 @@
 - **v2.1:** motor de efectos ampliado en `effects.js` con intro GSAP del hero, parallax, revelado de imágenes, texto “decode”, cursor de punto y punto de progreso.
 - **v2.1:** capa CSS de impacto en `estilos.css` con shimmer del degradado, scanline del hero, barrido de métricas, borde cónico, brillo de botones secundarios, destello de contadores, glitch 404 y entrada al filtrar planes.
 - **v2.1:** hooks `data-hero`, `data-hero-item`, `data-scramble`, `data-image-reveal` y `data-parallax` aplicados en las 7 páginas.
+- **v2.1.1:** el 404 calcula una base dinámica en el HTML fuente y el build de Vercel inyecta `<base href="/">` para que las rutas anidadas carguen CSS, JS, logo y enlaces desde la raíz.
 
 ## QA ejecutada
 
@@ -49,11 +50,10 @@
 - **v2.1:** 7 páginas × 320/390/768/1024/1280/1920 sin overflow; imágenes con `clip-path` reveladas; `hiddenReveals`, `hiddenStagger` y `hiddenImages` en 0 tras el scroll.
 - **v2.1:** consola y red limpias en las 7 páginas; menú, filtros, prefill y 404 verificados con navegador headless.
 - **v2.1.1:** 404 con rutas anidadas (`/foo/bar`) y de un segmento, con estado 404, CSS/JS/logo cargados y sin errores de recursos.
+- **Producción v2.1.1:** 7 páginas 200; 404 anidado real con estado 404, `base` raíz, assets, logo y scripts cargados; sin errores de assets.
 
 ## Siguiente
 
-- Publicar `v2.1.1` en GitHub y verificar el despliegue final en Vercel.
-- Verificar el 404 real en una ruta anidada.
 - Configurar el dominio definitivo y sus certificados en Vercel.
 - Sustituir el número de WhatsApp placeholder por el oficial.
 - Completar redes sociales, datos de contacto y fotos reales.

@@ -13,6 +13,11 @@ Todas las versiones relevantes de este proyecto se documentan aquí. El formato 
 - 404 probado en `/foo/bar` y `/ruta-inexistente`: estado 404, CSS/JS/logo cargados y sin errores de recursos.
 - `npm run build` y `npm run build:vercel` sin errores.
 
+### Despliegue
+
+- Producción: `https://web-corporativo-wireless-supply.vercel.app`.
+- 404 anidado verificado en producción con estado 404 y assets raíz.
+
 ## [2.1.0] — 2026-11-12
 
 ### Añadido
