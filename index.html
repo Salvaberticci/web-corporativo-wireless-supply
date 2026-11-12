@@ -109,26 +109,26 @@
 
   <main class="bg-light-surface">
     <!-- ================= HERO SECTION ================= -->
-    <section id="inicio" class="relative overflow-hidden pt-12 pb-20 md:py-24 grid-pattern bg-gradient-to-b from-light-surface-container to-light-surface border-b border-light-outline">
+    <section id="inicio" data-hero class="relative overflow-hidden pt-12 pb-20 md:py-24 grid-pattern bg-gradient-to-b from-light-surface-container to-light-surface border-b border-light-outline">
       <div id="hero-canvas" class="hero-canvas-layer" aria-hidden="true"></div>
       <div class="max-w-7xl mx-auto px-4 sm:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
         <!-- Hero Left Column -->
         <div class="lg:col-span-7 flex flex-col gap-6" data-reveal>
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-light-surface border border-light-outline w-fit shadow-sm badge-cyber">
+          <div data-hero-item class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-light-surface border border-light-outline w-fit shadow-sm badge-cyber">
             <span class="w-2.5 h-2.5 rounded-full bg-cyan-glow shadow-[0_0_8px_#00D2FF]"></span>
-            <span class="font-label text-label-md text-light-primary">Infraestructura GPON &amp; Enlaces Inalámbricos Corporativos</span>
+            <span class="font-label text-label-md text-light-primary" data-scramble>Infraestructura GPON &amp; Enlaces Inalámbricos Corporativos</span>
           </div>
 
-          <h1 class="font-headline text-display-lg-mobile md:text-display-lg text-light-primary tracking-tight">
+          <h1 data-hero-item class="font-headline text-display-lg-mobile md:text-display-lg text-light-primary tracking-tight">
             Conectividad Empresarial con <span class="text-gradient">Fibra Óptica de Alto Rendimiento</span>
           </h1>
 
-          <p class="text-body-lg text-light-secondary max-w-2xl leading-relaxed">
+          <p data-hero-item class="text-body-lg text-light-secondary max-w-2xl leading-relaxed">
             Potenciamos a corporaciones, industrias y residencias con internet simétrico 1:1, estabilidad de grado carrier y soporte de ingeniería ininterrumpido en Venezuela.
           </p>
 
           <!-- Metrics Row -->
-          <div class="grid grid-cols-3 gap-4 pt-2 border-y border-light-outline/60 py-4 max-w-xl" data-stagger>
+          <div data-hero-item class="grid grid-cols-3 gap-4 pt-2 border-y border-light-outline/60 py-4 max-w-xl" data-stagger>
             <div>
               <div class="font-headline text-headline-lg text-brand-blue" data-counter="99.8" data-counter-suffix="%">99.8%</div>
               <div class="text-body-sm text-light-secondary">SLA Disponibilidad</div>
@@ -144,7 +144,7 @@
           </div>
 
           <!-- CTAs -->
-          <div class="flex flex-wrap items-center gap-4 pt-2">
+          <div data-hero-item class="flex flex-wrap items-center gap-4 pt-2">
             <a href="#cotizador-whatsapp" class="btn-primary" data-magnetic>
               <span class="material-symbols-outlined" aria-hidden="true">flash_on</span>
               <span>Solicitar Cotización Inmediata</span>
@@ -156,7 +156,7 @@
           </div>
 
           <!-- Trust Badges -->
-          <div class="flex flex-wrap items-center gap-4 text-body-sm text-slate-500 pt-2">
+          <div data-hero-item class="flex flex-wrap items-center gap-4 text-body-sm text-slate-500 pt-2">
             <div class="flex items-center gap-1.5">
               <span class="material-symbols-outlined text-brand-blue text-lg" aria-hidden="true">verified</span>
               <span>Empresa Registrada RIF J507358860</span>
@@ -169,8 +169,8 @@
         </div>
 
         <!-- Hero Right Column: Graphic Showcase with Cyber Effects -->
-        <div class="lg:col-span-5 relative" data-reveal>
-          <div class="hero-visual relative rounded-2xl overflow-hidden shadow-2xl border-2 border-brand-blue/40 bg-light-primary animate-cyber-glow">
+        <div class="lg:col-span-5 relative" data-reveal data-parallax="0.1">
+          <div data-hero-item class="hero-visual relative rounded-2xl overflow-hidden shadow-2xl border-2 border-brand-blue/40 bg-light-primary animate-cyber-glow">
             <!-- Simulated Vertical Fiber Beams -->
             <div class="fiber-beam left-10"></div>
             <div class="fiber-beam right-16" style="animation-delay: 1.2s;"></div>
@@ -179,7 +179,7 @@
             <div class="absolute inset-0 bg-gradient-to-t from-light-primary via-transparent to-transparent"></div>
 
             <!-- Floating Fiber Speed Indicator Widget with Levitation -->
-            <div class="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-light-surface/95 backdrop-blur-md border border-cyan-glow/50 shadow-2xl flex items-center justify-between animate-float">
+            <div class="absolute bottom-4 left-4 right-4 z-10 p-4 rounded-xl bg-light-surface/95 backdrop-blur-md border border-cyan-glow/50 shadow-2xl flex items-center justify-between animate-float">
               <div class="flex items-center gap-3">
                 <div class="w-10 h-10 rounded-lg bg-brand-blue text-light-on-primary flex items-center justify-center shadow-[0_0_12px_#00D2FF]">
                   <span class="material-symbols-outlined animate-pulse" aria-hidden="true">speed</span>
@@ -256,7 +256,7 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center" data-stagger>
           <div class="lg:col-span-5 order-2 lg:order-1">
-            <div class="relative rounded-xl overflow-hidden border border-light-outline shadow-lg">
+            <div class="relative rounded-xl overflow-hidden border border-light-outline shadow-lg" data-image-reveal data-parallax="0.08">
               <img loading="lazy" decoding="async" width="1200" height="801" src="assets/img/ingenieros-telecom.jpg" alt="Infraestructura y equipo de ingenieros en telecomunicaciones Wireless Supply" class="w-full h-96 object-cover">
               <div class="absolute top-4 left-4 bg-light-surface/90 backdrop-blur px-3 py-1.5 rounded-md border border-light-outline shadow">
                 <span class="font-headline text-xs font-bold text-light-primary">RIF: J507358860</span>
@@ -267,7 +267,7 @@
           <div class="lg:col-span-7 order-1 lg:order-2 flex flex-col gap-6">
             <div class="inline-flex items-center gap-2 text-brand-blue font-label text-label-lg font-bold">
               <span class="material-symbols-outlined" aria-hidden="true">corporate_fare</span>
-              <span>SOBRE NOSOTROS</span>
+              <span data-scramble>SOBRE NOSOTROS</span>
             </div>
             
             <h2 class="font-headline text-headline-xl-mobile md:text-headline-xl text-light-primary tracking-tight">
@@ -323,7 +323,7 @@
         <div class="text-center max-w-3xl mx-auto mb-16" data-reveal>
           <div class="inline-flex items-center gap-2 text-brand-blue font-label text-label-lg font-bold mb-3">
             <span class="material-symbols-outlined" aria-hidden="true">lan</span>
-            <span>SOLUCIONES Y SERVICIOS</span>
+            <span data-scramble>SOLUCIONES Y SERVICIOS</span>
           </div>
           <h2 class="font-headline text-headline-xl-mobile md:text-headline-xl text-light-primary tracking-tight">
             Ecosistema Integral de Fibra Óptica &amp; Enlaces
@@ -412,7 +412,7 @@
         <div class="text-center max-w-3xl mx-auto mb-16" data-reveal>
           <div class="inline-flex items-center gap-2 text-brand-blue font-label text-label-lg font-bold mb-3">
             <span class="material-symbols-outlined" aria-hidden="true">speed</span>
-            <span>VELOCIDADES SIN LÍMITES</span>
+            <span data-scramble>VELOCIDADES SIN LÍMITES</span>
           </div>
           <h2 class="font-headline text-headline-xl-mobile md:text-headline-xl text-light-primary tracking-tight">
             Planes Diseñados Para Máximo Tráfico y Productividad
@@ -499,7 +499,7 @@
         <div class="max-w-3xl mb-14" data-reveal>
           <div class="inline-flex items-center gap-2 text-brand-blue font-label text-label-lg font-bold mb-3">
             <span class="material-symbols-outlined" aria-hidden="true">route</span>
-            <span>CÓMO TRABAJAMOS</span>
+            <span data-scramble>CÓMO TRABAJAMOS</span>
           </div>
           <h2 class="font-headline text-headline-xl-mobile md:text-headline-xl text-light-primary tracking-tight mb-4">
             De la factibilidad a la red operativa en cuatro pasos
@@ -571,7 +571,7 @@
             <div>
               <div class="inline-flex items-center gap-2 text-brand-blue font-label text-label-lg font-bold mb-3">
                 <span class="material-symbols-outlined" aria-hidden="true">headset_mic</span>
-                <span>CENTRAL DE ATENCIÓN</span>
+                <span data-scramble>CENTRAL DE ATENCIÓN</span>
               </div>
               <h2 class="font-headline text-headline-xl-mobile md:text-headline-xl text-light-primary tracking-tight mb-4">
                 Atención Inmediata y Verificación de Cobertura
@@ -714,7 +714,7 @@
         <div class="text-center mb-12" data-reveal>
           <div class="inline-flex items-center gap-2 text-brand-blue font-label text-label-md font-bold mb-2">
             <span class="material-symbols-outlined" aria-hidden="true">gavel</span>
-            <span>MARCO LEGAL Y COMPLIANCE TÉCNICO</span>
+            <span data-scramble>MARCO LEGAL Y COMPLIANCE TÉCNICO</span>
           </div>
           <h2 class="font-headline text-headline-lg text-light-primary tracking-tight">
             Términos Legales &amp; Políticas de Privacidad

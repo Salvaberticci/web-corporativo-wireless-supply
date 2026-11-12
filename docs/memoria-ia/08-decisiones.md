@@ -77,6 +77,13 @@
 - **Decisión:** quitar el fondo, borde y sombra del contenedor, subir la imagen a 56 px en móvil y 64 px en desktop, y añadir un `drop-shadow` cian sutil para separarla del fondo oscuro.
 - **Consecuencias:** el logo gana presencia sin aumentar el ancho del header; el footer conserva su tratamiento aclarado. Si el cliente entrega un logo para fondos oscuros, sustituir el PNG y revisar el glow.
 
+## ADR-013 — Capa de impacto visual v2.1 sin dependencias nuevas
+
+- **Fecha:** 2026-11-12
+- **Contexto:** el cliente pidió más animaciones e impacto visual sin romper la estética cyber-premium, el responsive ni el rendimiento.
+- **Decisión:** usar GSAP/ScrollTrigger solo para la intro coreografiada del hero y el parallax; el resto de efectos se implementa con CSS (`keyframes`, `clip-path`, `@property`) e `IntersectionObserver` mediante hooks declarativos (`data-hero`, `data-hero-item`, `data-scramble`, `data-image-reveal`, `data-parallax`). No se añaden dependencias.
+- **Consecuencias:** los efectos ambientales no bloquean el render y se aligeran en móvil o se desactivan con `prefers-reduced-motion`; el HTML incorpora atributos `data-*` que deben replicarse al crear páginas nuevas. El revelado de imágenes observa el contenedor padre porque el `clip-path` del propio elemento anula el `IntersectionObserver`.
+
 ## ADR-012 — Despliegue estático en Vercel
 
 - **Fecha:** 2026-11-12

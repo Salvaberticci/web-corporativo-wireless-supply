@@ -47,7 +47,7 @@
 - Alcance entre paréntesis: `feat(home): hero animado`.
 - Un commit por unidad lógica; no mezclar rediseño y limpieza.
 - Ramas: `feature/...`, `fix/...`, `docs/...`.
-- Tags: `v1.0.0` baseline, `v2.0.0` rediseño.
+- Tags: `v1.0.0` baseline, `v2.0.0` rediseño, `v2.0.1` logo y `v2.1.0` impacto visual.
 
 ## Calidad antes de commit
 

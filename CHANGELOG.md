@@ -2,6 +2,31 @@
 
 Todas las versiones relevantes de este proyecto se documentan aquí. El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y el versionado semántico.
 
+## [2.1.0] — 2026-11-12
+
+### Añadido
+
+- Capa de impacto visual v2.1 en las 7 páginas: intro coreografiada del hero con GSAP, parallax de imágenes desde 768 px, revelado cinematográfico con `clip-path` + `scale`, texto “decode” en etiquetas y punto de progreso de scroll.
+- Scanline y barrido del visual del hero, shimmer del degradado, borde cónico animado en el plan destacado y el CTA, brillo de barrido en botones secundarios, destello del contador y glitch RGB en el 404.
+- Cursor de punto con expansión sobre elementos interactivos en desktop.
+- Entrada escalonada de las tarjetas al cambiar los filtros de planes.
+- Hooks declarativos `data-hero`, `data-hero-item`, `data-scramble`, `data-image-reveal` y `data-parallax` en las 7 páginas.
+
+### Cambiado
+
+- El revelado de imágenes observa el contenedor padre para evitar que el `clip-path` del propio elemento anule el `IntersectionObserver`.
+- El canvas del hero se dibuja una sola vez con movimiento reducido y no vuelve a animarse al hacer scroll.
+- El brillo de los botones secundarios usa `transform` en lugar de `left`.
+- Animaciones ambientales aligeradas por debajo de 768 px: sin barrido de métricas, borde cónico ni scanline.
+
+### QA
+
+- 7 páginas × 320, 390, 768, 1024, 1280 y 1920 px sin overflow horizontal.
+- Sin errores de consola ni requests fallidos.
+- Imágenes con revelado activado, menú móvil, filtros de planes, prefill y 404 verificados.
+- `prefers-reduced-motion`: sin scanline, cursor, parallax, glitch, shimmer, progreso ni reveals ocultos; canvas estático.
+- `node --check` en los 5 scripts y `npm run build` sin errores.
+
 ## [2.0.1] — 2026-11-12
 
 ### Cambiado

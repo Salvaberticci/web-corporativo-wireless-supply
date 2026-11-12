@@ -35,17 +35,47 @@
   progress.setAttribute('aria-hidden', 'true');
   document.body.appendChild(progress);
 
+  const progressDot = document.createElement('div');
+  progressDot.id = 'scroll-progress-dot';
+  progressDot.setAttribute('aria-hidden', 'true');
+  document.body.appendChild(progressDot);
+
   const header = document.querySelector('header');
 
   function updateScrollUI() {
     if (header) header.classList.toggle('is-scrolled', window.scrollY > 20);
     const max = document.documentElement.scrollHeight - window.innerHeight;
-    progress.style.transform = `scaleX(${max > 0 ? Math.min(window.scrollY / max, 1) : 0})`;
+    const ratio = max > 0 ? Math.min(window.scrollY / max, 1) : 0;
+    progress.style.transform = `scaleX(${ratio})`;
+    progressDot.style.transform = `translate3d(${ratio * window.innerWidth}px, 0, 0)`;
   }
 
   window.addEventListener('scroll', updateScrollUI, { passive: true });
   window.addEventListener('resize', updateScrollUI);
   updateScrollUI();
+
+  /* ------------------------------------------------------------------------
+     Intro coreografiada del hero y cabeceras de página
+     ------------------------------------------------------------------------ */
+  function initHeroIntro() {
+    if (!hasGSAP || reduceMotion) return;
+
+    const hero = document.querySelector('[data-hero]');
+    if (!hero) return;
+
+    const items = hero.querySelectorAll('[data-hero-item]');
+    if (!items.length) return;
+
+    window.gsap.timeline({ defaults: { ease: 'power3.out' }, delay: 0.08 }).from(items, {
+      opacity: 0,
+      y: 28,
+      duration: 0.9,
+      stagger: 0.08,
+      clearProps: 'opacity,transform',
+    });
+  }
+
+  initHeroIntro();
 
   /* ------------------------------------------------------------------------
      Reveals al hacer scroll
@@ -79,6 +109,158 @@
   }
 
   /* ------------------------------------------------------------------------
+     Revelado cinematográfico de imágenes y parallax de scroll
+     ------------------------------------------------------------------------ */
+  function initImageReveals() {
+    const targets = document.querySelectorAll('[data-image-reveal]');
+    if (!targets.length) return;
+
+    if (reduceMotion || !('IntersectionObserver' in window)) {
+      targets.forEach((el) => el.classList.add('is-visible'));
+      return;
+    }
+
+    /* El clip-path del propio elemento hace que IntersectionObserver lo
+       considere no visible; observamos su contenedor padre. */
+    const observedTargets = new Map();
+
+    const imageObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            (observedTargets.get(entry.target) || []).forEach((el) => {
+              el.classList.add('is-visible');
+            });
+            imageObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.2, rootMargin: '0px 0px -60px 0px' }
+    );
+
+    targets.forEach((el) => {
+      const trigger = el.parentElement || el;
+      if (!observedTargets.has(trigger)) observedTargets.set(trigger, []);
+      observedTargets.get(trigger).push(el);
+      imageObserver.observe(trigger);
+    });
+
+    /* Red de seguridad: si el observer no dispara, la imagen nunca queda oculta. */
+    window.setTimeout(() => {
+      targets.forEach((el) => el.classList.add('is-visible'));
+    }, 3000);
+  }
+
+  initImageReveals();
+
+  function initParallax() {
+    if (!hasGSAP || !hasScrollTrigger || reduceMotion) return;
+
+    const setup = () => {
+      document.querySelectorAll('[data-parallax]').forEach((el) => {
+        const strength = parseFloat(el.getAttribute('data-parallax')) || 0.08;
+        const distance = Math.max(12, Math.min(48, strength * 300));
+
+        window.gsap.fromTo(
+          el,
+          { y: distance },
+          {
+            y: -distance,
+            ease: 'none',
+            scrollTrigger: {
+              trigger: el,
+              start: 'top bottom',
+              end: 'bottom top',
+              scrub: 0.6,
+            },
+          }
+        );
+      });
+    };
+
+    if (typeof window.gsap.matchMedia === 'function') {
+      window.gsap.matchMedia().add('(min-width: 768px)', setup);
+    } else if (window.matchMedia('(min-width: 768px)').matches) {
+      setup();
+    }
+  }
+
+  initParallax();
+
+  window.addEventListener('load', () => {
+    if (hasScrollTrigger) window.ScrollTrigger.refresh();
+  });
+
+  /* ------------------------------------------------------------------------
+     Texto “decode” en etiquetas de sección
+     ------------------------------------------------------------------------ */
+  function initTextScramble() {
+    const targets = document.querySelectorAll('[data-scramble]');
+    if (!targets.length || reduceMotion) return;
+
+    const glyphs = '01<>/\\[]{}#%&*+=-_';
+
+    function scramble(el) {
+      const finalText = el.textContent.trim();
+      if (!finalText) return;
+
+      el.setAttribute('aria-label', finalText);
+      const duration = Math.min(900, 320 + finalText.length * 16);
+      const start = performance.now();
+
+      function frame(now) {
+        const progressValue = Math.min((now - start) / duration, 1);
+        const revealed = Math.floor(progressValue * finalText.length);
+        let output = '';
+
+        for (let index = 0; index < finalText.length; index += 1) {
+          const char = finalText[index];
+          if (char === ' ') {
+            output += ' ';
+          } else if (index < revealed) {
+            output += char;
+          } else {
+            output += glyphs[Math.floor(Math.random() * glyphs.length)];
+          }
+        }
+
+        el.textContent = output;
+
+        if (progressValue < 1) {
+          requestAnimationFrame(frame);
+        } else {
+          el.textContent = finalText;
+          el.removeAttribute('aria-label');
+        }
+      }
+
+      requestAnimationFrame(frame);
+    }
+
+    if (!('IntersectionObserver' in window)) {
+      targets.forEach(scramble);
+      return;
+    }
+
+    const scrambleObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const target = entry.target;
+            scrambleObserver.unobserve(target);
+            window.setTimeout(() => scramble(target), 160);
+          }
+        });
+      },
+      { threshold: 0.6 }
+    );
+
+    targets.forEach((el) => scrambleObserver.observe(el));
+  }
+
+  initTextScramble();
+
+  /* ------------------------------------------------------------------------
      Contadores
      ------------------------------------------------------------------------ */
   const counters = document.querySelectorAll('[data-counter]');
@@ -96,7 +278,13 @@
       const eased = 1 - Math.pow(1 - progressValue, 3);
       const value = (target * eased).toFixed(decimals);
       el.textContent = prefix + value + suffix;
-      if (progressValue < 1) requestAnimationFrame(frame);
+
+      if (progressValue < 1) {
+        requestAnimationFrame(frame);
+      } else {
+        el.classList.add('counter-done');
+        window.setTimeout(() => el.classList.remove('counter-done'), 1000);
+      }
     }
 
     requestAnimationFrame(frame);
@@ -190,6 +378,13 @@
     cursor.setAttribute('aria-hidden', 'true');
     document.body.appendChild(cursor);
 
+    const cursorDot = document.createElement('div');
+    cursorDot.className = 'cursor-dot';
+    cursorDot.setAttribute('aria-hidden', 'true');
+    document.body.appendChild(cursorDot);
+
+    const interactiveSelector = 'a, button, [role="button"], input, select, textarea, summary';
+
     let mouseX = window.innerWidth / 2;
     let mouseY = window.innerHeight / 2;
     let currentX = mouseX;
@@ -199,12 +394,25 @@
       mouseX = event.clientX;
       mouseY = event.clientY;
       cursor.classList.add('is-active');
+      cursorDot.classList.add('is-active');
+    });
+
+    document.addEventListener('pointerover', (event) => {
+      if (event.target.closest(interactiveSelector)) cursorDot.classList.add('is-hover');
+    });
+
+    document.addEventListener('pointerout', (event) => {
+      const interactive = event.target.closest(interactiveSelector);
+      if (interactive && !interactive.contains(event.relatedTarget)) {
+        cursorDot.classList.remove('is-hover');
+      }
     });
 
     function renderCursor() {
       currentX += (mouseX - currentX) * 0.12;
       currentY += (mouseY - currentY) * 0.12;
       cursor.style.transform = `translate3d(${currentX}px, ${currentY}px, 0) translate(-50%, -50%)`;
+      cursorDot.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0) translate(-50%, -50%)`;
       requestAnimationFrame(renderCursor);
     }
 
@@ -244,6 +452,7 @@
       canvas.style.height = `${height}px`;
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
       createNodes();
+      if (reduceMotion) draw();
     }
 
     function createNodes() {
@@ -258,10 +467,8 @@
     }
 
     function draw() {
-      if (!visible) {
-        animationId = null;
-        return;
-      }
+      animationId = null;
+      if (!visible) return;
 
       ctx.clearRect(0, 0, width, height);
 
@@ -304,10 +511,14 @@
         }
       }
 
-      animationId = requestAnimationFrame(draw);
+      if (!reduceMotion) animationId = requestAnimationFrame(draw);
     }
 
     function start() {
+      if (reduceMotion) {
+        if (visible) draw();
+        return;
+      }
       if (!animationId) animationId = requestAnimationFrame(draw);
     }
 
@@ -359,13 +570,29 @@
 
     if (reduceMotion) {
       draw();
-      stop();
     } else {
       start();
     }
   }
 
   initHeroCanvas();
+
+  /* ------------------------------------------------------------------------
+     Scanline del visual del hero
+     ------------------------------------------------------------------------ */
+  function initHeroScan() {
+    if (reduceMotion) return;
+
+    const visual = document.querySelector('.hero-visual');
+    if (!visual || visual.querySelector('.hero-scan')) return;
+
+    const scan = document.createElement('span');
+    scan.className = 'hero-scan';
+    scan.setAttribute('aria-hidden', 'true');
+    visual.appendChild(scan);
+  }
+
+  initHeroScan();
 
   /* ------------------------------------------------------------------------
      Transiciones de página

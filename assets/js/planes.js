@@ -13,8 +13,15 @@ function filtrarCategoria(cat) {
     btn.setAttribute('aria-pressed', String(active));
   });
 
-  cards.forEach(function (card) {
+  cards.forEach(function (card, index) {
     const visible = cat === 'todos' || card.getAttribute('data-category') === cat;
     card.classList.toggle('hidden', !visible);
+
+    if (visible) {
+      card.classList.remove('plan-filter-in');
+      void card.offsetWidth;
+      card.style.animationDelay = (index * 35) + 'ms';
+      card.classList.add('plan-filter-in');
+    }
   });
 }

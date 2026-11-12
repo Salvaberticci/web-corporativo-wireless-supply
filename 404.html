@@ -75,27 +75,27 @@
   </header>
 
   <main class="bg-light-surface">
-    <section class="relative overflow-hidden min-h-[calc(100dvh-76px)] flex items-center py-16 md:py-24 grid-pattern bg-gradient-to-b from-light-surface-container to-light-surface border-b border-light-outline">
+    <section data-hero class="relative overflow-hidden min-h-[calc(100dvh-76px)] flex items-center py-16 md:py-24 grid-pattern bg-gradient-to-b from-light-surface-container to-light-surface border-b border-light-outline">
       <div id="hero-canvas" class="hero-canvas-layer" aria-hidden="true"></div>
 
       <div class="max-w-7xl mx-auto px-4 sm:px-8 relative z-10 w-full">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div class="lg:col-span-7" data-reveal>
-            <div class="badge-cyber mb-6">
+            <div data-hero-item class="badge-cyber mb-6">
               <span class="w-2 h-2 rounded-full bg-error animate-pulse"></span>
               <span>Error 404 · Señal perdida</span>
             </div>
 
             <div class="error-code text-gradient select-none" aria-hidden="true">404</div>
 
-            <h1 class="font-headline text-headline-xl-mobile md:text-headline-xl text-light-primary tracking-tight mb-5">
+            <h1 data-hero-item class="font-headline text-headline-xl-mobile md:text-headline-xl text-light-primary tracking-tight mb-5">
               Esta ruta no está en nuestra red
             </h1>
-            <p class="text-body-lg text-light-secondary max-w-2xl mb-8">
+            <p data-hero-item class="text-body-lg text-light-secondary max-w-2xl mb-8">
               La página que buscas no existe, cambió de ubicación o el enlace está incompleto. Tu conexión sigue activa: elige un destino y sigamos.
             </p>
 
-            <div class="flex flex-wrap gap-4">
+            <div data-hero-item class="flex flex-wrap gap-4">
               <a href="index.html" class="btn-primary" data-magnetic>
                 <span class="material-symbols-outlined" aria-hidden="true">home</span>
                 <span>Volver al inicio</span>

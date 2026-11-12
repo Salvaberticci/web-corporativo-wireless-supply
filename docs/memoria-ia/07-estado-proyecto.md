@@ -4,7 +4,7 @@
 
 ## Fase actual
 
-**Fase 8 — QA, documentación, cierre y despliegue:** completada. Rediseño `v2.0.0` y ajuste de logo `v2.0.1` desplegados en producción.
+**Fase 9 — Impacto visual v2.1:** implementada y verificada en local. Pendiente de publicar en GitHub y Vercel.
 
 ## Hecho
 
@@ -19,7 +19,6 @@
 - `planes.html`: filtros con `aria-pressed`, tabs de 44 px de alto mínimo, tabla con scroll interno, primera columna sticky y aviso móvil.
 - `contacto.html` e `index.html`: formularios con `autocomplete`, `inputmode`, estados `role="status"` y `aria-live`, y prefill por `?plan=`/`?servicio=`.
 - `404.html`: concepto “señal perdida”, diagnóstico de ruta, canvas y barras de señal. Sin botón flotante para no tapar la tarjeta.
-- `assets/js/effects.js`: fondo, ruido, progreso de scroll, header scrolled, reveals, stagger, contadores, tilt, botones magnéticos, cursor glow, canvas y transiciones.
 - `assets/js/main.js`: menú móvil con focus trap, bloqueo de scroll, cierre con Escape, clic fuera y cambio a escritorio en 1024 px.
 - Accesibilidad: `aria-current`, `aria-hidden` en iconos, alt en imágenes, labels, foco visible, touch targets de 44 px y `prefers-reduced-motion`.
 - Memoria IA completa en `docs/memoria-ia/`, `AGENTS.md` y `CHANGELOG.md`.
@@ -27,6 +26,9 @@
 - Remoto GitHub: `https://github.com/Salvaberticci/web-corporativo-wireless-supply`.
 - Producción en Vercel: `https://web-corporativo-wireless-supply.vercel.app`.
 - Vercel ejecuta `npm run build:vercel`, que compila Tailwind y genera `public/` solo con HTML, assets, `robots.txt` y `sitemap.xml`.
+- **v2.1:** motor de efectos ampliado en `effects.js` con intro GSAP del hero, parallax, revelado de imágenes, texto “decode”, cursor de punto y punto de progreso.
+- **v2.1:** capa CSS de impacto en `estilos.css` con shimmer del degradado, scanline del hero, barrido de métricas, borde cónico, brillo de botones secundarios, destello de contadores, glitch 404 y entrada al filtrar planes.
+- **v2.1:** hooks `data-hero`, `data-hero-item`, `data-scramble`, `data-image-reveal` y `data-parallax` aplicados en las 7 páginas.
 
 ## QA ejecutada
 
@@ -35,18 +37,22 @@
 - Header probado a 768, 1024, 1100, 1280 y 1920: sin solapamiento y sin saltos de línea.
 - Logo del header verificado a 390, 1024, 1280 y 1920: sin overflow, sin solapamiento y header de 85/93 px.
 - Menú móvil probado a 390 y 768: apertura, foco inicial, focus trap, Escape, scroll lock y cierre al pasar a 1024.
-- Filtros de planes: 4 cards, segmentos pymes/corporativo, `aria-pressed` correcto y tabs de 44 px.
+- Filtros de planes: 4 cards, segmentos pymes/corporativo, `aria-pressed` correcto, tabs de 44 px y animación de entrada al filtrar.
 - Formularios: prefill `?plan=500M`, payload completo y número placeholder `584120000000` intacto.
-- 404: título, `noindex`, ruta dinámica y 5 barras de señal.
-- `prefers-reduced-motion`: reveals visibles, marquee/cursor desactivados y contadores en valor final.
+- 404: título, `noindex`, ruta dinámica, 5 barras de señal y glitch RGB.
+- `prefers-reduced-motion`: sin scanline, cursor, parallax, glitch, shimmer ni progreso; reveals visibles, canvas estático y contadores en valor final.
 - `npm run build` y `node --check` en los 5 scripts sin errores.
 - Producción verificada a 390 y 1280 px: 7 páginas 200, sin errores de consola, sin requests fallidos, sin overflow y sin imágenes rotas.
 - 404 real de Vercel: devuelve estado 404 y sirve la página “señal perdida” con ruta dinámica y `noindex`.
 - Archivos internos (`package.json`, `docs/`, `_source/`, `src/`, `README.md`) devuelven 404 en producción.
 - Menú móvil, filtros de planes y prefill `?plan=500M` verificados en la URL de producción.
+- **v2.1:** 7 páginas × 320/390/768/1024/1280/1920 sin overflow; imágenes con `clip-path` reveladas; `hiddenReveals`, `hiddenStagger` y `hiddenImages` en 0 tras el scroll.
+- **v2.1:** consola y red limpias en las 7 páginas; menú, filtros, prefill y 404 verificados con navegador headless.
 
 ## Siguiente
 
+- Publicar `v2.1.0` en GitHub y desplegar en Vercel.
+- Verificar el despliegue de producción y el 404 real.
 - Configurar el dominio definitivo y sus certificados en Vercel.
 - Sustituir el número de WhatsApp placeholder por el oficial.
 - Completar redes sociales, datos de contacto y fotos reales.
