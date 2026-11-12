@@ -38,9 +38,13 @@ web-corporativa-wireless/
 │   ├── memoria-ia/
 │   └── sistema-de-diseno.md
 ├── _source/                  # export original de Stitch (respaldo)
+├── scripts/
+│   └── build-vercel.js       # genera public/ para Vercel
 ├── package.json
 ├── package-lock.json
 ├── tailwind.config.js
+├── vercel.json
+├── .vercelignore
 ├── AGENTS.md
 ├── README.md
 ├── CHANGELOG.md
@@ -54,10 +58,15 @@ web-corporativa-wireless/
 npm install          # dependencias de desarrollo
 npm run dev          # Tailwind en watch
 npm run build        # CSS minificado
+npm run build:vercel # compila y genera public/ solo con archivos publicables
 ```
 
 ## Despliegue
 
+- **Repositorio:** `https://github.com/Salvaberticci/web-corporativo-wireless-supply`.
+- **Producción:** `https://web-corporativo-wireless-supply.vercel.app`.
+- Vercel ejecuta `npm run build:vercel` y publica `public/`; el proyecto está conectado al repositorio de GitHub.
+- `.vercelignore` excluye `_source/`, `docs/`, `node_modules/` y archivos de desarrollo.
 - XAMPP/Apache: copiar la carpeta a `htdocs` y abrir `http://localhost/web-corporativa-wireless/`.
 - Hosting estático: subir solo HTML, `assets/`, `robots.txt` y `sitemap.xml`.
 - Excluir `_source/`, `docs/`, `src/`, `node_modules/` y archivos de configuración de desarrollo.

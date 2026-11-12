@@ -10,6 +10,15 @@ Todas las versiones relevantes de este proyecto se documentan aquí. El formato 
 - Logo del header ampliado a 56 px en móvil y 64 px en desktop, con un `drop-shadow` cian sutil para destacar sobre el fondo oscuro.
 - El logo del footer conserva su tratamiento original.
 
+### Despliegue
+
+- Repositorio remoto en GitHub: `https://github.com/Salvaberticci/web-corporativo-wireless-supply`.
+- Producción en Vercel: `https://web-corporativo-wireless-supply.vercel.app`.
+- Script `build:vercel` que compila Tailwind y genera `public/` solo con HTML y assets publicables.
+- `vercel.json` con `framework: null` y `outputDirectory: public`.
+- `.vercelignore` para excluir `_source/`, `docs/`, `node_modules/` y archivos de desarrollo.
+- 404 personalizado verificado en producción con estado HTTP 404.
+
 ### QA
 
 - Header verificado a 390, 1024, 1280 y 1920 px: sin overflow, sin solapamiento y con altura de 85 px en móvil y 93 px en desktop.

@@ -77,3 +77,10 @@
 - **Decisión:** quitar el fondo, borde y sombra del contenedor, subir la imagen a 56 px en móvil y 64 px en desktop, y añadir un `drop-shadow` cian sutil para separarla del fondo oscuro.
 - **Consecuencias:** el logo gana presencia sin aumentar el ancho del header; el footer conserva su tratamiento aclarado. Si el cliente entrega un logo para fondos oscuros, sustituir el PNG y revisar el glow.
 
+## ADR-012 — Despliegue estático en Vercel
+
+- **Fecha:** 2026-11-12
+- **Contexto:** el sitio es estático, pero el repositorio incluye `_source/`, `docs/`, `src/` y configuración de desarrollo que no debe publicarse.
+- **Decisión:** desplegar en Vercel con `npm run build:vercel`, que compila Tailwind y copia a `public/` solo los 7 HTML, `assets/`, `robots.txt` y `sitemap.xml`. `vercel.json` fija `framework: null` y `outputDirectory: public`; `.vercelignore` excluye el resto.
+- **Consecuencias:** el sitio se sirve limpio y el 404 personalizado funciona con estado 404. Cualquier archivo nuevo que deba publicarse hay que añadirlo a `scripts/build-vercel.js`. El proyecto queda conectado al repositorio de GitHub para despliegues automáticos.
+

@@ -4,7 +4,7 @@
 
 ## Fase actual
 
-**Fase 8 — QA, documentación y cierre:** completada. Rediseño `v2.0.0` y ajuste de logo `v2.0.1` listos para revisión del cliente.
+**Fase 8 — QA, documentación, cierre y despliegue:** completada. Rediseño `v2.0.0` y ajuste de logo `v2.0.1` desplegados en producción.
 
 ## Hecho
 
@@ -24,6 +24,9 @@
 - Accesibilidad: `aria-current`, `aria-hidden` en iconos, alt en imágenes, labels, foco visible, touch targets de 44 px y `prefers-reduced-motion`.
 - Memoria IA completa en `docs/memoria-ia/`, `AGENTS.md` y `CHANGELOG.md`.
 - Repositorio Git inicializado: baseline `v1.0.0` en `main`, rama activa `feature/redesign-v2`.
+- Remoto GitHub: `https://github.com/Salvaberticci/web-corporativo-wireless-supply`.
+- Producción en Vercel: `https://web-corporativo-wireless-supply.vercel.app`.
+- Vercel ejecuta `npm run build:vercel`, que compila Tailwind y genera `public/` solo con HTML, assets, `robots.txt` y `sitemap.xml`.
 
 ## QA ejecutada
 
@@ -37,14 +40,16 @@
 - 404: título, `noindex`, ruta dinámica y 5 barras de señal.
 - `prefers-reduced-motion`: reveals visibles, marquee/cursor desactivados y contadores en valor final.
 - `npm run build` y `node --check` en los 5 scripts sin errores.
+- Producción verificada a 390 y 1280 px: 7 páginas 200, sin errores de consola, sin requests fallidos, sin overflow y sin imágenes rotas.
+- 404 real de Vercel: devuelve estado 404 y sirve la página “señal perdida” con ruta dinámica y `noindex`.
+- Archivos internos (`package.json`, `docs/`, `_source/`, `src/`, `README.md`) devuelven 404 en producción.
+- Menú móvil, filtros de planes y prefill `?plan=500M` verificados en la URL de producción.
 
 ## Siguiente
 
-- Publicar el repositorio en el remoto definitivo.
+- Configurar el dominio definitivo y sus certificados en Vercel.
 - Sustituir el número de WhatsApp placeholder por el oficial.
 - Completar redes sociales, datos de contacto y fotos reales.
-- Definir remoto GitHub/GitLab y publicar.
-- Configurar el 404 real del servidor de producción.
 - Auditoría Lighthouse y prueba en Safari/iOS y Android reales.
 
 ## Bloqueos
@@ -52,7 +57,7 @@
 - Número de WhatsApp real pendiente (`584120000000` es placeholder).
 - Redes sociales y datos de contacto reales pendientes.
 - Fotos reales de la empresa pendientes; se usa stock de Pexels.
-- Remoto Git no definido.
+- Dominio definitivo pendiente de configuración en Vercel.
 
 ## Riesgos
 

@@ -71,6 +71,13 @@ npm run build    # CSS minificado para producción
 
 El CSS compilado se sirve desde `assets/css/tailwind.css`. No se usa CDN en producción.
 
+## Despliegue
+
+- **Repositorio:** https://github.com/Salvaberticci/web-corporativo-wireless-supply
+- **Producción:** https://web-corporativo-wireless-supply.vercel.app
+
+Vercel ejecuta `npm run build:vercel`, que compila Tailwind y genera `public/` solo con los HTML, `assets/`, `robots.txt` y `sitemap.xml`. El proyecto está conectado al repositorio de GitHub.
+
 ## Tecnologías
 
 - **HTML5** semántico y accesible.
