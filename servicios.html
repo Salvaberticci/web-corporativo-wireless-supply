@@ -11,49 +11,48 @@
   <meta property="og:image" content="https://wirelesssupply.com.ve/assets/img/logo-wireless-supply.png">
 
   <!-- Tailwind & Config -->
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <script src="assets/js/tailwind.config.js"></script>
+  <link rel="stylesheet" href="assets/css/tailwind.css">
 
   <!-- Typography & Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/estilos.css">
   <link rel="icon" type="image/png" href="assets/img/logo-wireless-supply.png">
 </head>
-<body class="min-h-[1024px] bg-light-primary text-light-on-surface font-body selection:bg-brand-blue selection:text-light-on-primary m-0 p-0">
+<body class="min-h-screen bg-light-primary text-light-on-surface font-body selection:bg-brand-blue selection:text-light-on-primary m-0 p-0">
 
   <!-- ================= HEADER & NAVIGATION (FOOTER DEEP NAVY BLUE) ================= -->
   <header class="sticky top-0 z-50 bg-light-primary border-b border-brand-blue/30 shadow-md">
     <div class="max-w-7xl mx-auto px-4 sm:px-8 py-3.5 flex items-center justify-between">
-      <a href="index.html" class="flex items-center gap-3 bg-white px-3.5 py-1.5 rounded-lg shadow-sm group focus:outline-none" aria-label="Wireless Supply Inicio">
-        <img src="assets/img/logo-wireless-supply.png" alt="Logo Oficial Wireless Supply C.A. RIF J507358860" class="h-10 md:h-11 w-auto object-contain transition-transform group-hover:scale-105">
+      <a href="index.html" class="flex items-center gap-3 shrink-0 bg-white px-3.5 py-1.5 rounded-lg shadow-sm group focus:outline-none" aria-label="Wireless Supply Inicio">
+        <img loading="eager" decoding="async" width="1600" height="1191" src="assets/img/logo-wireless-supply.png" alt="Logo Oficial Wireless Supply C.A. RIF J507358860" class="h-10 md:h-11 w-auto object-contain transition-transform group-hover:scale-105">
       </a>
 
-      <nav class="hidden md:flex items-center gap-8 font-label text-label-lg text-white" aria-label="Navegación principal">
+      <nav class="hidden lg:flex items-center gap-6 xl:gap-8 whitespace-nowrap font-label text-label-lg text-white" aria-label="Navegación principal">
         <a href="index.html" class="text-slate-200 hover:text-cyan-glow transition-colors">Inicio</a>
         <a href="sobre-nosotros.html" class="text-slate-200 hover:text-cyan-glow transition-colors">Sobre Nosotros</a>
-        <a href="servicios.html" class="text-cyan-glow font-bold border-b-2 border-cyan-glow pb-0.5 transition-colors">Servicios &amp; Fibra</a>
+        <a href="servicios.html" class="text-cyan-glow font-bold border-b-2 border-cyan-glow pb-0.5 transition-colors" aria-current="page">Servicios &amp; Fibra</a>
         <a href="planes.html" class="text-slate-200 hover:text-cyan-glow transition-colors">Planes</a>
         <a href="contacto.html" class="text-slate-200 hover:text-cyan-glow transition-colors">Contacto</a>
       </nav>
 
-      <div class="flex items-center gap-3">
-        <button type="button" id="mobile-menu-toggle" class="md:hidden shrink-0 inline-flex items-center justify-center w-10 h-10 rounded-md border border-cyan-glow/50 text-cyan-glow hover:bg-brand-blue/20 transition-colors" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="mobile-menu">
-          <span class="material-symbols-outlined" data-menu-icon>menu</span>
+      <div class="flex items-center gap-3 shrink-0">
+        <button type="button" id="mobile-menu-toggle" class="lg:hidden shrink-0 inline-flex items-center justify-center w-11 h-11 rounded-md border border-cyan-glow/50 text-cyan-glow hover:bg-brand-blue/20 transition-colors" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="material-symbols-outlined" data-menu-icon aria-hidden="true">menu</span>
         </button>
-        <a href="contacto.html" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-md border border-cyan-glow/50 text-cyan-glow font-label text-label-md hover:bg-brand-blue/20 transition-colors">
-          <span class="material-symbols-outlined text-lg">travel_explore</span>
+        <a href="contacto.html" class="hidden xl:inline-flex items-center gap-2 min-h-11 px-4 py-2 rounded-md border border-cyan-glow/50 text-cyan-glow font-label text-label-md hover:bg-brand-blue/20 transition-colors">
+          <span class="material-symbols-outlined text-lg" aria-hidden="true">travel_explore</span>
           <span>Factibilidad</span>
         </a>
-        <a href="contacto.html" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-md bg-brand-blue text-light-on-primary font-label text-label-lg font-bold shadow hover:bg-light-secondary transition-all">
-          <span class="material-symbols-outlined text-lg">chat</span>
+        <a href="contacto.html" class="inline-flex items-center justify-center gap-2 whitespace-nowrap min-h-11 px-5 py-2.5 rounded-md bg-brand-blue text-light-on-primary font-label text-label-lg font-bold shadow hover:bg-light-secondary transition-all">
+          <span class="material-symbols-outlined text-lg" aria-hidden="true">chat</span>
           <span class="sr-only sm:not-sr-only">WhatsApp Directo</span>
         </a>
       </div>
     </div>
-      <div id="mobile-menu" class="hidden md:hidden border-t border-brand-blue/30 bg-light-primary">
+      <div id="mobile-menu" class="hidden lg:hidden border-t border-brand-blue/30 bg-light-primary">
       <nav class="max-w-7xl mx-auto px-4 sm:px-8 py-3 flex flex-col" aria-label="Navegación móvil">
         <a href="index.html" class="flex items-center justify-between px-3 py-3 rounded-md font-label text-label-lg transition-colors text-slate-200 hover:text-cyan-glow hover:bg-brand-blue/10 border-b border-slate-700/50">
           <span>Inicio</span>
@@ -61,7 +60,7 @@
         <a href="sobre-nosotros.html" class="flex items-center justify-between px-3 py-3 rounded-md font-label text-label-lg transition-colors text-slate-200 hover:text-cyan-glow hover:bg-brand-blue/10 border-b border-slate-700/50">
           <span>Sobre Nosotros</span>
         </a>
-        <a href="servicios.html" class="flex items-center justify-between px-3 py-3 rounded-md font-label text-label-lg transition-colors text-cyan-glow font-bold bg-brand-blue/10 border-b border-slate-700/50">
+        <a href="servicios.html" class="flex items-center justify-between px-3 py-3 rounded-md font-label text-label-lg transition-colors text-cyan-glow font-bold bg-brand-blue/10 border-b border-slate-700/50" aria-current="page">
           <span>Servicios &amp; Fibra</span>
         </a>
         <a href="planes.html" class="flex items-center justify-between px-3 py-3 rounded-md font-label text-label-lg transition-colors text-slate-200 hover:text-cyan-glow hover:bg-brand-blue/10 border-b border-slate-700/50">
@@ -71,7 +70,7 @@
           <span>Contacto</span>
         </a>
         <a href="contacto.html" class="mt-2 inline-flex items-center justify-center gap-2 px-4 py-3 rounded-md bg-brand-blue text-light-on-primary font-label text-label-lg font-bold shadow hover:bg-light-secondary transition-colors">
-          <span class="material-symbols-outlined text-lg">travel_explore</span>
+          <span class="material-symbols-outlined text-lg" aria-hidden="true">travel_explore</span>
           <span>Solicitar factibilidad</span>
         </a>
       </nav>
@@ -81,9 +80,9 @@
   <main class="bg-light-surface">
     <!-- Page Header Hero -->
     <section class="py-16 md:py-20 grid-pattern bg-gradient-to-b from-light-surface-container to-light-surface border-b border-light-outline">
-      <div class="max-w-7xl mx-auto px-4 sm:px-8 text-center max-w-4xl mx-auto">
+      <div class="max-w-7xl mx-auto px-4 sm:px-8 text-center max-w-4xl mx-auto" data-reveal>
         <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-light-surface border border-light-outline text-brand-blue font-label text-label-md font-bold mb-4 shadow-sm">
-          <span class="material-symbols-outlined text-base">lan</span>
+          <span class="material-symbols-outlined text-base" aria-hidden="true">lan</span>
           <span>SOLUCIONES Y CONECTIVIDAD DE ALTA VELOCIDAD</span>
         </div>
         <h1 class="font-headline text-display-lg-mobile md:text-display-lg text-light-primary tracking-tight mb-6">
@@ -100,7 +99,7 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-8 space-y-16">
         
         <!-- Solución 1 -->
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center" data-stagger>
           <div class="lg:col-span-6 flex flex-col gap-5">
             <span class="text-xs uppercase font-label font-bold text-brand-blue tracking-wider">Telecomunicaciones Corporativas</span>
             <h2 class="font-headline text-headline-xl text-light-primary">Internet Dedicado Simétrico 1:1</h2>
@@ -108,14 +107,14 @@
               Diseñado para instituciones financieras, clínicas, industrias y corporativos que no pueden tolerar variaciones de velocidad. Se asigna un canal de fibra exclusivo que no se comparte con ningún otro usuario, con garantía de ancho de banda constante tanto de subida como de bajada.
             </p>
             <div class="space-y-3 text-body-sm text-light-on-surface">
-              <div class="flex items-center gap-3"><span class="material-symbols-outlined text-success">check_circle</span> Acuerdo de Nivel de Servicio (SLA 99.8%)</div>
-              <div class="flex items-center gap-3"><span class="material-symbols-outlined text-success">check_circle</span> Rango de IPs públicas estáticas para VPN y servidores</div>
-              <div class="flex items-center gap-3"><span class="material-symbols-outlined text-success">check_circle</span> Monitoreo SNMP con portal de estadísticas en vivo</div>
+              <div class="flex items-center gap-3"><span class="material-symbols-outlined text-success" aria-hidden="true">check_circle</span> Acuerdo de Nivel de Servicio (SLA 99.8%)</div>
+              <div class="flex items-center gap-3"><span class="material-symbols-outlined text-success" aria-hidden="true">check_circle</span> Rango de IPs públicas estáticas para VPN y servidores</div>
+              <div class="flex items-center gap-3"><span class="material-symbols-outlined text-success" aria-hidden="true">check_circle</span> Monitoreo SNMP con portal de estadísticas en vivo</div>
             </div>
             <div class="pt-2">
               <a href="contacto.html?servicio=Dedicado" class="inline-flex items-center gap-2 px-5 py-3 rounded-md bg-light-primary text-light-on-primary font-label text-label-lg hover:bg-light-secondary transition-colors">
                 <span>Solicitar Factibilidad Dedicada</span>
-                <span class="material-symbols-outlined">arrow_forward</span>
+                <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
               </a>
             </div>
           </div>
@@ -148,7 +147,7 @@
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center pt-12 border-t border-light-outline">
           <div class="lg:col-span-6 order-2 lg:order-1">
             <div class="relative rounded-2xl overflow-hidden shadow-lg border border-light-outline">
-              <img src="assets/img/infraestructura-gpon.jpg" alt="Infraestructura GPON Wireless Supply" class="w-full h-80 object-cover">
+              <img loading="lazy" decoding="async" width="1200" height="800" src="assets/img/infraestructura-gpon.jpg" alt="Infraestructura GPON Wireless Supply" class="w-full h-80 object-cover">
             </div>
           </div>
           <div class="lg:col-span-6 order-1 lg:order-2 flex flex-col gap-5">
@@ -158,14 +157,14 @@
               Llevamos el cable de fibra de vidrio directamente hasta tu router mediante tecnología GPON pasiva. Experimenta descargas instantáneas, videoconferencias fluidas en 4K y gaming sin interrupciones ni interferencias climáticas.
             </p>
             <div class="space-y-3 text-body-sm text-light-on-surface">
-              <div class="flex items-center gap-3"><span class="material-symbols-outlined text-success">check_circle</span> Inmunidad total a interferencias eléctricas o de lluvia</div>
-              <div class="flex items-center gap-3"><span class="material-symbols-outlined text-success">check_circle</span> Equipos terminales ONT con Wi-Fi 6 de largo alcance</div>
-              <div class="flex items-center gap-3"><span class="material-symbols-outlined text-success">check_circle</span> Activación rápida con tendido aéreo y subterráneo</div>
+              <div class="flex items-center gap-3"><span class="material-symbols-outlined text-success" aria-hidden="true">check_circle</span> Inmunidad total a interferencias eléctricas o de lluvia</div>
+              <div class="flex items-center gap-3"><span class="material-symbols-outlined text-success" aria-hidden="true">check_circle</span> Equipos terminales ONT con Wi-Fi 6 de largo alcance</div>
+              <div class="flex items-center gap-3"><span class="material-symbols-outlined text-success" aria-hidden="true">check_circle</span> Activación rápida con tendido aéreo y subterráneo</div>
             </div>
             <div class="pt-2">
               <a href="contacto.html?servicio=GPON" class="inline-flex items-center gap-2 px-5 py-3 rounded-md bg-brand-blue text-light-on-primary font-label text-label-lg hover:bg-light-secondary transition-colors">
                 <span>Ver Disponibilidad en tu Zona</span>
-                <span class="material-symbols-outlined">arrow_forward</span>
+                <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
               </a>
             </div>
           </div>
@@ -177,9 +176,9 @@
     <!-- SECCIÓN DE PLANES CON COMPARATIVA -->
     <section id="planes" class="py-20 bg-light-surface-container border-b border-light-outline">
       <div class="max-w-7xl mx-auto px-4 sm:px-8">
-        <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="text-center max-w-3xl mx-auto mb-16" data-reveal>
           <div class="inline-flex items-center gap-2 text-brand-blue font-label text-label-lg font-bold mb-3">
-            <span class="material-symbols-outlined">payments</span>
+            <span class="material-symbols-outlined" aria-hidden="true">payments</span>
             <span>PLANES COMERCIALES Y CORPORATIVOS</span>
           </div>
           <h2 class="font-headline text-headline-xl-mobile md:text-headline-xl text-light-primary tracking-tight">
@@ -190,9 +189,9 @@
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8" data-stagger>
           <!-- Plan 1 -->
-          <div class="p-8 rounded-xl border border-light-outline bg-light-surface flex flex-col justify-between">
+          <div class="surface-card p-8 rounded-xl border border-light-outline bg-light-surface flex flex-col justify-between" data-tilt>
             <div>
               <span class="text-label-md font-label uppercase text-brand-blue font-bold tracking-wider mb-2 block">Pymes y Oficinas</span>
               <h3 class="font-headline text-headline-lg text-light-primary mb-4">Fibra Pro 200M</h3>
@@ -202,9 +201,9 @@
                 <span class="text-body-sm text-light-secondary ml-2">/ Simétrico</span>
               </div>
               <ul class="space-y-3 text-body-sm text-light-on-surface mb-8">
-                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success">check_circle</span> Para 15-25 estaciones</li>
-                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success">check_circle</span> Videoconferencias HD estables</li>
-                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success">check_circle</span> Router Dual Band 5GHz</li>
+                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success" aria-hidden="true">check_circle</span> Para 15-25 estaciones</li>
+                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success" aria-hidden="true">check_circle</span> Videoconferencias HD estables</li>
+                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success" aria-hidden="true">check_circle</span> Router Dual Band 5GHz</li>
               </ul>
             </div>
             <a href="contacto.html?plan=200M" class="w-full py-3 rounded-md bg-light-primary text-light-on-primary font-label text-label-lg text-center hover:bg-light-secondary transition-colors block">
@@ -226,10 +225,10 @@
                 <span class="text-body-sm text-light-secondary ml-2">/ Simétrico 1:1</span>
               </div>
               <ul class="space-y-3 text-body-sm text-light-on-surface mb-8">
-                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success">check_circle</span> Servidores locales y cloud computing</li>
-                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success">check_circle</span> IP Fija Pública dedicada</li>
-                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success">check_circle</span> Soporte técnico preferencial</li>
-                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success">check_circle</span> Certificación técnica de enlace</li>
+                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success" aria-hidden="true">check_circle</span> Servidores locales y cloud computing</li>
+                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success" aria-hidden="true">check_circle</span> IP Fija Pública dedicada</li>
+                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success" aria-hidden="true">check_circle</span> Soporte técnico preferencial</li>
+                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success" aria-hidden="true">check_circle</span> Certificación técnica de enlace</li>
               </ul>
             </div>
             <a href="contacto.html?plan=500M" class="w-full py-3 rounded-md bg-brand-blue text-light-on-primary font-label text-label-lg text-center hover:bg-light-secondary transition-colors shadow-md block">
@@ -238,7 +237,7 @@
           </div>
 
           <!-- Plan 3 -->
-          <div class="p-8 rounded-xl border border-light-outline bg-light-surface flex flex-col justify-between">
+          <div class="surface-card p-8 rounded-xl border border-light-outline bg-light-surface flex flex-col justify-between" data-tilt>
             <div>
               <span class="text-label-md font-label uppercase text-brand-blue font-bold tracking-wider mb-2 block">Corporativo &amp; Data Centers</span>
               <h3 class="font-headline text-headline-lg text-light-primary mb-4">Giga Corporativo</h3>
@@ -248,14 +247,43 @@
                 <span class="text-body-sm text-light-secondary ml-2">/ Simétrico</span>
               </div>
               <ul class="space-y-3 text-body-sm text-light-on-surface mb-8">
-                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success">check_circle</span> Ancho de banda puro sin contención</li>
-                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success">check_circle</span> Enlace secundario de respaldo</li>
-                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success">check_circle</span> Ingeniero de cuenta asignado</li>
+                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success" aria-hidden="true">check_circle</span> Ancho de banda puro sin contención</li>
+                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success" aria-hidden="true">check_circle</span> Enlace secundario de respaldo</li>
+                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success" aria-hidden="true">check_circle</span> Ingeniero de cuenta asignado</li>
               </ul>
             </div>
             <a href="contacto.html?plan=1000M" class="w-full py-3 rounded-md bg-light-primary text-light-on-primary font-label text-label-lg text-center hover:bg-light-secondary transition-colors block">
               Cotizar Plan Giga
             </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- CTA DE SERVICIOS A MEDIDA -->
+    <section class="py-16 md:py-24 bg-light-surface">
+      <div class="max-w-7xl mx-auto px-4 sm:px-8">
+        <div class="cta-panel" data-reveal>
+          <div class="relative z-10 max-w-3xl">
+            <div class="badge-cyber mb-5">
+              <span class="w-2 h-2 rounded-full bg-success animate-pulse"></span>
+              <span>Ingeniería de red a medida</span>
+            </div>
+            <h2 class="font-headline text-headline-xl-mobile md:text-headline-xl text-light-primary tracking-tight mb-4">
+              ¿Tu operación necesita más que un plan estándar?
+            </h2>
+            <p class="text-body-lg text-light-secondary mb-8">
+              Diseñamos enlaces dedicados, redundancia, IPs públicas y arquitecturas multipunto para proyectos que no admiten interrupciones.
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <a href="contacto.html" class="btn-primary" data-magnetic>
+                <span class="material-symbols-outlined" aria-hidden="true">engineering</span>
+                <span>Hablar con un ingeniero</span>
+              </a>
+              <a href="planes.html" class="btn-secondary" data-magnetic>
+                <span class="material-symbols-outlined" aria-hidden="true">payments</span>
+                <span>Comparar planes</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -268,7 +296,7 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-700">
         <div class="lg:col-span-2">
           <div class="flex items-center gap-3 mb-4">
-            <img src="assets/img/logo-wireless-supply.png" alt="Wireless Supply C.A. Logo" class="h-10 w-auto brightness-200 contrast-125">
+            <img loading="eager" decoding="async" width="1600" height="1191" src="assets/img/logo-wireless-supply.png" alt="Wireless Supply C.A. Logo" class="h-10 w-auto brightness-200 contrast-125">
           </div>
           <p class="text-body-md text-slate-300 max-w-sm mb-4 leading-relaxed">
             Soluciones de telecomunicaciones, enlaces dedicados y fibra óptica de alta tecnología para empresas líderes en Venezuela.
@@ -327,11 +355,14 @@
 
   <!-- Botón Flotante WhatsApp -->
   <a href="https://wa.me/584120000000?text=Hola%20Wireless%20Supply,%20deseo%20cotizar%20servicios%20de%20fibra%20%C3%B3ptica." target="_blank" rel="noopener noreferrer" aria-label="Contactar a Wireless Supply por WhatsApp" class="fixed bottom-6 right-6 z-50 flex items-center gap-2.5 px-4 py-3 rounded-full bg-success text-white shadow-2xl hover:bg-emerald-600 hover:scale-105 transition-all duration-300">
-    <span class="material-symbols-outlined text-2xl">chat</span>
+    <span class="material-symbols-outlined text-2xl" aria-hidden="true">chat</span>
     <span class="font-label text-label-lg font-bold pr-1">Atención WhatsApp</span>
   </a>
 
 
 
+  <script src="assets/vendor/gsap.min.js"></script>
+  <script src="assets/vendor/ScrollTrigger.min.js"></script>
+  <script src="assets/js/effects.js"></script>
   <script src="assets/js/main.js"></script>
 </body></html>

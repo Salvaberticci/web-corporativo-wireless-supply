@@ -12,24 +12,32 @@ web-corporativa-wireless/
 ├── planes.html                 # Tarifas y filtros por categoría
 ├── contacto.html               # Formulario inteligente + WhatsApp
 ├── legal.html                  # Políticas, términos y cumplimiento
+├── 404.html                    # Página de error “señal perdida”
 ├── assets/
 │   ├── css/
+│   │   ├── tailwind.css        # generado por Tailwind CLI
 │   │   └── estilos.css         # Animaciones y estilos personalizados compartidos
 │   ├── js/
-│   │   ├── tailwind.config.js  # Configuración de Tailwind (colores, tipografías)
 │   │   ├── main.js             # Menú móvil accesible
+│   │   ├── effects.js          # Reveals, tilt, contadores, canvas y transiciones
 │   │   ├── cotizador.js        # Formulario de cotización del inicio
 │   │   ├── contacto.js         # Formulario de contacto + prefill por URL
 │   │   └── planes.js           # Filtros de categoría en planes
-│   └── img/
-│       ├── logo-wireless-supply.png
-│       ├── fibra-optica.jpg
-│       ├── ingenieros-telecom.jpg
-│       └── infraestructura-gpon.jpg
+│   ├── img/
+│   │   ├── logo-wireless-supply.png
+│   │   ├── fibra-optica.jpg
+│   │   ├── ingenieros-telecom.jpg
+│   │   └── infraestructura-gpon.jpg
+│   └── vendor/                 # GSAP y ScrollTrigger locales
+├── src/
+│   └── input.css               # Entrada de Tailwind
 ├── docs/
+│   ├── memoria-ia/             # Memoria del proyecto para agentes
 │   └── sistema-de-diseno.md    # Sistema de diseño original (Stitch)
 ├── _source/
 │   └── stitch-export/          # Export original de Stitch (respaldo, no publicar)
+├── package.json
+├── tailwind.config.js
 ├── robots.txt
 └── sitemap.xml
 ```
@@ -51,23 +59,32 @@ php -S 127.0.0.1:8080
 
 Luego abre `http://127.0.0.1:8080/`.
 
-> No abras los HTML con doble clic (`file://`): Tailwind CDN y las rutas relativas funcionan mejor con un servidor local.
+> No abras los HTML con doble clic (`file://`): las rutas relativas y los scripts funcionan mejor con un servidor local.
+
+## Build
+
+```bash
+npm install
+npm run dev      # Tailwind en watch
+npm run build    # CSS minificado para producción
+```
+
+El CSS compilado se sirve desde `assets/css/tailwind.css`. No se usa CDN en producción.
 
 ## Tecnologías
 
 - **HTML5** semántico y accesible.
-- **Tailwind CSS** vía CDN (`cdn.tailwindcss.com`) con configuración externa en `assets/js/tailwind.config.js`.
+- **Tailwind CSS** compilado con CLI y configuración en `tailwind.config.js`.
+- **GSAP + ScrollTrigger** vendorizados en `assets/vendor/`.
 - **Material Symbols** de Google Fonts para iconografía.
-- **JavaScript vanilla** sin dependencias ni build step.
-- Fuentes: Space Grotesk (titulares) y Plus Jakarta Sans (cuerpo).
-
-> **Nota de producción:** Tailwind CDN está pensado para prototipos. Para un despliegue final se recomienda compilar Tailwind y servir un CSS estático.
+- **JavaScript vanilla** para navegación, formularios y efectos.
+- Fuentes: Space Grotesk (titulares), Plus Jakarta Sans (cuerpo) y JetBrains Mono (datos).
 
 ## Datos que debes personalizar
 
 | Dato | Dónde | Valor actual |
 |---|---|---|
-| Número de WhatsApp | `assets/js/cotizador.js`, `assets/js/contacto.js`, enlaces `wa.me` en los 6 HTML | `584120000000` (placeholder) |
+| Número de WhatsApp | `assets/js/cotizador.js`, `assets/js/contacto.js`, enlaces `wa.me` en los 7 HTML | `584120000000` (placeholder) |
 | Dominio | `sitemap.xml`, `robots.txt`, etiquetas `og:image` | `https://wirelesssupply.com.ve` |
 | Redes sociales | Footer de cada página | Enlaces `#` pendientes |
 | Dirección / correo | `contacto.html`, footer | Pendiente de datos reales |
@@ -76,11 +93,12 @@ Busca `584120000000` en todo el proyecto y reemplázalo por el número oficial a
 
 ## Funcionalidades implementadas
 
-- **Menú móvil** accesible: `aria-expanded`, cierre con Escape, clic fuera y cambio a escritorio (`assets/js/main.js`).
+- **Menú móvil** accesible: `aria-expanded`, focus trap, cierre con Escape, clic fuera y cambio a escritorio (`assets/js/main.js`).
 - **Cotizador del inicio**: arma un mensaje estructurado y abre WhatsApp.
 - **Formulario de contacto**: valida campos y redirige a WhatsApp con el detalle de la solicitud.
 - **Prefill por URL**: `contacto.html?plan=Fibra%20Start%20100M` o `contacto.html?servicio=GPON` preselecciona el servicio.
-- **Filtros de planes**: categorías Residencial / Pyme / Empresarial en `planes.html`.
+- **Filtros de planes**: Todos / Pymes / Corporativo en `planes.html`, con `aria-pressed`.
+- **Página 404** con diagnóstico de ruta y recuperación.
 - **Animaciones** respetando `prefers-reduced-motion`.
 - **SEO**: metadatos, Open Graph, JSON-LD, `robots.txt` y `sitemap.xml`.
 
@@ -101,7 +119,8 @@ La carpeta `_source/stitch-export/` conserva los 6 `code.html` originales genera
 ## Pendientes sugeridos
 
 - Reemplazar el número de WhatsApp placeholder.
-- Añadir enlaces reales de redes sociales.
+- Añadir enlaces reales de redes sociales y datos de contacto.
+- Sustituir las fotos de stock por material real de la empresa.
 - Comprimir/convertir las imágenes a WebP y añadir `srcset`.
-- Compilar Tailwind para producción.
+- Configurar el 404 real del servidor de producción.
 - Añadir política de cookies si se incorporan analíticas.

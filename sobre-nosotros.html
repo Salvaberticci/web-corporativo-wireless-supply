@@ -14,57 +14,56 @@
   <meta property="og:image" content="https://wirelesssupply.com.ve/assets/img/logo-wireless-supply.png">
 
   <!-- Tailwind & Config -->
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <script src="assets/js/tailwind.config.js"></script>
+  <link rel="stylesheet" href="assets/css/tailwind.css">
 
   <!-- Typography & Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/estilos.css">
   <link rel="icon" type="image/png" href="assets/img/logo-wireless-supply.png">
 </head>
-<body class="min-h-[1024px] bg-light-primary text-light-on-surface font-body selection:bg-brand-blue selection:text-light-on-primary m-0 p-0">
+<body class="min-h-screen bg-light-primary text-light-on-surface font-body selection:bg-brand-blue selection:text-light-on-primary m-0 p-0">
 
   <!-- ================= HEADER & NAVIGATION (FOOTER DEEP NAVY BLUE) ================= -->
   <header class="sticky top-0 z-50 bg-light-primary border-b border-brand-blue/30 shadow-md">
     <div class="max-w-7xl mx-auto px-4 sm:px-8 py-3.5 flex items-center justify-between">
       <!-- Brand Logo -->
-      <a href="index.html" class="flex items-center gap-3 bg-white px-3.5 py-1.5 rounded-lg shadow-sm group focus:outline-none" aria-label="Wireless Supply Inicio">
-        <img src="assets/img/logo-wireless-supply.png" alt="Logo Oficial Wireless Supply C.A. RIF J507358860" class="h-10 md:h-11 w-auto object-contain transition-transform group-hover:scale-105">
+      <a href="index.html" class="flex items-center gap-3 shrink-0 bg-white px-3.5 py-1.5 rounded-lg shadow-sm group focus:outline-none" aria-label="Wireless Supply Inicio">
+        <img loading="eager" decoding="async" width="1600" height="1191" src="assets/img/logo-wireless-supply.png" alt="Logo Oficial Wireless Supply C.A. RIF J507358860" class="h-10 md:h-11 w-auto object-contain transition-transform group-hover:scale-105">
       </a>
 
       <!-- Desktop Navigation Menu -->
-      <nav class="hidden md:flex items-center gap-8 font-label text-label-lg text-white" aria-label="Navegación principal">
+      <nav class="hidden lg:flex items-center gap-6 xl:gap-8 whitespace-nowrap font-label text-label-lg text-white" aria-label="Navegación principal">
         <a href="index.html" class="text-slate-200 hover:text-cyan-glow transition-colors">Inicio</a>
-        <a href="sobre-nosotros.html" class="text-cyan-glow font-bold border-b-2 border-cyan-glow pb-0.5 transition-colors">Sobre Nosotros</a>
+        <a href="sobre-nosotros.html" class="text-cyan-glow font-bold border-b-2 border-cyan-glow pb-0.5 transition-colors" aria-current="page">Sobre Nosotros</a>
         <a href="servicios.html" class="text-slate-200 hover:text-cyan-glow transition-colors">Servicios &amp; Fibra</a>
         <a href="planes.html" class="text-slate-200 hover:text-cyan-glow transition-colors">Planes</a>
         <a href="contacto.html" class="text-slate-200 hover:text-cyan-glow transition-colors">Contacto</a>
       </nav>
 
       <!-- Quick Action Buttons -->
-      <div class="flex items-center gap-3">
-        <button type="button" id="mobile-menu-toggle" class="md:hidden shrink-0 inline-flex items-center justify-center w-10 h-10 rounded-md border border-cyan-glow/50 text-cyan-glow hover:bg-brand-blue/20 transition-colors" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="mobile-menu">
-          <span class="material-symbols-outlined" data-menu-icon>menu</span>
+      <div class="flex items-center gap-3 shrink-0">
+        <button type="button" id="mobile-menu-toggle" class="lg:hidden shrink-0 inline-flex items-center justify-center w-11 h-11 rounded-md border border-cyan-glow/50 text-cyan-glow hover:bg-brand-blue/20 transition-colors" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="material-symbols-outlined" data-menu-icon aria-hidden="true">menu</span>
         </button>
-        <a href="contacto.html" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-md border border-cyan-glow/50 text-cyan-glow font-label text-label-md hover:bg-brand-blue/20 transition-colors">
-          <span class="material-symbols-outlined text-lg">travel_explore</span>
+        <a href="contacto.html" class="hidden xl:inline-flex items-center gap-2 min-h-11 px-4 py-2 rounded-md border border-cyan-glow/50 text-cyan-glow font-label text-label-md hover:bg-brand-blue/20 transition-colors">
+          <span class="material-symbols-outlined text-lg" aria-hidden="true">travel_explore</span>
           <span>Factibilidad</span>
         </a>
-        <a href="contacto.html" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-md bg-brand-blue text-light-on-primary font-label text-label-lg font-bold shadow hover:bg-light-secondary transition-all">
-          <span class="material-symbols-outlined text-lg">chat</span>
+        <a href="contacto.html" class="inline-flex items-center justify-center gap-2 whitespace-nowrap min-h-11 px-5 py-2.5 rounded-md bg-brand-blue text-light-on-primary font-label text-label-lg font-bold shadow hover:bg-light-secondary transition-all">
+          <span class="material-symbols-outlined text-lg" aria-hidden="true">chat</span>
           <span class="sr-only sm:not-sr-only">WhatsApp Directo</span>
         </a>
       </div>
     </div>
-      <div id="mobile-menu" class="hidden md:hidden border-t border-brand-blue/30 bg-light-primary">
+      <div id="mobile-menu" class="hidden lg:hidden border-t border-brand-blue/30 bg-light-primary">
       <nav class="max-w-7xl mx-auto px-4 sm:px-8 py-3 flex flex-col" aria-label="Navegación móvil">
         <a href="index.html" class="flex items-center justify-between px-3 py-3 rounded-md font-label text-label-lg transition-colors text-slate-200 hover:text-cyan-glow hover:bg-brand-blue/10 border-b border-slate-700/50">
           <span>Inicio</span>
         </a>
-        <a href="sobre-nosotros.html" class="flex items-center justify-between px-3 py-3 rounded-md font-label text-label-lg transition-colors text-cyan-glow font-bold bg-brand-blue/10 border-b border-slate-700/50">
+        <a href="sobre-nosotros.html" class="flex items-center justify-between px-3 py-3 rounded-md font-label text-label-lg transition-colors text-cyan-glow font-bold bg-brand-blue/10 border-b border-slate-700/50" aria-current="page">
           <span>Sobre Nosotros</span>
         </a>
         <a href="servicios.html" class="flex items-center justify-between px-3 py-3 rounded-md font-label text-label-lg transition-colors text-slate-200 hover:text-cyan-glow hover:bg-brand-blue/10 border-b border-slate-700/50">
@@ -77,7 +76,7 @@
           <span>Contacto</span>
         </a>
         <a href="contacto.html" class="mt-2 inline-flex items-center justify-center gap-2 px-4 py-3 rounded-md bg-brand-blue text-light-on-primary font-label text-label-lg font-bold shadow hover:bg-light-secondary transition-colors">
-          <span class="material-symbols-outlined text-lg">travel_explore</span>
+          <span class="material-symbols-outlined text-lg" aria-hidden="true">travel_explore</span>
           <span>Solicitar factibilidad</span>
         </a>
       </nav>
@@ -87,9 +86,9 @@
   <main class="bg-light-surface">
     <!-- Page Header Hero -->
     <section class="py-16 md:py-20 grid-pattern bg-gradient-to-b from-light-surface-container to-light-surface border-b border-light-outline">
-      <div class="max-w-7xl mx-auto px-4 sm:px-8 text-center max-w-4xl mx-auto">
+      <div class="max-w-7xl mx-auto px-4 sm:px-8 text-center max-w-4xl mx-auto" data-reveal>
         <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-light-surface border border-light-outline text-brand-blue font-label text-label-md font-bold mb-4 shadow-sm">
-          <span class="material-symbols-outlined text-base">corporate_fare</span>
+          <span class="material-symbols-outlined text-base" aria-hidden="true">corporate_fare</span>
           <span>IDENTIDAD CORPORATIVA &amp; TRAYECTORIA</span>
         </div>
         <h1 class="font-headline text-display-lg-mobile md:text-display-lg text-light-primary tracking-tight mb-6">
@@ -104,7 +103,7 @@
     <!-- Historia y Compromiso -->
     <section class="py-20 bg-light-surface border-b border-light-outline">
       <div class="max-w-7xl mx-auto px-4 sm:px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center" data-stagger>
           <div class="lg:col-span-6 flex flex-col gap-6">
             <h2 class="font-headline text-headline-xl-mobile md:text-headline-xl text-light-primary tracking-tight">
               Construyendo Enlaces Confiables Donde la Conectividad No Puede Fallar
@@ -116,13 +115,13 @@
               Hemos desplegado kilómetros de cableado de fibra óptica GPON, torres de microondas de alta capacidad y nodos de distribución redundantes con respaldo eléctrico industrial, garantizando que empresas, clínicas, centros comerciales y complejos habitacionales permanezcan siempre conectados.
             </p>
 
-            <div class="grid grid-cols-2 gap-6 pt-4 border-t border-light-outline">
+            <div class="grid grid-cols-2 gap-6 pt-4 border-t border-light-outline" data-stagger>
               <div>
-                <div class="font-headline text-headline-lg text-brand-blue font-bold">+100 Km</div>
+                <div class="font-headline text-headline-lg text-brand-blue font-bold" data-counter="100" data-counter-prefix="+" data-counter-suffix=" Km">+100 Km</div>
                 <div class="text-body-sm text-light-secondary">Tendido de Fibra Troncal</div>
               </div>
               <div>
-                <div class="font-headline text-headline-lg text-light-primary font-bold">&lt; 30 min</div>
+                <div class="font-headline text-headline-lg text-light-primary font-bold" data-counter="30" data-counter-prefix="&lt; " data-counter-suffix=" min">&lt; 30 min</div>
                 <div class="text-body-sm text-light-secondary">Tiempo Promedio Respuesta NOC</div>
               </div>
             </div>
@@ -130,7 +129,7 @@
 
           <div class="lg:col-span-6">
             <div class="relative rounded-2xl overflow-hidden shadow-xl border border-light-outline">
-              <img src="assets/img/ingenieros-telecom.jpg" alt="Ingeniero en telecomunicaciones de Wireless Supply supervisando racks" class="w-full h-[450px] object-cover">
+              <img loading="lazy" decoding="async" width="1200" height="801" src="assets/img/ingenieros-telecom.jpg" alt="Ingeniero en telecomunicaciones de Wireless Supply supervisando racks" class="w-full h-[450px] object-cover">
               <div class="absolute inset-0 bg-gradient-to-t from-light-primary/80 via-transparent to-transparent flex items-end p-8">
                 <div class="text-white">
                   <div class="font-headline text-title-lg font-bold">Infraestructura Carrier-Grade</div>
@@ -146,7 +145,7 @@
     <!-- Misión, Visión y Valores -->
     <section class="py-20 bg-light-surface-container border-b border-light-outline">
       <div class="max-w-7xl mx-auto px-4 sm:px-8">
-        <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="text-center max-w-3xl mx-auto mb-16" data-reveal>
           <h2 class="font-headline text-headline-xl-mobile md:text-headline-xl text-light-primary tracking-tight mb-4">
             Nuestros Pilares Estratégicos
           </h2>
@@ -155,11 +154,11 @@
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div class="p-8 rounded-xl bg-light-surface border border-light-outline shadow-sm flex flex-col justify-between">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8" data-stagger>
+          <div class="surface-card p-8 rounded-xl bg-light-surface border border-light-outline shadow-sm flex flex-col justify-between" data-tilt>
             <div>
               <div class="w-12 h-12 rounded-lg bg-brand-blue/10 text-brand-blue flex items-center justify-center mb-6">
-                <span class="material-symbols-outlined text-2xl">flag</span>
+                <span class="material-symbols-outlined text-2xl" aria-hidden="true">flag</span>
               </div>
               <h3 class="font-headline text-headline-md text-light-primary mb-3">Nuestra Misión</h3>
               <p class="text-body-md text-light-secondary leading-relaxed">
@@ -168,10 +167,10 @@
             </div>
           </div>
 
-          <div class="p-8 rounded-xl bg-light-surface border border-light-outline shadow-sm flex flex-col justify-between">
+          <div class="surface-card p-8 rounded-xl bg-light-surface border border-light-outline shadow-sm flex flex-col justify-between" data-tilt>
             <div>
               <div class="w-12 h-12 rounded-lg bg-brand-blue/10 text-brand-blue flex items-center justify-center mb-6">
-                <span class="material-symbols-outlined text-2xl">visibility</span>
+                <span class="material-symbols-outlined text-2xl" aria-hidden="true">visibility</span>
               </div>
               <h3 class="font-headline text-headline-md text-light-primary mb-3">Nuestra Visión</h3>
               <p class="text-body-md text-light-secondary leading-relaxed">
@@ -180,10 +179,10 @@
             </div>
           </div>
 
-          <div class="p-8 rounded-xl bg-light-surface border border-light-outline shadow-sm flex flex-col justify-between">
+          <div class="surface-card p-8 rounded-xl bg-light-surface border border-light-outline shadow-sm flex flex-col justify-between" data-tilt>
             <div>
               <div class="w-12 h-12 rounded-lg bg-brand-blue/10 text-brand-blue flex items-center justify-center mb-6">
-                <span class="material-symbols-outlined text-2xl">workspace_premium</span>
+                <span class="material-symbols-outlined text-2xl" aria-hidden="true">workspace_premium</span>
               </div>
               <h3 class="font-headline text-headline-md text-light-primary mb-3">Valores Rectores</h3>
               <p class="text-body-md text-light-secondary leading-relaxed">
@@ -197,7 +196,7 @@
 
     <!-- Legitimacy & Compliance Banner -->
     <section class="py-16 bg-light-primary text-light-on-primary border-b border-brand-blue/30">
-      <div class="max-w-7xl mx-auto px-4 sm:px-8 flex flex-col md:flex-row items-center justify-between gap-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-8 flex flex-col md:flex-row items-center justify-between gap-8" data-reveal>
         <div>
           <div class="font-headline text-headline-lg text-white mb-2">Empresa Registrada y Certificada</div>
           <p class="text-body-md text-slate-300 max-w-2xl">
@@ -209,7 +208,7 @@
             <div class="text-xs text-slate-300">Registro Fiscal</div>
             <div class="font-headline text-title-lg text-cyan-glow font-bold">RIF J507358860</div>
           </div>
-          <a href="contacto.html" class="px-6 py-3.5 bg-brand-blue text-light-on-primary rounded-md font-label text-label-lg font-bold hover:bg-light-secondary transition-colors">
+          <a href="contacto.html" class="px-6 py-3.5 bg-brand-blue text-light-on-primary rounded-md font-label text-label-lg font-bold hover:bg-light-secondary transition-colors" data-magnetic>
             Contactar Ingeniero
           </a>
         </div>
@@ -224,7 +223,7 @@
         
         <div class="lg:col-span-2">
           <div class="flex items-center gap-3 mb-4">
-            <img src="assets/img/logo-wireless-supply.png" alt="Wireless Supply C.A. Logo" class="h-10 w-auto brightness-200 contrast-125">
+            <img loading="eager" decoding="async" width="1600" height="1191" src="assets/img/logo-wireless-supply.png" alt="Wireless Supply C.A. Logo" class="h-10 w-auto brightness-200 contrast-125">
           </div>
           <p class="text-body-md text-slate-300 max-w-sm mb-4 leading-relaxed">
             Soluciones de telecomunicaciones, enlaces dedicados y fibra óptica de alta tecnología para empresas líderes en Venezuela.
@@ -284,11 +283,14 @@
 
   <!-- Botón Flotante WhatsApp -->
   <a href="https://wa.me/584120000000?text=Hola%20Wireless%20Supply,%20deseo%20m%C3%A1s%20informaci%C3%B3n%20sobre%20su%20empresa." target="_blank" rel="noopener noreferrer" aria-label="Contactar a Wireless Supply por WhatsApp" class="fixed bottom-6 right-6 z-50 flex items-center gap-2.5 px-4 py-3 rounded-full bg-success text-white shadow-2xl hover:bg-emerald-600 hover:scale-105 transition-all duration-300">
-    <span class="material-symbols-outlined text-2xl">chat</span>
+    <span class="material-symbols-outlined text-2xl" aria-hidden="true">chat</span>
     <span class="font-label text-label-lg font-bold pr-1">Atención WhatsApp</span>
   </a>
 
 
 
+  <script src="assets/vendor/gsap.min.js"></script>
+  <script src="assets/vendor/ScrollTrigger.min.js"></script>
+  <script src="assets/js/effects.js"></script>
   <script src="assets/js/main.js"></script>
 </body></html>

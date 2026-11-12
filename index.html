@@ -38,30 +38,29 @@
   </script>
 
   <!-- Tailwind & Config -->
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <script src="assets/js/tailwind.config.js"></script>
+  <link rel="stylesheet" href="assets/css/tailwind.css">
 
   <!-- Typography & Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/estilos.css">
   <link rel="icon" type="image/png" href="assets/img/logo-wireless-supply.png">
 </head>
-<body class="min-h-[1024px] bg-light-primary text-light-on-surface font-body selection:bg-brand-blue selection:text-light-on-primary m-0 p-0">
+<body class="min-h-screen bg-light-primary text-light-on-surface font-body selection:bg-brand-blue selection:text-light-on-primary m-0 p-0">
 
   <!-- ================= HEADER & NAVIGATION (FOOTER DEEP NAVY BLUE) ================= -->
   <header class="sticky top-0 z-50 bg-light-primary border-b border-brand-blue/30 shadow-md">
     <div class="max-w-7xl mx-auto px-4 sm:px-8 py-3.5 flex items-center justify-between">
       <!-- Brand Logo in crisp white pill for maximum contrast and prestige -->
-      <a href="index.html" class="flex items-center gap-3 bg-white px-3.5 py-1.5 rounded-lg shadow-sm group focus:outline-none" aria-label="Wireless Supply Inicio">
-        <img src="assets/img/logo-wireless-supply.png" alt="Logo Oficial Wireless Supply C.A. RIF J507358860" class="h-10 md:h-11 w-auto object-contain transition-transform group-hover:scale-105">
+      <a href="index.html" class="flex items-center gap-3 shrink-0 bg-white px-3.5 py-1.5 rounded-lg shadow-sm group focus:outline-none" aria-label="Wireless Supply Inicio">
+        <img loading="eager" decoding="async" width="1600" height="1191" src="assets/img/logo-wireless-supply.png" alt="Logo Oficial Wireless Supply C.A. RIF J507358860" class="h-10 md:h-11 w-auto object-contain transition-transform group-hover:scale-105">
       </a>
 
       <!-- Desktop Navigation Menu -->
-      <nav class="hidden md:flex items-center gap-8 font-label text-label-lg text-white" aria-label="Navegación principal">
-        <a href="index.html" class="text-cyan-glow font-bold border-b-2 border-cyan-glow pb-0.5 transition-colors">Inicio</a>
+      <nav class="hidden lg:flex items-center gap-6 xl:gap-8 whitespace-nowrap font-label text-label-lg text-white" aria-label="Navegación principal">
+        <a href="index.html" class="text-cyan-glow font-bold border-b-2 border-cyan-glow pb-0.5 transition-colors" aria-current="page">Inicio</a>
         <a href="sobre-nosotros.html" class="text-slate-200 hover:text-cyan-glow transition-colors">Sobre Nosotros</a>
         <a href="servicios.html" class="text-slate-200 hover:text-cyan-glow transition-colors">Servicios &amp; Fibra</a>
         <a href="planes.html" class="text-slate-200 hover:text-cyan-glow transition-colors">Planes</a>
@@ -69,23 +68,23 @@
       </nav>
 
       <!-- Quick Action Buttons -->
-      <div class="flex items-center gap-3">
-        <button type="button" id="mobile-menu-toggle" class="md:hidden shrink-0 inline-flex items-center justify-center w-10 h-10 rounded-md border border-cyan-glow/50 text-cyan-glow hover:bg-brand-blue/20 transition-colors" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="mobile-menu">
-          <span class="material-symbols-outlined" data-menu-icon>menu</span>
+      <div class="flex items-center gap-3 shrink-0">
+        <button type="button" id="mobile-menu-toggle" class="lg:hidden shrink-0 inline-flex items-center justify-center w-11 h-11 rounded-md border border-cyan-glow/50 text-cyan-glow hover:bg-brand-blue/20 transition-colors" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="material-symbols-outlined" data-menu-icon aria-hidden="true">menu</span>
         </button>
-        <a href="contacto.html" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-md border border-cyan-glow/50 text-cyan-glow font-label text-label-md hover:bg-brand-blue/20 transition-colors">
-          <span class="material-symbols-outlined text-lg">travel_explore</span>
+        <a href="contacto.html" class="hidden xl:inline-flex items-center gap-2 min-h-11 px-4 py-2 rounded-md border border-cyan-glow/50 text-cyan-glow font-label text-label-md hover:bg-brand-blue/20 transition-colors">
+          <span class="material-symbols-outlined text-lg" aria-hidden="true">travel_explore</span>
           <span>Factibilidad</span>
         </a>
-        <a href="contacto.html" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-md bg-brand-blue text-light-on-primary font-label text-label-lg font-bold shadow hover:bg-light-secondary transition-all">
-          <span class="material-symbols-outlined text-lg">chat</span>
+        <a href="contacto.html" class="inline-flex items-center justify-center gap-2 whitespace-nowrap min-h-11 px-5 py-2.5 rounded-md bg-brand-blue text-light-on-primary font-label text-label-lg font-bold shadow hover:bg-light-secondary transition-all">
+          <span class="material-symbols-outlined text-lg" aria-hidden="true">chat</span>
           <span class="sr-only sm:not-sr-only">WhatsApp Directo</span>
         </a>
       </div>
     </div>
-      <div id="mobile-menu" class="hidden md:hidden border-t border-brand-blue/30 bg-light-primary">
+      <div id="mobile-menu" class="hidden lg:hidden border-t border-brand-blue/30 bg-light-primary">
       <nav class="max-w-7xl mx-auto px-4 sm:px-8 py-3 flex flex-col" aria-label="Navegación móvil">
-        <a href="index.html" class="flex items-center justify-between px-3 py-3 rounded-md font-label text-label-lg transition-colors text-cyan-glow font-bold bg-brand-blue/10 border-b border-slate-700/50">
+        <a href="index.html" class="flex items-center justify-between px-3 py-3 rounded-md font-label text-label-lg transition-colors text-cyan-glow font-bold bg-brand-blue/10 border-b border-slate-700/50" aria-current="page">
           <span>Inicio</span>
         </a>
         <a href="sobre-nosotros.html" class="flex items-center justify-between px-3 py-3 rounded-md font-label text-label-lg transition-colors text-slate-200 hover:text-cyan-glow hover:bg-brand-blue/10 border-b border-slate-700/50">
@@ -101,7 +100,7 @@
           <span>Contacto</span>
         </a>
         <a href="contacto.html" class="mt-2 inline-flex items-center justify-center gap-2 px-4 py-3 rounded-md bg-brand-blue text-light-on-primary font-label text-label-lg font-bold shadow hover:bg-light-secondary transition-colors">
-          <span class="material-symbols-outlined text-lg">travel_explore</span>
+          <span class="material-symbols-outlined text-lg" aria-hidden="true">travel_explore</span>
           <span>Solicitar factibilidad</span>
         </a>
       </nav>
@@ -111,16 +110,17 @@
   <main class="bg-light-surface">
     <!-- ================= HERO SECTION ================= -->
     <section id="inicio" class="relative overflow-hidden pt-12 pb-20 md:py-24 grid-pattern bg-gradient-to-b from-light-surface-container to-light-surface border-b border-light-outline">
-      <div class="max-w-7xl mx-auto px-4 sm:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <div id="hero-canvas" class="hero-canvas-layer" aria-hidden="true"></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
         <!-- Hero Left Column -->
-        <div class="lg:col-span-7 flex flex-col gap-6">
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-light-surface border border-light-outline w-fit shadow-sm">
+        <div class="lg:col-span-7 flex flex-col gap-6" data-reveal>
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-light-surface border border-light-outline w-fit shadow-sm badge-cyber">
             <span class="w-2.5 h-2.5 rounded-full bg-cyan-glow shadow-[0_0_8px_#00D2FF]"></span>
             <span class="font-label text-label-md text-light-primary">Infraestructura GPON &amp; Enlaces Inalámbricos Corporativos</span>
           </div>
 
           <h1 class="font-headline text-display-lg-mobile md:text-display-lg text-light-primary tracking-tight">
-            Conectividad Empresarial con <span class="text-brand-blue">Fibra Óptica de Alto Rendimiento</span>
+            Conectividad Empresarial con <span class="text-gradient">Fibra Óptica de Alto Rendimiento</span>
           </h1>
 
           <p class="text-body-lg text-light-secondary max-w-2xl leading-relaxed">
@@ -128,9 +128,9 @@
           </p>
 
           <!-- Metrics Row -->
-          <div class="grid grid-cols-3 gap-4 pt-2 border-y border-light-outline/60 py-4 max-w-xl">
+          <div class="grid grid-cols-3 gap-4 pt-2 border-y border-light-outline/60 py-4 max-w-xl" data-stagger>
             <div>
-              <div class="font-headline text-headline-lg text-brand-blue">99.8%</div>
+              <div class="font-headline text-headline-lg text-brand-blue" data-counter="99.8" data-counter-suffix="%">99.8%</div>
               <div class="text-body-sm text-light-secondary">SLA Disponibilidad</div>
             </div>
             <div>
@@ -145,44 +145,44 @@
 
           <!-- CTAs -->
           <div class="flex flex-wrap items-center gap-4 pt-2">
-            <a href="#cotizador-whatsapp" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-light-primary text-light-on-primary rounded-md font-label text-label-lg shadow-lg hover:bg-light-secondary transition-all">
-              <span class="material-symbols-outlined">flash_on</span>
+            <a href="#cotizador-whatsapp" class="btn-primary" data-magnetic>
+              <span class="material-symbols-outlined" aria-hidden="true">flash_on</span>
               <span>Solicitar Cotización Inmediata</span>
             </a>
-            <a href="#servicios" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-light-surface border border-light-outline text-light-primary rounded-md font-label text-label-lg hover:border-brand-blue hover:text-brand-blue transition-all">
-              <span class="material-symbols-outlined">hub</span>
+            <a href="#servicios" class="btn-secondary" data-magnetic>
+              <span class="material-symbols-outlined" aria-hidden="true">hub</span>
               <span>Conoce Nuestras Soluciones</span>
             </a>
           </div>
 
           <!-- Trust Badges -->
-          <div class="flex items-center gap-4 text-body-sm text-slate-500 pt-2">
+          <div class="flex flex-wrap items-center gap-4 text-body-sm text-slate-500 pt-2">
             <div class="flex items-center gap-1.5">
-              <span class="material-symbols-outlined text-brand-blue text-lg">verified</span>
+              <span class="material-symbols-outlined text-brand-blue text-lg" aria-hidden="true">verified</span>
               <span>Empresa Registrada RIF J507358860</span>
             </div>
             <div class="flex items-center gap-1.5">
-              <span class="material-symbols-outlined text-success text-lg">security</span>
+              <span class="material-symbols-outlined text-success text-lg" aria-hidden="true">security</span>
               <span>Cumplimiento Estándar Meta API</span>
             </div>
           </div>
         </div>
 
         <!-- Hero Right Column: Graphic Showcase with Cyber Effects -->
-        <div class="lg:col-span-5 relative">
-          <div class="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-brand-blue/40 bg-light-primary animate-cyber-glow">
+        <div class="lg:col-span-5 relative" data-reveal>
+          <div class="hero-visual relative rounded-2xl overflow-hidden shadow-2xl border-2 border-brand-blue/40 bg-light-primary animate-cyber-glow">
             <!-- Simulated Vertical Fiber Beams -->
             <div class="fiber-beam left-10"></div>
             <div class="fiber-beam right-16" style="animation-delay: 1.2s;"></div>
 
-            <img src="assets/img/fibra-optica.jpg" alt="Cables de fibra óptica de alta tecnología Wireless Supply" class="w-full h-80 md:h-[430px] object-cover opacity-90 hover:scale-105 transition-transform duration-700">
+            <img src="assets/img/fibra-optica.jpg" alt="Cables de fibra óptica de alta tecnología Wireless Supply" width="1200" height="800" loading="eager" fetchpriority="high" decoding="async" class="w-full h-80 md:h-[430px] object-cover opacity-90 hover:scale-105 transition-transform duration-700">
             <div class="absolute inset-0 bg-gradient-to-t from-light-primary via-transparent to-transparent"></div>
 
             <!-- Floating Fiber Speed Indicator Widget with Levitation -->
             <div class="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-light-surface/95 backdrop-blur-md border border-cyan-glow/50 shadow-2xl flex items-center justify-between animate-float">
               <div class="flex items-center gap-3">
                 <div class="w-10 h-10 rounded-lg bg-brand-blue text-light-on-primary flex items-center justify-center shadow-[0_0_12px_#00D2FF]">
-                  <span class="material-symbols-outlined animate-pulse">speed</span>
+                  <span class="material-symbols-outlined animate-pulse" aria-hidden="true">speed</span>
                 </div>
                 <div>
                   <div class="font-headline text-title-md text-light-primary flex items-center gap-1.5">
@@ -199,15 +199,65 @@
           </div>
         </div>
       </div>
+
+      <a href="#sobre-nosotros" class="hero-scroll" aria-label="Descubrir más sobre Wireless Supply">Explorar</a>
+    </section>
+
+    <!-- ================= MARQUEE DE TECNOLOGÍAS ================= -->
+    <div class="marquee-band" aria-label="Tecnologías y estándares de Wireless Supply">
+      <div class="marquee-track">
+        <div class="marquee-group">
+          <span class="marquee-item">Fibra Óptica GPON</span>
+          <span class="marquee-item">Internet Dedicado 1:1</span>
+          <span class="marquee-item">Enlaces PTP</span>
+          <span class="marquee-item">SLA 99.8%</span>
+          <span class="marquee-item">NOC 24/7</span>
+          <span class="marquee-item">IP Pública Estática</span>
+          <span class="marquee-item">Redundancia de Red</span>
+          <span class="marquee-item">Wi-Fi 6</span>
+        </div>
+        <div class="marquee-group" aria-hidden="true">
+          <span class="marquee-item">Fibra Óptica GPON</span>
+          <span class="marquee-item">Internet Dedicado 1:1</span>
+          <span class="marquee-item">Enlaces PTP</span>
+          <span class="marquee-item">SLA 99.8%</span>
+          <span class="marquee-item">NOC 24/7</span>
+          <span class="marquee-item">IP Pública Estática</span>
+          <span class="marquee-item">Redundancia de Red</span>
+          <span class="marquee-item">Wi-Fi 6</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= MÉTRICAS DE SERVICIO ================= -->
+    <section class="stats-band" aria-label="Métricas de servicio">
+      <div class="max-w-7xl mx-auto px-4 sm:px-8 grid grid-cols-2 lg:grid-cols-4 gap-8 py-10 md:py-14" data-stagger>
+        <div class="text-center lg:text-left">
+          <div class="stat-value"><span class="accent" data-counter="99.8" data-counter-suffix="%">99.8%</span></div>
+          <div class="stat-label">Disponibilidad SLA</div>
+        </div>
+        <div class="text-center lg:text-left">
+          <div class="stat-value">1:1</div>
+          <div class="stat-label">Simetría real</div>
+        </div>
+        <div class="text-center lg:text-left">
+          <div class="stat-value">24/7</div>
+          <div class="stat-label">Monitoreo NOC</div>
+        </div>
+        <div class="text-center lg:text-left">
+          <div class="stat-value"><span class="accent" data-counter="100" data-counter-prefix="+" data-counter-suffix=" km">+100 km</span></div>
+          <div class="stat-label">Fibra troncal desplegada</div>
+        </div>
+      </div>
     </section>
 
     <!-- ================= SOBRE NOSOTROS ================= -->
     <section id="sobre-nosotros" class="py-20 bg-light-surface border-b border-light-outline">
       <div class="max-w-7xl mx-auto px-4 sm:px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center" data-stagger>
           <div class="lg:col-span-5 order-2 lg:order-1">
             <div class="relative rounded-xl overflow-hidden border border-light-outline shadow-lg">
-              <img src="assets/img/ingenieros-telecom.jpg" alt="Infraestructura y equipo de ingenieros en telecomunicaciones Wireless Supply" class="w-full h-96 object-cover">
+              <img loading="lazy" decoding="async" width="1200" height="801" src="assets/img/ingenieros-telecom.jpg" alt="Infraestructura y equipo de ingenieros en telecomunicaciones Wireless Supply" class="w-full h-96 object-cover">
               <div class="absolute top-4 left-4 bg-light-surface/90 backdrop-blur px-3 py-1.5 rounded-md border border-light-outline shadow">
                 <span class="font-headline text-xs font-bold text-light-primary">RIF: J507358860</span>
               </div>
@@ -216,7 +266,7 @@
 
           <div class="lg:col-span-7 order-1 lg:order-2 flex flex-col gap-6">
             <div class="inline-flex items-center gap-2 text-brand-blue font-label text-label-lg font-bold">
-              <span class="material-symbols-outlined">corporate_fare</span>
+              <span class="material-symbols-outlined" aria-hidden="true">corporate_fare</span>
               <span>SOBRE NOSOTROS</span>
             </div>
             
@@ -231,7 +281,7 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
               <div class="p-4 rounded-lg bg-light-surface-container border border-light-outline">
                 <div class="w-10 h-10 rounded-md bg-brand-blue/10 text-brand-blue flex items-center justify-center mb-3">
-                  <span class="material-symbols-outlined">shield</span>
+                  <span class="material-symbols-outlined" aria-hidden="true">shield</span>
                 </div>
                 <h3 class="font-headline text-title-md text-light-primary mb-1">Misión y Respaldo</h3>
                 <p class="text-body-sm text-light-secondary">
@@ -241,7 +291,7 @@
 
               <div class="p-4 rounded-lg bg-light-surface-container border border-light-outline">
                 <div class="w-10 h-10 rounded-md bg-brand-blue/10 text-brand-blue flex items-center justify-center mb-3">
-                  <span class="material-symbols-outlined">visibility</span>
+                  <span class="material-symbols-outlined" aria-hidden="true">visibility</span>
                 </div>
                 <h3 class="font-headline text-title-md text-light-primary mb-1">Visión de Futuro</h3>
                 <p class="text-body-sm text-light-secondary">
@@ -270,9 +320,9 @@
     <!-- ================= SERVICIOS ESTRATÉGICOS ================= -->
     <section id="servicios" class="py-20 bg-light-surface-container border-b border-light-outline">
       <div class="max-w-7xl mx-auto px-4 sm:px-8">
-        <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="text-center max-w-3xl mx-auto mb-16" data-reveal>
           <div class="inline-flex items-center gap-2 text-brand-blue font-label text-label-lg font-bold mb-3">
-            <span class="material-symbols-outlined">lan</span>
+            <span class="material-symbols-outlined" aria-hidden="true">lan</span>
             <span>SOLUCIONES Y SERVICIOS</span>
           </div>
           <h2 class="font-headline text-headline-xl-mobile md:text-headline-xl text-light-primary tracking-tight">
@@ -283,73 +333,73 @@
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8" data-stagger>
           <!-- Servicio 1: Internet Dedicado -->
-          <div class="bg-light-surface p-8 rounded-xl border border-light-outline shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+          <div class="surface-card bg-light-surface p-8 rounded-xl border border-light-outline shadow-sm transition-all duration-300 flex flex-col justify-between group" data-tilt>
             <div>
               <div class="w-14 h-14 rounded-xl bg-brand-blue/10 text-brand-blue flex items-center justify-center mb-6 group-hover:bg-brand-blue group-hover:text-light-on-primary transition-colors">
-                <span class="material-symbols-outlined text-3xl">settings_ethernet</span>
+                <span class="material-symbols-outlined text-3xl" aria-hidden="true">settings_ethernet</span>
               </div>
               <h3 class="font-headline text-headline-md text-light-primary mb-3">Internet Dedicado 1:1</h3>
               <p class="text-body-md text-light-secondary mb-6 leading-relaxed">
                 Canal exclusivo no compartido para instituciones financieras, plantas industriales y centros corporativos. Capacidad simétrica garantizada con SLA de servicio.
               </p>
               <ul class="space-y-2.5 text-body-sm text-light-on-surface mb-6">
-                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success text-base">check</span> Velocidad simétrica garantizada</li>
-                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success text-base">check</span> Bloque de IPs públicas estáticas</li>
-                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success text-base">check</span> Monitoreo proactivo desde nuestro NOC</li>
+                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success text-base" aria-hidden="true">check</span> Velocidad simétrica garantizada</li>
+                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success text-base" aria-hidden="true">check</span> Bloque de IPs públicas estáticas</li>
+                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success text-base" aria-hidden="true">check</span> Monitoreo proactivo desde nuestro NOC</li>
               </ul>
             </div>
             <a href="#contacto" class="inline-flex items-center gap-2 font-label text-label-lg text-brand-blue hover:text-light-secondary font-bold pt-4 border-t border-light-outline">
               <span>Cotizar Dedicado</span>
-              <span class="material-symbols-outlined text-base">arrow_forward</span>
+              <span class="material-symbols-outlined text-base" aria-hidden="true">arrow_forward</span>
             </a>
           </div>
 
           <!-- Servicio 2: Fibra Óptica GPON -->
-          <div class="bg-light-surface p-8 rounded-xl border-2 border-brand-blue shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between relative group">
+          <div class="bg-light-surface p-8 rounded-xl border-2 border-brand-blue shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between relative group" data-tilt>
             <span class="absolute -top-3.5 right-6 px-3 py-1 rounded-full bg-brand-blue text-light-on-primary font-label text-label-md shadow">
               Más Solicitado
             </span>
             <div>
               <div class="w-14 h-14 rounded-xl bg-brand-blue text-light-on-primary flex items-center justify-center mb-6">
-                <span class="material-symbols-outlined text-3xl">bolt</span>
+                <span class="material-symbols-outlined text-3xl" aria-hidden="true">bolt</span>
               </div>
               <h3 class="font-headline text-headline-md text-light-primary mb-3">Fibra Óptica FTTH / FTTB</h3>
               <p class="text-body-md text-light-secondary mb-6 leading-relaxed">
                 Tecnología GPON directa a comercios, sedes operativas y urbanismos. Conexión de fibra pura con tasas de transferencia ultrarrápidas y latencia mínima.
               </p>
               <ul class="space-y-2.5 text-body-sm text-light-on-surface mb-6">
-                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success text-base">check</span> Planes desde 100 Mbps hasta 1 Gbps</li>
-                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success text-base">check</span> Router Wi-Fi 6 de alta cobertura</li>
-                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success text-base">check</span> Instalación técnica certificada</li>
+                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success text-base" aria-hidden="true">check</span> Planes desde 100 Mbps hasta 1 Gbps</li>
+                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success text-base" aria-hidden="true">check</span> Router Wi-Fi 6 de alta cobertura</li>
+                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success text-base" aria-hidden="true">check</span> Instalación técnica certificada</li>
               </ul>
             </div>
             <a href="#contacto" class="inline-flex items-center gap-2 font-label text-label-lg text-brand-blue hover:text-light-secondary font-bold pt-4 border-t border-light-outline">
               <span>Ver Planes Fibra</span>
-              <span class="material-symbols-outlined text-base">arrow_forward</span>
+              <span class="material-symbols-outlined text-base" aria-hidden="true">arrow_forward</span>
             </a>
           </div>
 
           <!-- Servicio 3: Enlaces Inalámbricos & Punto a Punto -->
-          <div class="bg-light-surface p-8 rounded-xl border border-light-outline shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+          <div class="surface-card bg-light-surface p-8 rounded-xl border border-light-outline shadow-sm transition-all duration-300 flex flex-col justify-between group" data-tilt>
             <div>
               <div class="w-14 h-14 rounded-xl bg-brand-blue/10 text-brand-blue flex items-center justify-center mb-6 group-hover:bg-brand-blue group-hover:text-light-on-primary transition-colors">
-                <span class="material-symbols-outlined text-3xl">cell_tower</span>
+                <span class="material-symbols-outlined text-3xl" aria-hidden="true">cell_tower</span>
               </div>
               <h3 class="font-headline text-headline-md text-light-primary mb-3">Enlaces Inalámbricos &amp; PTP</h3>
               <p class="text-body-md text-light-secondary mb-6 leading-relaxed">
                 Interconexión de sucursales, almacenes y zonas con difícil acceso cableado mediante enlaces de radiofrecuencia microondas de grado carrier y alta inmunidad al ruido.
               </p>
               <ul class="space-y-2.5 text-body-sm text-light-on-surface mb-6">
-                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success text-base">check</span> Interconexión segura LAN to LAN (VLANs)</li>
-                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success text-base">check</span> Línea de vista y torres repetidoras propias</li>
-                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success text-base">check</span> Respaldo híbrido Fibra + Wireless</li>
+                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success text-base" aria-hidden="true">check</span> Interconexión segura LAN to LAN (VLANs)</li>
+                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success text-base" aria-hidden="true">check</span> Línea de vista y torres repetidoras propias</li>
+                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success text-base" aria-hidden="true">check</span> Respaldo híbrido Fibra + Wireless</li>
               </ul>
             </div>
             <a href="#contacto" class="inline-flex items-center gap-2 font-label text-label-lg text-brand-blue hover:text-light-secondary font-bold pt-4 border-t border-light-outline">
               <span>Consultar Factibilidad</span>
-              <span class="material-symbols-outlined text-base">arrow_forward</span>
+              <span class="material-symbols-outlined text-base" aria-hidden="true">arrow_forward</span>
             </a>
           </div>
         </div>
@@ -359,9 +409,9 @@
     <!-- ================= PLANES CORPORATIVOS Y RESIDENCIALES ================= -->
     <section id="planes" class="py-20 bg-light-surface border-b border-light-outline">
       <div class="max-w-7xl mx-auto px-4 sm:px-8">
-        <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="text-center max-w-3xl mx-auto mb-16" data-reveal>
           <div class="inline-flex items-center gap-2 text-brand-blue font-label text-label-lg font-bold mb-3">
-            <span class="material-symbols-outlined">speed</span>
+            <span class="material-symbols-outlined" aria-hidden="true">speed</span>
             <span>VELOCIDADES SIN LÍMITES</span>
           </div>
           <h2 class="font-headline text-headline-xl-mobile md:text-headline-xl text-light-primary tracking-tight">
@@ -372,9 +422,9 @@
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8" data-stagger>
           <!-- Plan 1 -->
-          <div class="p-8 rounded-xl border border-light-outline bg-light-surface-container flex flex-col justify-between">
+          <div class="plan-card p-8 rounded-xl border border-light-outline bg-light-surface-container flex flex-col justify-between" data-tilt>
             <div>
               <div class="text-label-md font-label uppercase text-brand-blue font-bold tracking-wider mb-2">Pymes &amp; Oficinas</div>
               <h3 class="font-headline text-headline-lg text-light-primary mb-4">Fibra Pro 200M</h3>
@@ -384,9 +434,9 @@
                 <span class="text-body-sm text-light-secondary ml-2">/ Simétrico</span>
               </div>
               <ul class="space-y-3 text-body-sm text-light-on-surface mb-8">
-                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success">check_circle</span> Ideal para 15-25 estaciones</li>
-                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success">check_circle</span> Streaming y videollamadas 4K fluidas</li>
-                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success">check_circle</span> Router Dual Band 5GHz</li>
+                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success" aria-hidden="true">check_circle</span> Ideal para 15-25 estaciones</li>
+                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success" aria-hidden="true">check_circle</span> Streaming y videollamadas 4K fluidas</li>
+                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success" aria-hidden="true">check_circle</span> Router Dual Band 5GHz</li>
               </ul>
             </div>
             <button type="button" onclick="seleccionarPlan(&#39;Fibra Pro 200M&#39;)" class="w-full py-3 rounded-md bg-light-primary text-light-on-primary font-label text-label-lg hover:bg-light-secondary transition-colors">
@@ -395,7 +445,7 @@
           </div>
 
           <!-- Plan 2: Destacado -->
-          <div class="p-8 rounded-xl border-2 border-brand-blue bg-light-surface shadow-xl relative flex flex-col justify-between scale-105 z-10">
+          <div class="plan-card cyan-glow-box p-8 rounded-xl border-2 border-brand-blue bg-light-surface shadow-xl relative flex flex-col justify-between lg:scale-105 z-10" data-tilt>
             <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-brand-blue text-light-on-primary font-label text-label-md shadow font-bold">
               Recomendado Empresas
             </div>
@@ -408,10 +458,10 @@
                 <span class="text-body-sm text-light-secondary ml-2">/ Simétrico 1:1</span>
               </div>
               <ul class="space-y-3 text-body-sm text-light-on-surface mb-8">
-                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success">check_circle</span> Servidores locales y nube pesada</li>
-                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success">check_circle</span> IP Fija Pública dedicada incluida</li>
-                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success">check_circle</span> Prioridad en atención y soporte NOC</li>
-                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success">check_circle</span> Instalación y certificación técnica VIP</li>
+                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success" aria-hidden="true">check_circle</span> Servidores locales y nube pesada</li>
+                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success" aria-hidden="true">check_circle</span> IP Fija Pública dedicada incluida</li>
+                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success" aria-hidden="true">check_circle</span> Prioridad en atención y soporte NOC</li>
+                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success" aria-hidden="true">check_circle</span> Instalación y certificación técnica VIP</li>
               </ul>
             </div>
             <button type="button" onclick="seleccionarPlan(&#39;Fibra Ultra 500M&#39;)" class="w-full py-3 rounded-md bg-brand-blue text-light-on-primary font-label text-label-lg hover:bg-light-secondary transition-colors shadow-md">
@@ -420,7 +470,7 @@
           </div>
 
           <!-- Plan 3 -->
-          <div class="p-8 rounded-xl border border-light-outline bg-light-surface-container flex flex-col justify-between">
+          <div class="plan-card p-8 rounded-xl border border-light-outline bg-light-surface-container flex flex-col justify-between" data-tilt>
             <div>
               <div class="text-label-md font-label uppercase text-brand-blue font-bold tracking-wider mb-2">Corporativo &amp; Data Centers</div>
               <h3 class="font-headline text-headline-lg text-light-primary mb-4">Giga Corporativo</h3>
@@ -430,9 +480,9 @@
                 <span class="text-body-sm text-light-secondary ml-2">/ Simétrico</span>
               </div>
               <ul class="space-y-3 text-body-sm text-light-on-surface mb-8">
-                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success">check_circle</span> Ancho de banda puro sin contención</li>
-                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success">check_circle</span> Enlace secundario de respaldo automático</li>
-                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success">check_circle</span> Ingeniero de cuenta dedicado</li>
+                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success" aria-hidden="true">check_circle</span> Ancho de banda puro sin contención</li>
+                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success" aria-hidden="true">check_circle</span> Enlace secundario de respaldo automático</li>
+                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success" aria-hidden="true">check_circle</span> Ingeniero de cuenta dedicado</li>
               </ul>
             </div>
             <button type="button" onclick="seleccionarPlan(&#39;Giga Corporativo 1000M&#39;)" class="w-full py-3 rounded-md bg-light-primary text-light-on-primary font-label text-label-lg hover:bg-light-secondary transition-colors">
@@ -443,16 +493,84 @@
       </div>
     </section>
 
+    <!-- ================= PROCESO DE CONTRATACIÓN ================= -->
+    <section id="proceso" class="py-20 bg-light-surface border-b border-light-outline">
+      <div class="max-w-7xl mx-auto px-4 sm:px-8">
+        <div class="max-w-3xl mb-14" data-reveal>
+          <div class="inline-flex items-center gap-2 text-brand-blue font-label text-label-lg font-bold mb-3">
+            <span class="material-symbols-outlined" aria-hidden="true">route</span>
+            <span>CÓMO TRABAJAMOS</span>
+          </div>
+          <h2 class="font-headline text-headline-xl-mobile md:text-headline-xl text-light-primary tracking-tight mb-4">
+            De la factibilidad a la red operativa en cuatro pasos
+          </h2>
+          <p class="text-body-lg text-light-secondary">
+            Un proceso claro, con ingeniería propia y acompañamiento humano desde la primera consulta hasta el monitoreo continuo.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" data-stagger>
+          <article class="process-card" data-tilt>
+            <span class="process-number" aria-hidden="true">01</span>
+            <span class="process-step">Paso 01</span>
+            <div class="icon-tile mb-5 mt-4">
+              <span class="material-symbols-outlined" aria-hidden="true">travel_explore</span>
+            </div>
+            <h3 class="font-headline text-title-lg text-light-primary mb-2">Factibilidad técnica</h3>
+            <p class="text-body-sm text-light-secondary leading-relaxed">
+              Verificamos cobertura, línea de vista y capacidad de red en tu ubicación antes de proponer una solución.
+            </p>
+          </article>
+
+          <article class="process-card" data-tilt>
+            <span class="process-number" aria-hidden="true">02</span>
+            <span class="process-step">Paso 02</span>
+            <div class="icon-tile mb-5 mt-4">
+              <span class="material-symbols-outlined" aria-hidden="true">architecture</span>
+            </div>
+            <h3 class="font-headline text-title-lg text-light-primary mb-2">Diseño del enlace</h3>
+            <p class="text-body-sm text-light-secondary leading-relaxed">
+              Dimensionamos ancho de banda, redundancia, IPs públicas y equipamiento según la operación de tu empresa.
+            </p>
+          </article>
+
+          <article class="process-card" data-tilt>
+            <span class="process-number" aria-hidden="true">03</span>
+            <span class="process-step">Paso 03</span>
+            <div class="icon-tile mb-5 mt-4">
+              <span class="material-symbols-outlined" aria-hidden="true">cable</span>
+            </div>
+            <h3 class="font-headline text-title-lg text-light-primary mb-2">Instalación certificada</h3>
+            <p class="text-body-sm text-light-secondary leading-relaxed">
+              Tendido de fibra, configuración de equipos y pruebas de velocidad, latencia y estabilidad en sitio.
+            </p>
+          </article>
+
+          <article class="process-card" data-tilt>
+            <span class="process-number" aria-hidden="true">04</span>
+            <span class="process-step">Paso 04</span>
+            <div class="icon-tile mb-5 mt-4">
+              <span class="material-symbols-outlined" aria-hidden="true">monitoring</span>
+            </div>
+            <h3 class="font-headline text-title-lg text-light-primary mb-2">Monitoreo continuo</h3>
+            <p class="text-body-sm text-light-secondary leading-relaxed">
+              Nuestro NOC vigila el enlace 24/7 y activa protocolos de respaldo ante cualquier incidencia.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <!-- ================= FORMULARIO INTELIGENTE A WHATSAPP & CONTACTO ================= -->
     <section id="contacto" class="py-20 bg-light-surface-container relative">
       <div id="cotizador-whatsapp" class="max-w-7xl mx-auto px-4 sm:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
           
           <!-- Contact Left: Corporate Legitimacy & Channels -->
-          <div class="lg:col-span-5 flex flex-col justify-between">
+          <div class="lg:col-span-5 flex flex-col justify-between" data-reveal>
             <div>
               <div class="inline-flex items-center gap-2 text-brand-blue font-label text-label-lg font-bold mb-3">
-                <span class="material-symbols-outlined">headset_mic</span>
+                <span class="material-symbols-outlined" aria-hidden="true">headset_mic</span>
                 <span>CENTRAL DE ATENCIÓN</span>
               </div>
               <h2 class="font-headline text-headline-xl-mobile md:text-headline-xl text-light-primary tracking-tight mb-4">
@@ -464,7 +582,7 @@
 
               <div class="space-y-4 mb-8">
                 <div class="flex items-start gap-4 p-4 rounded-lg bg-light-surface border border-light-outline">
-                  <span class="material-symbols-outlined text-brand-blue text-2xl mt-0.5">apartment</span>
+                  <span class="material-symbols-outlined text-brand-blue text-2xl mt-0.5" aria-hidden="true">apartment</span>
                   <div>
                     <div class="font-headline text-title-md text-light-primary">Razón Social Oficial</div>
                     <div class="text-body-md text-light-secondary">Wireless Supply C.A.</div>
@@ -473,7 +591,7 @@
                 </div>
 
                 <div class="flex items-start gap-4 p-4 rounded-lg bg-light-surface border border-light-outline">
-                  <span class="material-symbols-outlined text-success text-2xl mt-0.5">verified</span>
+                  <span class="material-symbols-outlined text-success text-2xl mt-0.5" aria-hidden="true">verified</span>
                   <div>
                     <div class="font-headline text-title-md text-light-primary">Canal WhatsApp Verificado</div>
                     <div class="text-body-md text-light-secondary">Atención comercial y técnica directa</div>
@@ -482,7 +600,7 @@
                 </div>
 
                 <div class="flex items-start gap-4 p-4 rounded-lg bg-light-surface border border-light-outline">
-                  <span class="material-symbols-outlined text-brand-blue text-2xl mt-0.5">schedule</span>
+                  <span class="material-symbols-outlined text-brand-blue text-2xl mt-0.5" aria-hidden="true">schedule</span>
                   <div>
                     <div class="font-headline text-title-md text-light-primary">Disponibilidad Operativa</div>
                     <div class="text-body-md text-light-secondary">Ventas: Lun - Sáb (8:00 AM - 6:00 PM)</div>
@@ -499,15 +617,15 @@
           </div>
 
           <!-- Contact Right: Intelligent WhatsApp Form -->
-          <div class="lg:col-span-7">
-            <div class="bg-light-surface p-8 sm:p-10 rounded-2xl border-2 border-light-outline shadow-xl relative">
+          <div class="lg:col-span-7" data-reveal>
+            <div class="bg-light-surface p-8 sm:p-10 rounded-2xl border-2 border-light-outline shadow-xl relative glass-strong">
               <div class="flex items-center justify-between pb-6 mb-6 border-b border-light-outline">
                 <div>
                   <h3 class="font-headline text-headline-md text-light-primary">Formulario Inteligente de Contacto</h3>
                   <p class="text-body-sm text-light-secondary">Genera tu mensaje formateado y conéctate al WhatsApp corporativo</p>
                 </div>
                 <div class="w-12 h-12 rounded-full bg-emerald-100 text-success flex items-center justify-center">
-                  <span class="material-symbols-outlined text-3xl">chat</span>
+                  <span class="material-symbols-outlined text-3xl" aria-hidden="true">chat</span>
                 </div>
               </div>
 
@@ -518,7 +636,7 @@
                     <label for="cliente_nombre" class="block font-label text-label-md text-light-primary mb-1.5">
                       Nombre o Empresa *
                     </label>
-                    <input type="text" id="cliente_nombre" required placeholder="Ej. Inversiones Alfa C.A." class="w-full px-4 py-3 rounded-md bg-light-surface border border-light-outline text-light-on-surface placeholder:text-slate-400 focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-colors text-body-md">
+                    <input type="text" id="cliente_nombre" required autocomplete="organization" placeholder="Ej. Inversiones Alfa C.A." class="w-full px-4 py-3 rounded-md bg-light-surface border border-light-outline text-light-on-surface placeholder:text-slate-400 focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-colors text-body-md">
                   </div>
 
                   <!-- Teléfono WhatsApp -->
@@ -526,7 +644,7 @@
                     <label for="cliente_telefono" class="block font-label text-label-md text-light-primary mb-1.5">
                       Tu Teléfono de Contacto *
                     </label>
-                    <input type="tel" id="cliente_telefono" required placeholder="Ej. 0412 1234567" class="w-full px-4 py-3 rounded-md bg-light-surface border border-light-outline text-light-on-surface placeholder:text-slate-400 focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-colors text-body-md">
+                    <input type="tel" id="cliente_telefono" required autocomplete="tel" inputmode="tel" placeholder="Ej. 0412 1234567" class="w-full px-4 py-3 rounded-md bg-light-surface border border-light-outline text-light-on-surface placeholder:text-slate-400 focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-colors text-body-md">
                   </div>
                 </div>
 
@@ -551,7 +669,7 @@
                     <label for="cliente_zona" class="block font-label text-label-md text-light-primary mb-1.5">
                       Ciudad / Zona de Instalación *
                     </label>
-                    <input type="text" id="cliente_zona" required placeholder="Ej. Caracas, Valencia, Maracay..." class="w-full px-4 py-3 rounded-md bg-light-surface border border-light-outline text-light-on-surface placeholder:text-slate-400 focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-colors text-body-md">
+                    <input type="text" id="cliente_zona" required autocomplete="address-level2" placeholder="Ej. Caracas, Valencia, Maracay..." class="w-full px-4 py-3 rounded-md bg-light-surface border border-light-outline text-light-on-surface placeholder:text-slate-400 focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-colors text-body-md">
                   </div>
                 </div>
 
@@ -572,14 +690,14 @@
                 </div>
 
                 <!-- Botón de Envío -->
-                <button type="submit" class="w-full py-4 px-6 rounded-md bg-success hover:bg-emerald-600 text-light-on-primary font-label text-label-lg font-bold shadow-lg flex items-center justify-center gap-3 transition-colors">
-                  <span class="material-symbols-outlined text-2xl">send</span>
+                <button type="submit" class="w-full py-4 px-6 rounded-md bg-success hover:bg-emerald-600 text-light-on-primary font-label text-label-lg font-bold shadow-lg flex items-center justify-center gap-3 transition-colors" data-magnetic>
+                  <span class="material-symbols-outlined text-2xl" aria-hidden="true">send</span>
                   <span>Enviar Consulta al WhatsApp Oficial</span>
                 </button>
 
                 <!-- Feedback Visual en Tiempo Real -->
-                <div id="formFeedback" class="hidden p-4 rounded-md bg-emerald-50 border border-success text-success text-body-sm flex items-center gap-2">
-                  <span class="material-symbols-outlined">check_circle</span>
+                <div id="formFeedback" role="status" aria-live="polite" class="hidden p-4 rounded-md bg-emerald-50 border border-success text-success text-body-sm flex items-center gap-2">
+                  <span class="material-symbols-outlined" aria-hidden="true">check_circle</span>
                   <span>¡Datos preparados con éxito! Redirigiendo a WhatsApp oficial de Wireless Supply...</span>
                 </div>
               </form>
@@ -593,9 +711,9 @@
     <!-- ================= PÁGINAS LEGALES & CUMPLIMIENTO META API ================= -->
     <section id="politicas" class="py-16 bg-light-surface border-t border-light-outline">
       <div class="max-w-5xl mx-auto px-4 sm:px-8">
-        <div class="text-center mb-12">
+        <div class="text-center mb-12" data-reveal>
           <div class="inline-flex items-center gap-2 text-brand-blue font-label text-label-md font-bold mb-2">
-            <span class="material-symbols-outlined">gavel</span>
+            <span class="material-symbols-outlined" aria-hidden="true">gavel</span>
             <span>MARCO LEGAL Y COMPLIANCE TÉCNICO</span>
           </div>
           <h2 class="font-headline text-headline-lg text-light-primary tracking-tight">
@@ -607,11 +725,11 @@
         </div>
 
         <!-- Tabbed Legal Content Accordion / Sections -->
-        <div class="space-y-6">
+        <div class="space-y-6" data-stagger>
           <!-- Política de Privacidad -->
-          <div class="p-6 rounded-xl bg-light-surface-container border border-light-outline">
+          <div class="surface-card p-6 rounded-xl bg-light-surface-container border border-light-outline" data-tilt>
             <h3 class="font-headline text-title-lg text-light-primary mb-3 flex items-center gap-2">
-              <span class="material-symbols-outlined text-brand-blue">lock</span>
+              <span class="material-symbols-outlined text-brand-blue" aria-hidden="true">lock</span>
               1. Política de Privacidad y Tratamiento de Datos
             </h3>
             <div class="text-body-sm text-light-secondary space-y-3 leading-relaxed">
@@ -628,9 +746,9 @@
           </div>
 
           <!-- Cumplimiento Meta WhatsApp Business API -->
-          <div class="p-6 rounded-xl bg-light-surface-container border border-light-outline">
+          <div class="surface-card p-6 rounded-xl bg-light-surface-container border border-light-outline" data-tilt>
             <h3 class="font-headline text-title-lg text-light-primary mb-3 flex items-center gap-2">
-              <span class="material-symbols-outlined text-brand-blue">api</span>
+              <span class="material-symbols-outlined text-brand-blue" aria-hidden="true">api</span>
               2. Cumplimiento de Políticas de Mensajería de Meta (WhatsApp Cloud API)
             </h3>
             <div class="text-body-sm text-light-secondary space-y-3 leading-relaxed">
@@ -646,15 +764,44 @@
           </div>
 
           <!-- Términos de Servicio de Telecomunicaciones -->
-          <div class="p-6 rounded-xl bg-light-surface-container border border-light-outline">
+          <div class="surface-card p-6 rounded-xl bg-light-surface-container border border-light-outline" data-tilt>
             <h3 class="font-headline text-title-lg text-light-primary mb-3 flex items-center gap-2">
-              <span class="material-symbols-outlined text-brand-blue">description</span>
+              <span class="material-symbols-outlined text-brand-blue" aria-hidden="true">description</span>
               3. Términos y Condiciones del Servicio de Telecomunicaciones
             </h3>
             <div class="text-body-sm text-light-secondary space-y-3 leading-relaxed">
               <p>
                 La provisión de enlaces dedicados y fibra simétrica GPON se formaliza mediante contratos individuales de nivel de servicio (SLA) según la viabilidad geográfica de cada zona. Los parámetros de velocidad contratados reflejan ancho de banda real simétrico hacia los principales puntos de intercambio de tráfico de internet (IXP) y rutas submarinas internacionales.
               </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ================= CTA FINAL ================= -->
+    <section class="py-16 md:py-24 bg-light-surface">
+      <div class="max-w-7xl mx-auto px-4 sm:px-8">
+        <div class="cta-panel" data-reveal>
+          <div class="relative z-10 max-w-3xl">
+            <div class="badge-cyber mb-5">
+              <span class="w-2 h-2 rounded-full bg-success animate-pulse"></span>
+              <span>Red disponible para nueva factibilidad</span>
+            </div>
+            <h2 class="font-headline text-headline-xl-mobile md:text-headline-xl text-light-primary tracking-tight mb-4">
+              Tu empresa no debería detenerse por una red inestable
+            </h2>
+            <p class="text-body-lg text-light-secondary mb-8">
+              Hablemos de tu operación y diseñemos el enlace que necesita. Un ingeniero revisará cobertura, capacidad y redundancia contigo.
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <a href="contacto.html" class="btn-primary" data-magnetic>
+                <span class="material-symbols-outlined" aria-hidden="true">travel_explore</span>
+                <span>Solicitar factibilidad</span>
+              </a>
+              <a href="https://wa.me/584120000000?text=Hola%20Wireless%20Supply,%20deseo%20una%20cotizaci%C3%B3n%20corporativa." target="_blank" rel="noopener noreferrer" class="btn-secondary" data-magnetic>
+                <span class="material-symbols-outlined" aria-hidden="true">chat</span>
+                <span>Hablar por WhatsApp</span>
+              </a>
             </div>
           </div>
         </div>
@@ -670,7 +817,7 @@
         <!-- Columna Marca y RIF -->
         <div class="lg:col-span-2">
           <div class="flex items-center gap-3 mb-4">
-            <img src="assets/img/logo-wireless-supply.png" alt="Wireless Supply C.A. Logo" class="h-10 w-auto brightness-200 contrast-125">
+            <img loading="eager" decoding="async" width="1600" height="1191" src="assets/img/logo-wireless-supply.png" alt="Wireless Supply C.A. Logo" class="h-10 w-auto brightness-200 contrast-125">
           </div>
           <p class="text-body-md text-slate-300 max-w-sm mb-4 leading-relaxed">
             Soluciones de telecomunicaciones, enlaces dedicados y fibra óptica de alta tecnología para empresas líderes en Venezuela.
@@ -734,7 +881,7 @@
 
   <!-- ================= BOTÓN FLOTANTE DIRECTO WHATSAPP ================= -->
   <a href="https://wa.me/584120000000?text=Hola%20Wireless%20Supply,%20deseo%20informaci%C3%B3n%20sobre%20sus%20servicios%20de%20internet%20y%20fibra%20%C3%B3ptica." target="_blank" rel="noopener noreferrer" aria-label="Contactar a Wireless Supply por WhatsApp" class="fixed bottom-6 right-6 z-50 flex items-center gap-2.5 px-4 py-3 rounded-full bg-success text-white shadow-2xl hover:bg-emerald-600 hover:scale-105 transition-all duration-300">
-    <span class="material-symbols-outlined text-2xl">chat</span>
+    <span class="material-symbols-outlined text-2xl" aria-hidden="true">chat</span>
     <span class="font-label text-label-lg font-bold pr-1">Atención WhatsApp</span>
   </a>
 
@@ -742,5 +889,8 @@
 
 
   <script src="assets/js/cotizador.js"></script>
+  <script src="assets/vendor/gsap.min.js"></script>
+  <script src="assets/vendor/ScrollTrigger.min.js"></script>
+  <script src="assets/js/effects.js"></script>
   <script src="assets/js/main.js"></script>
 </body></html>

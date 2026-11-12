@@ -11,27 +11,26 @@
   <meta property="og:image" content="https://wirelesssupply.com.ve/assets/img/logo-wireless-supply.png">
 
   <!-- Tailwind & Config -->
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <script src="assets/js/tailwind.config.js"></script>
+  <link rel="stylesheet" href="assets/css/tailwind.css">
 
   <!-- Typography & Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/estilos.css">
   <link rel="icon" type="image/png" href="assets/img/logo-wireless-supply.png">
 </head>
-<body class="min-h-[1024px] bg-light-primary text-light-on-surface font-body selection:bg-brand-blue selection:text-light-on-primary m-0 p-0">
+<body class="min-h-screen bg-light-primary text-light-on-surface font-body selection:bg-brand-blue selection:text-light-on-primary m-0 p-0">
 
   <!-- ================= HEADER & NAVIGATION (FOOTER DEEP NAVY BLUE) ================= -->
   <header class="sticky top-0 z-50 bg-light-primary border-b border-brand-blue/30 shadow-md">
     <div class="max-w-7xl mx-auto px-4 sm:px-8 py-3.5 flex items-center justify-between">
-      <a href="index.html" class="flex items-center gap-3 bg-white px-3.5 py-1.5 rounded-lg shadow-sm group focus:outline-none" aria-label="Wireless Supply Inicio">
-        <img src="assets/img/logo-wireless-supply.png" alt="Logo Oficial Wireless Supply C.A. RIF J507358860" class="h-10 md:h-11 w-auto object-contain transition-transform group-hover:scale-105">
+      <a href="index.html" class="flex items-center gap-3 shrink-0 bg-white px-3.5 py-1.5 rounded-lg shadow-sm group focus:outline-none" aria-label="Wireless Supply Inicio">
+        <img loading="eager" decoding="async" width="1600" height="1191" src="assets/img/logo-wireless-supply.png" alt="Logo Oficial Wireless Supply C.A. RIF J507358860" class="h-10 md:h-11 w-auto object-contain transition-transform group-hover:scale-105">
       </a>
 
-      <nav class="hidden md:flex items-center gap-8 font-label text-label-lg text-white" aria-label="Navegación principal">
+      <nav class="hidden lg:flex items-center gap-6 xl:gap-8 whitespace-nowrap font-label text-label-lg text-white" aria-label="Navegación principal">
         <a href="index.html" class="text-slate-200 hover:text-cyan-glow transition-colors">Inicio</a>
         <a href="sobre-nosotros.html" class="text-slate-200 hover:text-cyan-glow transition-colors">Sobre Nosotros</a>
         <a href="servicios.html" class="text-slate-200 hover:text-cyan-glow transition-colors">Servicios &amp; Fibra</a>
@@ -39,17 +38,17 @@
         <a href="contacto.html" class="text-slate-200 hover:text-cyan-glow transition-colors">Contacto</a>
       </nav>
 
-      <div class="flex items-center gap-3">
-        <button type="button" id="mobile-menu-toggle" class="md:hidden shrink-0 inline-flex items-center justify-center w-10 h-10 rounded-md border border-cyan-glow/50 text-cyan-glow hover:bg-brand-blue/20 transition-colors" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="mobile-menu">
-          <span class="material-symbols-outlined" data-menu-icon>menu</span>
+      <div class="flex items-center gap-3 shrink-0">
+        <button type="button" id="mobile-menu-toggle" class="lg:hidden shrink-0 inline-flex items-center justify-center w-11 h-11 rounded-md border border-cyan-glow/50 text-cyan-glow hover:bg-brand-blue/20 transition-colors" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="material-symbols-outlined" data-menu-icon aria-hidden="true">menu</span>
         </button>
-        <a href="contacto.html" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-md bg-brand-blue text-light-on-primary font-label text-label-lg font-bold shadow hover:bg-light-secondary transition-all">
-          <span class="material-symbols-outlined text-lg">chat</span>
+        <a href="contacto.html" class="inline-flex items-center justify-center gap-2 whitespace-nowrap min-h-11 px-5 py-2.5 rounded-md bg-brand-blue text-light-on-primary font-label text-label-lg font-bold shadow hover:bg-light-secondary transition-all">
+          <span class="material-symbols-outlined text-lg" aria-hidden="true">chat</span>
           <span class="sr-only sm:not-sr-only">WhatsApp Directo</span>
         </a>
       </div>
     </div>
-      <div id="mobile-menu" class="hidden md:hidden border-t border-brand-blue/30 bg-light-primary">
+      <div id="mobile-menu" class="hidden lg:hidden border-t border-brand-blue/30 bg-light-primary">
       <nav class="max-w-7xl mx-auto px-4 sm:px-8 py-3 flex flex-col" aria-label="Navegación móvil">
         <a href="index.html" class="flex items-center justify-between px-3 py-3 rounded-md font-label text-label-lg transition-colors text-slate-200 hover:text-cyan-glow hover:bg-brand-blue/10 border-b border-slate-700/50">
           <span>Inicio</span>
@@ -67,7 +66,7 @@
           <span>Contacto</span>
         </a>
         <a href="contacto.html" class="mt-2 inline-flex items-center justify-center gap-2 px-4 py-3 rounded-md bg-brand-blue text-light-on-primary font-label text-label-lg font-bold shadow hover:bg-light-secondary transition-colors">
-          <span class="material-symbols-outlined text-lg">travel_explore</span>
+          <span class="material-symbols-outlined text-lg" aria-hidden="true">travel_explore</span>
           <span>Solicitar factibilidad</span>
         </a>
       </nav>
@@ -77,9 +76,9 @@
   <main class="bg-light-surface">
     <!-- Page Header Hero -->
     <section class="py-16 md:py-20 grid-pattern bg-gradient-to-b from-light-surface-container to-light-surface border-b border-light-outline">
-      <div class="max-w-7xl mx-auto px-4 sm:px-8 text-center max-w-4xl mx-auto">
+      <div class="max-w-7xl mx-auto px-4 sm:px-8 text-center max-w-4xl mx-auto" data-reveal>
         <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-light-surface border border-light-outline text-brand-blue font-label text-label-md font-bold mb-4 shadow-sm">
-          <span class="material-symbols-outlined text-base">gavel</span>
+          <span class="material-symbols-outlined text-base" aria-hidden="true">gavel</span>
           <span>MARCO LEGAL Y COMPLIANCE TÉCNICO META</span>
         </div>
         <h1 class="font-headline text-display-lg-mobile md:text-display-lg text-light-primary tracking-tight mb-6">
@@ -93,10 +92,10 @@
 
     <!-- Marco Legal Completo -->
     <section class="py-20 bg-light-surface border-b border-light-outline">
-      <div class="max-w-4xl mx-auto px-4 sm:px-8 space-y-12">
+      <div class="max-w-4xl mx-auto px-4 sm:px-8 space-y-12" data-stagger>
         
         <!-- Ficha de Identidad Corporativa -->
-        <div class="p-6 rounded-xl bg-light-surface-container border border-brand-blue/30 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div class="surface-card p-6 rounded-xl bg-light-surface-container border border-brand-blue/30 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-6" data-tilt>
           <div>
             <div class="text-xs uppercase font-label font-bold text-brand-blue">Titular de la Entidad Comercial</div>
             <div class="font-headline text-headline-md text-light-primary">Wireless Supply C.A.</div>
@@ -113,7 +112,7 @@
         <!-- Sección 1 -->
         <article class="space-y-4">
           <h2 class="font-headline text-headline-md text-light-primary flex items-center gap-2 border-b border-light-outline pb-3">
-            <span class="material-symbols-outlined text-brand-blue">security</span>
+            <span class="material-symbols-outlined text-brand-blue" aria-hidden="true">security</span>
             1. Declaración de Privacidad y Recopilación de Datos
           </h2>
           <p class="text-body-md text-light-secondary leading-relaxed">
@@ -127,7 +126,7 @@
         <!-- Sección 2: Cumplimiento de Meta WhatsApp API -->
         <article class="space-y-4">
           <h2 class="font-headline text-headline-md text-light-primary flex items-center gap-2 border-b border-light-outline pb-3">
-            <span class="material-symbols-outlined text-brand-blue">cloud_sync</span>
+            <span class="material-symbols-outlined text-brand-blue" aria-hidden="true">cloud_sync</span>
             2. Cumplimiento de los Estándares de la API de WhatsApp de Meta Platforms
           </h2>
           <p class="text-body-md text-light-secondary leading-relaxed">
@@ -136,28 +135,28 @@
           
           <div class="p-6 rounded-xl bg-light-surface-container border border-light-outline space-y-4">
             <div class="flex items-start gap-3">
-              <span class="material-symbols-outlined text-success text-xl mt-0.5">check_circle</span>
+              <span class="material-symbols-outlined text-success text-xl mt-0.5" aria-hidden="true">check_circle</span>
               <div>
                 <strong class="text-light-primary">Mecanismo de Opt-In Transparente:</strong> El usuario otorga su consentimiento previo y deliberado para ser contactado por WhatsApp marcando la casilla de autorización antes de enviar cualquier consulta en nuestros formularios.
               </div>
             </div>
 
             <div class="flex items-start gap-3">
-              <span class="material-symbols-outlined text-success text-xl mt-0.5">check_circle</span>
+              <span class="material-symbols-outlined text-success text-xl mt-0.5" aria-hidden="true">check_circle</span>
               <div>
                 <strong class="text-light-primary">Propósito Único del Contacto:</strong> Las comunicaciones vía WhatsApp se circunscriben estrictamente al asesoramiento sobre fibra óptica, soporte técnico, factibilidad de red y atención a solicitudes directas formuladas por el interesado.
               </div>
             </div>
 
             <div class="flex items-start gap-3">
-              <span class="material-symbols-outlined text-success text-xl mt-0.5">check_circle</span>
+              <span class="material-symbols-outlined text-success text-xl mt-0.5" aria-hidden="true">check_circle</span>
               <div>
                 <strong class="text-light-primary">Derecho de Exclusión (Opt-Out):</strong> Todo usuario puede solicitar el cese inmediato de notificaciones en cualquier instante respondiendo con los comandos &#34;BAJA&#34;, &#34;STOP&#34; o &#34;CANCELAR&#34; en la conversación de WhatsApp.
               </div>
             </div>
 
             <div class="flex items-start gap-3">
-              <span class="material-symbols-outlined text-success text-xl mt-0.5">check_circle</span>
+              <span class="material-symbols-outlined text-success text-xl mt-0.5" aria-hidden="true">check_circle</span>
               <div>
                 <strong class="text-light-primary">No Compartición con Terceros:</strong> Wireless Supply C.A. jamás venderá ni facilitará números telefónicos ni historiales a intermediarios de marketing o bases de datos no autorizadas.
               </div>
@@ -168,7 +167,7 @@
         <!-- Sección 3: Términos y Condiciones Generales -->
         <article class="space-y-4">
           <h2 class="font-headline text-headline-md text-light-primary flex items-center gap-2 border-b border-light-outline pb-3">
-            <span class="material-symbols-outlined text-brand-blue">description</span>
+            <span class="material-symbols-outlined text-brand-blue" aria-hidden="true">description</span>
             3. Términos y Condiciones del Servicio de Telecomunicaciones
           </h2>
           <p class="text-body-md text-light-secondary leading-relaxed">
@@ -179,13 +178,27 @@
         <!-- Sección 4: Derechos ARCO -->
         <article class="space-y-4">
           <h2 class="font-headline text-headline-md text-light-primary flex items-center gap-2 border-b border-light-outline pb-3">
-            <span class="material-symbols-outlined text-brand-blue">manage_accounts</span>
+            <span class="material-symbols-outlined text-brand-blue" aria-hidden="true">manage_accounts</span>
             4. Ejercicio de Derechos de Acceso, Rectificación y Cancelación
           </h2>
           <p class="text-body-md text-light-secondary leading-relaxed">
             Cualquier suscriptor o prospecto puede solicitar la rectificación o eliminación total de sus datos almacenados en nuestros sistemas administrativos comunicándose formalmente a nuestro canal oficial de WhatsApp o visitando nuestras oficinas corporativas.
           </p>
         </article>
+
+        <!-- CTA de privacidad -->
+        <div class="surface-card p-6 sm:p-8 rounded-2xl bg-light-surface-container border border-brand-blue/30 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5" data-tilt>
+          <div>
+            <h2 class="font-headline text-headline-md text-light-primary mb-2">¿Tienes dudas sobre el tratamiento de tus datos?</h2>
+            <p class="text-body-sm text-light-secondary max-w-xl">
+              Nuestro equipo puede explicarte el alcance del consentimiento, los canales de contacto y cómo ejercer tus derechos ARCO.
+            </p>
+          </div>
+          <a href="contacto.html" class="btn-secondary shrink-0" data-magnetic>
+            <span class="material-symbols-outlined" aria-hidden="true">support_agent</span>
+            <span>Contactar</span>
+          </a>
+        </div>
 
       </div>
     </section>
@@ -197,7 +210,7 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-700">
         <div class="lg:col-span-2">
           <div class="flex items-center gap-3 mb-4">
-            <img src="assets/img/logo-wireless-supply.png" alt="Wireless Supply C.A. Logo" class="h-10 w-auto brightness-200 contrast-125">
+            <img loading="eager" decoding="async" width="1600" height="1191" src="assets/img/logo-wireless-supply.png" alt="Wireless Supply C.A. Logo" class="h-10 w-auto brightness-200 contrast-125">
           </div>
           <p class="text-body-md text-slate-300 max-w-sm mb-4 leading-relaxed">
             Soluciones de telecomunicaciones, enlaces dedicados y fibra óptica de alta tecnología para empresas líderes en Venezuela.
@@ -256,11 +269,14 @@
 
   <!-- Botón Flotante WhatsApp -->
   <a href="https://wa.me/584120000000?text=Hola%20Wireless%20Supply,%20tengo%20una%20consulta%20legal%20o%20de%20privacidad." target="_blank" rel="noopener noreferrer" aria-label="Contactar a Wireless Supply por WhatsApp" class="fixed bottom-6 right-6 z-50 flex items-center gap-2.5 px-4 py-3 rounded-full bg-success text-white shadow-2xl hover:bg-emerald-600 hover:scale-105 transition-all duration-300">
-    <span class="material-symbols-outlined text-2xl">chat</span>
+    <span class="material-symbols-outlined text-2xl" aria-hidden="true">chat</span>
     <span class="font-label text-label-lg font-bold pr-1">Atención WhatsApp</span>
   </a>
 
 
 
+  <script src="assets/vendor/gsap.min.js"></script>
+  <script src="assets/vendor/ScrollTrigger.min.js"></script>
+  <script src="assets/js/effects.js"></script>
   <script src="assets/js/main.js"></script>
 </body></html>
