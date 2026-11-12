@@ -4,7 +4,7 @@
 
 ## Fase actual
 
-**Fase 9 — Impacto visual v2.1:** completada. `v2.1.0`, `v2.1.1` y `v2.1.2` desplegadas y verificadas en producción.
+**Fase 9 — Impacto visual v2.1:** `v2.1.0`, `v2.1.1` y `v2.1.2` desplegadas y verificadas. `v2.1.3` añade el opt-in de movimiento para equipos con `prefers-reduced-motion: reduce` y queda pendiente de publicar.
 
 ## Hecho
 
@@ -31,7 +31,9 @@
 - **v2.1:** hooks `data-hero`, `data-hero-item`, `data-scramble`, `data-image-reveal` y `data-parallax` aplicados en las 7 páginas.
 - **v2.1.1:** el 404 calcula una base dinámica en el HTML fuente y el build de Vercel inyecta `<base href="/">` para que las rutas anidadas carguen CSS, JS, logo y enlaces desde la raíz.
 - **v2.1.2:** assets CSS/JS/vendor versionados con `?v=2.1.2` en las 7 páginas para invalidar cachés de navegador y CDN.
+- **v2.1.3:** botón “Activar” cuando el sistema pide movimiento reducido; guarda `ws-motion=full`, recarga y activa `force-motion`. Los assets pasan a `?v=2.1.3`.
 - **Producción v2.1.2:** 7 páginas 200 con assets `?v=2.1.2`, CSS/JS nuevos cargados, sin overflow ni errores de consola ni requests fallidos; 404 anidado con estado 404 y assets versionados.
+- **v2.1.3:** con `prefers-reduced-motion: reduce`, el 404, home y páginas muestran el botón “Activar”; al pulsarlo se guarda `ws-motion=full`, se recarga y se habilitan scanline, shimmer, cursor, progreso, canvas, parallax e image reveal. En modo normal el botón no aparece y las animaciones siguen activas.
 
 ## QA ejecutada
 

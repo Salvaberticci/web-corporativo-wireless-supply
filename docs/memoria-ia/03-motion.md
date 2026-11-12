@@ -63,6 +63,7 @@
 - Los contadores saltan al valor final con movimiento reducido y emiten un destello al llegar al valor final.
 - El header cambia de estado (`is-scrolled`) a partir de 20 px de scroll.
 - En móvil (<768 px) se desactivan el barrido de métricas, el borde cónico y la scanline para aligerar el pintado; el resto de efectos se mantiene.
+- Con `prefers-reduced-motion: reduce`, un botón “Activar” permite el opt-in explícito; la preferencia se guarda en `localStorage` (`ws-motion=full`) y activa la clase `force-motion`.
 
 ## Reglas de rendimiento
 
@@ -76,7 +77,8 @@
 
 ## Accesibilidad
 
-- `prefers-reduced-motion`: desactivar intro, parallax, scramble, cursor, marquee, scanline, glitch, shimmer, borde cónico y transiciones no esenciales; el canvas queda estático y el contenido visible.
+- Por defecto se respeta `prefers-reduced-motion: reduce`: sin intro, parallax, scramble, cursor, marquee, scanline, glitch, shimmer, borde cónico ni transiciones no esenciales; el canvas queda estático y el contenido visible.
+- Si el sistema pide movimiento reducido, aparece un botón discreto “Activar” que guarda `ws-motion=full` en `localStorage`, recarga y añade `force-motion` para habilitar la experiencia completa. Es un opt-in explícito, no una imposición.
 - Nunca mover el foco ni bloquear la lectura por una animación.
 - Los estados de carga y éxito deben anunciarse con `aria-live`.
 - El texto “decode” conserva el texto final accesible y no se usa en contenido crítico.

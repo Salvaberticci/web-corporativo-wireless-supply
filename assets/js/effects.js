@@ -7,7 +7,21 @@
 
   document.documentElement.classList.add('has-effects');
 
-  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const storedMotion = (() => {
+    try {
+      return window.localStorage.getItem('ws-motion');
+    } catch (error) {
+      return null;
+    }
+  })();
+  const forceMotion = storedMotion === 'full';
+  const reduceMotion = motionPreference.matches && !forceMotion;
+
+  if (forceMotion) {
+    document.documentElement.classList.add('force-motion');
+  }
+
   const finePointer = window.matchMedia('(pointer: fine)').matches;
   const isDesktop = window.matchMedia('(min-width: 1024px)').matches;
   const hasGSAP = Boolean(window.gsap);
@@ -593,6 +607,40 @@
   }
 
   initHeroScan();
+
+  /* ------------------------------------------------------------------------
+     Opt-in de movimiento cuando el sistema pide movimiento reducido
+     ------------------------------------------------------------------------ */
+  function initMotionToggle() {
+    if (!motionPreference.matches || forceMotion) return;
+    if (document.querySelector('.motion-toggle')) return;
+
+    const toggle = document.createElement('div');
+    toggle.className = 'motion-toggle';
+    toggle.setAttribute('role', 'region');
+    toggle.setAttribute('aria-label', 'Preferencia de animaciones');
+
+    const label = document.createElement('span');
+    label.textContent = 'Animaciones desactivadas por tu sistema';
+
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.textContent = 'Activar';
+    button.addEventListener('click', () => {
+      try {
+        window.localStorage.setItem('ws-motion', 'full');
+      } catch (error) {
+        /* Sin almacenamiento: se aplica solo en esta carga. */
+      }
+      window.location.reload();
+    });
+
+    toggle.appendChild(label);
+    toggle.appendChild(button);
+    document.body.appendChild(toggle);
+  }
+
+  initMotionToggle();
 
   /* ------------------------------------------------------------------------
      Transiciones de página

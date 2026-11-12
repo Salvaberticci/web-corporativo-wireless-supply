@@ -2,6 +2,23 @@
 
 Todas las versiones relevantes de este proyecto se documentan aquí. El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y el versionado semántico.
 
+## [2.1.3] — 2026-11-12
+
+### Añadido
+
+- Botón discreto “Activar” cuando el sistema tiene `prefers-reduced-motion: reduce`: guarda `ws-motion=full` en `localStorage`, recarga y habilita la experiencia completa sin cambiar la configuración del sistema.
+- Clase `force-motion` que reactiva las animaciones CSS/JS cuando el usuario acepta explícitamente el movimiento.
+
+### Cambiado
+
+- Assets CSS/JS/vendor actualizados a `?v=2.1.3` para invalidar caché.
+
+### QA
+
+- Con movimiento reducido: aparece el botón, el sitio respeta la preferencia por defecto y al activarlo se habilitan scanline, shimmer, cursor, progreso, canvas, parallax e image reveal.
+- En modo normal: el botón no aparece y las animaciones siguen activas.
+- Sin errores de consola ni overflow.
+
 ## [2.1.2] — 2026-11-12
 
 ### Cambiado

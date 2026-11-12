@@ -77,6 +77,13 @@
 - **Decisión:** quitar el fondo, borde y sombra del contenedor, subir la imagen a 56 px en móvil y 64 px en desktop, y añadir un `drop-shadow` cian sutil para separarla del fondo oscuro.
 - **Consecuencias:** el logo gana presencia sin aumentar el ancho del header; el footer conserva su tratamiento aclarado. Si el cliente entrega un logo para fondos oscuros, sustituir el PNG y revisar el glow.
 
+## ADR-016 — Opt-in explícito de movimiento
+
+- **Fecha:** 2026-11-12
+- **Contexto:** el cliente reportó que el sitio se veía estático; la causa era `prefers-reduced-motion: reduce` activo en su sistema. El sitio lo respetaba apagando todas las animaciones.
+- **Decisión:** mantener la preferencia del sistema por defecto y mostrar un botón discreto “Activar” solo cuando está activa. Al pulsarlo se guarda `ws-motion=full` en `localStorage`, se recarga la página y la clase `force-motion` reactiva las animaciones.
+- **Consecuencias:** accesibilidad y control del usuario; quien quiera movimiento puede activarlo sin tocar el sistema operativo. Para volver al modo reducido hay que borrar la clave `ws-motion` de `localStorage`.
+
 ## ADR-015 — Cache busting de assets
 
 - **Fecha:** 2026-11-12
