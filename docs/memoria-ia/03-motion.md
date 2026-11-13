@@ -26,8 +26,8 @@
 |---|---|---|---|
 | Red de fibra animada | Hero home y 404 | Canvas 2D + pointer parallax | Alta |
 | Intro coreografiada | Hero de las 7 páginas | GSAP timeline (`opacity` + `y`), stagger 80 ms | Alta |
-| Parallax de imágenes | Home, about y servicios (≥768 px) | GSAP + ScrollTrigger, `scrub: 0.6` | Media |
-| Revelado de imágenes | Home, about y servicios | IntersectionObserver en el padre + `clip-path` y `scale` | Alta |
+| Parallax de imágenes | Home (visual del hero), about y servicios (≥768 px) | GSAP + ScrollTrigger, `scrub: 0.6` | Media |
+| Revelado de imágenes | About y servicios | IntersectionObserver en el padre + `clip-path` y `scale` | Alta |
 | Texto “decode” | Etiquetas de sección y hero | `requestAnimationFrame` con glifos técnicos | Media |
 | Punto de progreso | Global | JS scroll + `translate3d()` | Baja |
 | Reveal on scroll | Secciones | IntersectionObserver + CSS (`opacity` + `translate`) | Alta |

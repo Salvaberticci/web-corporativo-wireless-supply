@@ -2,6 +2,22 @@
 
 Todas las versiones relevantes de este proyecto se documentan aquí. El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y el versionado semántico.
 
+## [2.3.0] — 2026-11-12
+
+### Cambiado
+
+- La home queda limitada a hero, marquee de tecnologías, métricas, proceso de contratación y CTA final.
+- Se eliminan de `index.html` las secciones `#sobre-nosotros`, `#servicios`, `#planes` y `#contacto`, que duplicaban `sobre-nosotros.html`, `servicios.html`, `planes.html` y `contacto.html`.
+- El CTA del hero apunta a `contacto.html#formulario`; “Conoce Nuestras Soluciones” apunta a `servicios.html`; “Explorar” baja al `#proceso`.
+- Se retira `assets/js/cotizador.js` de la home y se elimina el archivo, porque ninguna página lo carga.
+- Assets CSS/JS/vendor actualizados a `?v=2.3.0`.
+
+### QA
+
+- La home no contiene las secciones duplicadas ni enlaces internos a `#contacto`, `#servicios`, `#planes`, `#sobre-nosotros` o `#cotizador-whatsapp`.
+- Hero, métricas, proceso y CTA final se mantienen; enlaces del hero verificados.
+- Sin overflow ni errores de consola en local y producción.
+
 ## [2.2.1] — 2026-11-12
 
 ### Cambiado

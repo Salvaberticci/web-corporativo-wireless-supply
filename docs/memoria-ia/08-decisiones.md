@@ -77,6 +77,13 @@
 - **Decisión:** quitar el fondo, borde y sombra del contenedor, subir la imagen a 56 px en móvil y 64 px en desktop, y añadir un `drop-shadow` cian sutil para separarla del fondo oscuro.
 - **Consecuencias:** el logo gana presencia sin aumentar el ancho del header; el footer conserva su tratamiento aclarado. Si el cliente entrega un logo para fondos oscuros, sustituir el PNG y revisar el glow.
 
+## ADR-019 — Home sin secciones duplicadas
+
+- **Fecha:** 2026-11-12
+- **Contexto:** la home repetía misión/visión, servicios, planes y formulario que ya tienen páginas propias; el cliente pidió que el inicio no mostrara secciones repetidas.
+- **Decisión:** dejar la home con hero, marquee de tecnologías, métricas, proceso de 4 pasos y CTA final. Los enlaces del hero apuntan a `contacto.html#formulario` y `servicios.html`; “Explorar” baja al `#proceso`. Se elimina `assets/js/cotizador.js`, que solo usaba la home.
+- **Consecuencias:** la home es más corta y cada tema vive en una sola página; el formulario y los planes ya no se pueden operar desde inicio. Las anclas antiguas `index.html#sobre-nosotros`, `#servicios`, `#planes` y `#contacto` dejan de existir.
+
 ## ADR-018 — Contenido legal solo en `legal.html`
 
 - **Fecha:** 2026-11-12

@@ -27,7 +27,6 @@ web-corporativa-wireless/
 │   ├── js/
 │   │   ├── main.js           # navegación móvil y shell
 │   │   ├── effects.js        # reveals, intro, parallax, tilt, contadores, cursor, canvas
-│   │   ├── cotizador.js
 │   │   ├── contacto.js
 │   │   └── planes.js
 │   ├── img/

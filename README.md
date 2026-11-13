@@ -6,7 +6,7 @@ Sitio estático corporativo de **Wireless Supply C.A.** (RIF: J507358860), prove
 
 ```
 web-corporativa-wireless/
-├── index.html                  # Inicio (hero, servicios, planes destacados, cotizador)
+├── index.html                  # Inicio (hero, métricas, proceso y CTA final)
 ├── sobre-nosotros.html         # Quiénes somos, misión, visión, valores
 ├── servicios.html              # Servicios y soluciones de fibra óptica
 ├── planes.html                 # Tarifas y filtros por categoría
@@ -20,7 +20,6 @@ web-corporativa-wireless/
 │   ├── js/
 │   │   ├── main.js             # Menú móvil accesible
 │   │   ├── effects.js          # Reveals, tilt, contadores, canvas y transiciones
-│   │   ├── cotizador.js        # Formulario de cotización del inicio
 │   │   ├── contacto.js         # Formulario de contacto + prefill por URL
 │   │   └── planes.js           # Filtros de categoría en planes
 │   ├── img/
@@ -91,7 +90,7 @@ Vercel ejecuta `npm run build:vercel`, que compila Tailwind y genera `public/` s
 
 | Dato | Dónde | Valor actual |
 |---|---|---|
-| Número de WhatsApp | `assets/js/cotizador.js`, `assets/js/contacto.js`, enlaces `wa.me` en los 7 HTML | `584120000000` (placeholder) |
+| Número de WhatsApp | `assets/js/contacto.js` y enlaces `wa.me` en los 7 HTML | `584120000000` (placeholder) |
 | Dominio | `sitemap.xml`, `robots.txt`, etiquetas `og:image` | `https://wirelesssupply.com.ve` |
 | Redes sociales | Footer de cada página | Enlaces `#` pendientes |
 | Dirección / correo | `contacto.html`, footer | Pendiente de datos reales |
@@ -101,7 +100,7 @@ Busca `584120000000` en todo el proyecto y reemplázalo por el número oficial a
 ## Funcionalidades implementadas
 
 - **Menú móvil** accesible: `aria-expanded`, focus trap, cierre con Escape, clic fuera y cambio a escritorio (`assets/js/main.js`).
-- **Cotizador del inicio**: arma un mensaje estructurado y abre WhatsApp.
+- **Enlaces de conversión**: el hero y el CTA final llevan al formulario de `contacto.html#formulario`.
 - **Formulario de contacto**: valida campos y redirige a WhatsApp con el detalle de la solicitud.
 - **Prefill por URL**: `contacto.html?plan=Fibra%20Start%20100M` o `contacto.html?servicio=GPON` preselecciona el servicio.
 - **Filtros de planes**: Todos / Pymes / Corporativo en `planes.html`, con `aria-pressed`.

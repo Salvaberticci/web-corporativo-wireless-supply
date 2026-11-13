@@ -2,16 +2,15 @@
 
 ## index.html — Inicio
 
+La home no replica secciones de otras páginas: servicios, planes, misión/visión y formulario viven en sus propias páginas.
+
 1. Header sticky + menú móvil.
-2. Hero: badge, H1 con gradiente, subtítulo, CTAs, métricas (SLA, 1:1, 24/7), visual de fibra.
-3. Barra de confianza: RIF, Meta API, NOC.
-4. Servicios principales (bento grid).
-5. Por qué Wireless Supply (stats + beneficios).
-6. Planes destacados.
-7. Proceso de contratación.
-8. Testimonios / marquee de tecnologías.
-9. CTA final + cotizador.
-10. Footer.
+2. Hero: badge, H1 con gradiente, subtítulo, CTAs y sellos RIF / Meta API.
+3. Marquee de tecnologías.
+4. Banda de métricas: SLA, simetría 1:1, NOC 24/7 y km de fibra.
+5. Proceso de contratación en 4 pasos.
+6. CTA final.
+7. Footer.
 
 ## sobre-nosotros.html — Empresa
 
