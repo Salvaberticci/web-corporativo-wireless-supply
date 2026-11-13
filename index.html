@@ -38,14 +38,14 @@
   </script>
 
   <!-- Tailwind & Config -->
-  <link rel="stylesheet" href="assets/css/tailwind.css?v=2.3.0">
+  <link rel="stylesheet" href="assets/css/tailwind.css?v=2.4.0">
 
   <!-- Typography & Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/estilos.css?v=2.3.0">
+  <link rel="stylesheet" href="assets/css/estilos.css?v=2.4.0">
   <link rel="icon" type="image/png" href="assets/img/logo-wireless-supply.png">
 </head>
 <body class="min-h-screen bg-light-primary text-light-on-surface font-body selection:bg-brand-blue selection:text-light-on-primary m-0 p-0">
@@ -200,7 +200,7 @@
         </div>
       </div>
 
-      <a href="#proceso" class="hero-scroll" aria-label="Ver nuestro proceso de contratación">Explorar</a>
+      <a href="#sectores" class="hero-scroll" aria-label="Descubrir los sectores que atendemos">Explorar</a>
     </section>
 
     <!-- ================= MARQUEE DE TECNOLOGÍAS ================= -->
@@ -247,6 +247,86 @@
         <div class="text-center lg:text-left">
           <div class="stat-value"><span class="accent" data-counter="100" data-counter-prefix="+" data-counter-suffix=" km">+100 km</span></div>
           <div class="stat-label">Fibra troncal desplegada</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECTORES ATENDIDOS ================= -->
+    <section id="sectores" class="py-20 bg-light-surface-container border-b border-light-outline" aria-labelledby="sectores-title">
+      <div class="max-w-7xl mx-auto px-4 sm:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-14" data-reveal>
+          <div class="inline-flex items-center gap-2 text-brand-blue font-label text-label-lg font-bold mb-3">
+            <span class="material-symbols-outlined" aria-hidden="true">domain</span>
+            <span data-scramble>SECTORES ATENDIDOS</span>
+          </div>
+          <h2 id="sectores-title" class="font-headline text-headline-xl-mobile md:text-headline-xl text-light-primary tracking-tight">
+            Conectividad para operaciones que no pueden detenerse
+          </h2>
+          <p class="text-body-lg text-light-secondary">
+            Cada sector exige un nivel distinto de disponibilidad, seguridad y respaldo. Diseñamos el enlace según tu operación.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" data-stagger>
+          <article class="surface-card p-7 rounded-xl border border-light-outline h-full" data-tilt>
+            <div class="icon-tile mb-5">
+              <span class="material-symbols-outlined" aria-hidden="true">account_balance</span>
+            </div>
+            <h3 class="font-headline text-title-lg text-light-primary mb-2">Banca y finanzas</h3>
+            <p class="text-body-sm text-light-secondary leading-relaxed">
+              Enlaces simétricos y rutas de respaldo para sucursales, servicios transaccionales y atención al cliente sin interrupciones.
+            </p>
+          </article>
+
+          <article class="surface-card p-7 rounded-xl border border-light-outline h-full" data-tilt>
+            <div class="icon-tile mb-5">
+              <span class="material-symbols-outlined" aria-hidden="true">local_hospital</span>
+            </div>
+            <h3 class="font-headline text-title-lg text-light-primary mb-2">Salud y clínicas</h3>
+            <p class="text-body-sm text-light-secondary leading-relaxed">
+              Conectividad estable para historia clínica digital, imagenología y coordinación entre sedes y especialistas.
+            </p>
+          </article>
+
+          <article class="surface-card p-7 rounded-xl border border-light-outline h-full" data-tilt>
+            <div class="icon-tile mb-5">
+              <span class="material-symbols-outlined" aria-hidden="true">factory</span>
+            </div>
+            <h3 class="font-headline text-title-lg text-light-primary mb-2">Industria y plantas</h3>
+            <p class="text-body-sm text-light-secondary leading-relaxed">
+              Fibra dedicada y enlaces PTP para procesos productivos, sensores y control de operaciones en planta.
+            </p>
+          </article>
+
+          <article class="surface-card p-7 rounded-xl border border-light-outline h-full" data-tilt>
+            <div class="icon-tile mb-5">
+              <span class="material-symbols-outlined" aria-hidden="true">school</span>
+            </div>
+            <h3 class="font-headline text-title-lg text-light-primary mb-2">Educación</h3>
+            <p class="text-body-sm text-light-secondary leading-relaxed">
+              Redes de alta capacidad para campus, aulas digitales y plataformas de aprendizaje en línea.
+            </p>
+          </article>
+
+          <article class="surface-card p-7 rounded-xl border border-light-outline h-full" data-tilt>
+            <div class="icon-tile mb-5">
+              <span class="material-symbols-outlined" aria-hidden="true">storefront</span>
+            </div>
+            <h3 class="font-headline text-title-lg text-light-primary mb-2">Retail y centros comerciales</h3>
+            <p class="text-body-sm text-light-secondary leading-relaxed">
+              Cobertura para puntos de venta, inventario y pasarelas de pago que dependen de la red en tiempo real.
+            </p>
+          </article>
+
+          <article class="surface-card p-7 rounded-xl border border-light-outline h-full" data-tilt>
+            <div class="icon-tile mb-5">
+              <span class="material-symbols-outlined" aria-hidden="true">corporate_fare</span>
+            </div>
+            <h3 class="font-headline text-title-lg text-light-primary mb-2">Corporativos y oficinas</h3>
+            <p class="text-body-sm text-light-secondary leading-relaxed">
+              Internet 1:1, IP pública y VPN para equipos distribuidos, sedes múltiples y trabajo híbrido.
+            </p>
+          </article>
         </div>
       </div>
     </section>
@@ -315,6 +395,86 @@
               Nuestro NOC vigila el enlace 24/7 y activa protocolos de respaldo ante cualquier incidencia.
             </p>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PREGUNTAS FRECUENTES ================= -->
+    <section id="faq" class="py-20 bg-light-surface-container border-b border-light-outline" aria-labelledby="faq-title">
+      <div class="max-w-4xl mx-auto px-4 sm:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-12" data-reveal>
+          <div class="inline-flex items-center gap-2 text-brand-blue font-label text-label-lg font-bold mb-3">
+            <span class="material-symbols-outlined" aria-hidden="true">help</span>
+            <span data-scramble>ANTES DE CONTRATAR</span>
+          </div>
+          <h2 id="faq-title" class="font-headline text-headline-xl-mobile md:text-headline-xl text-light-primary tracking-tight mb-4">
+            Preguntas frecuentes de conectividad empresarial
+          </h2>
+          <p class="text-body-lg text-light-secondary">
+            Las dudas que más nos plantean los equipos de TI antes de solicitar una factibilidad.
+          </p>
+        </div>
+
+        <div class="faq-list" data-stagger>
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>¿Qué diferencia un enlace dedicado 1:1 de un internet compartido?</span>
+              <span class="faq-icon" aria-hidden="true"><span class="material-symbols-outlined text-base">add</span></span>
+            </summary>
+            <div class="faq-answer">
+              <p>En un enlace dedicado el ancho de banda es exclusivo para tu empresa: no se reparte con otros usuarios y la velocidad de subida y bajada se mantiene constante. En un servicio compartido, el rendimiento puede variar según la demanda de la zona.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>¿Cómo se verifica la factibilidad de mi ubicación?</span>
+              <span class="faq-icon" aria-hidden="true"><span class="material-symbols-outlined text-base">add</span></span>
+            </summary>
+            <div class="faq-answer">
+              <p>Revisamos cobertura, línea de vista y capacidad de red en tu dirección. Si la infraestructura no llega, evaluamos alternativas inalámbricas o un diseño a medida.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>¿Qué cubre el SLA del 99.8%?</span>
+              <span class="faq-icon" aria-hidden="true"><span class="material-symbols-outlined text-base">add</span></span>
+            </summary>
+            <div class="faq-answer">
+              <p>El acuerdo de nivel de servicio define la disponibilidad comprometida y el marco de respuesta ante incidencias. Los tiempos, penalizaciones y el alcance exacto se formalizan en el contrato de cada enlace.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>¿Puedo solicitar IP pública fija o enlaces redundantes?</span>
+              <span class="faq-icon" aria-hidden="true"><span class="material-symbols-outlined text-base">add</span></span>
+            </summary>
+            <div class="faq-answer">
+              <p>Sí. Los planes corporativos pueden incluir IP pública estática, enlaces de respaldo y arquitecturas multipunto según la criticidad de tu operación.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>¿Cuánto tarda la instalación?</span>
+              <span class="faq-icon" aria-hidden="true"><span class="material-symbols-outlined text-base">add</span></span>
+            </summary>
+            <div class="faq-answer">
+              <p>El plazo depende de la factibilidad técnica y de la obra requerida en sitio. Después de la evaluación, el equipo confirma el cronograma y las condiciones de instalación.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>¿Cómo inicio el proceso?</span>
+              <span class="faq-icon" aria-hidden="true"><span class="material-symbols-outlined text-base">add</span></span>
+            </summary>
+            <div class="faq-answer">
+              <p>Solicita una factibilidad desde la <a href="contacto.html" class="text-brand-blue underline hover:text-light-secondary">página de contacto</a> o por WhatsApp. Un ingeniero revisará cobertura, capacidad y redundancia contigo antes de proponer una solución.</p>
+            </div>
+          </details>
         </div>
       </div>
     </section>
@@ -429,8 +589,8 @@
   
 
 
-  <script src="assets/vendor/gsap.min.js?v=2.3.0"></script>
-  <script src="assets/vendor/ScrollTrigger.min.js?v=2.3.0"></script>
-  <script src="assets/js/effects.js?v=2.3.0"></script>
-  <script src="assets/js/main.js?v=2.3.0"></script>
+  <script src="assets/vendor/gsap.min.js?v=2.4.0"></script>
+  <script src="assets/vendor/ScrollTrigger.min.js?v=2.4.0"></script>
+  <script src="assets/js/effects.js?v=2.4.0"></script>
+  <script src="assets/js/main.js?v=2.4.0"></script>
 </body></html>

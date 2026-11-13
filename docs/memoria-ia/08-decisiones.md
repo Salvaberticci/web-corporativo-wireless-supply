@@ -77,6 +77,13 @@
 - **Decisión:** quitar el fondo, borde y sombra del contenedor, subir la imagen a 56 px en móvil y 64 px en desktop, y añadir un `drop-shadow` cian sutil para separarla del fondo oscuro.
 - **Consecuencias:** el logo gana presencia sin aumentar el ancho del header; el footer conserva su tratamiento aclarado. Si el cliente entrega un logo para fondos oscuros, sustituir el PNG y revisar el glow.
 
+## ADR-020 — Sectores y FAQ propias en la home
+
+- **Fecha:** 2026-11-12
+- **Contexto:** tras retirar las secciones duplicadas, el cliente pidió dos bloques más para que la home no quedara demasiado corta, sin volver a repetir contenido de otras páginas.
+- **Decisión:** añadir “Sectores atendidos” (seis industrias, sin cifras ni clientes inventados) y “Preguntas frecuentes” (seis dudas respondidas con información ya publicada). La FAQ usa `<details>/<summary>` nativo para funcionar sin JavaScript y conservar accesibilidad. “Explorar” pasa a apuntar a `#sectores`.
+- **Consecuencias:** la home gana contenido propio y valor SEO; las respuestas de la FAQ deben revisarse si cambian los planes, el SLA o las condiciones comerciales.
+
 ## ADR-019 — Home sin secciones duplicadas
 
 - **Fecha:** 2026-11-12

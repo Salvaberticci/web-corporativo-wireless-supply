@@ -47,7 +47,7 @@
 - Alcance entre paréntesis: `feat(home): hero animado`.
 - Un commit por unidad lógica; no mezclar rediseño y limpieza.
 - Ramas: `feature/...`, `fix/...`, `docs/...`.
-- Tags: `v1.0.0` baseline, `v2.0.0` rediseño, `v2.0.1` logo, `v2.1.0` impacto visual, `v2.1.1` 404 anidado, `v2.1.2` cache busting, `v2.1.3` opt-in de movimiento, `v2.2.0` animaciones siempre activas, `v2.2.1` legal solo en `legal.html` y `v2.3.0` home sin secciones duplicadas.
+- Tags: `v1.0.0` baseline, `v2.0.0` rediseño, `v2.0.1` logo, `v2.1.0` impacto visual, `v2.1.1` 404 anidado, `v2.1.2` cache busting, `v2.1.3` opt-in de movimiento, `v2.2.0` animaciones siempre activas, `v2.2.1` legal solo en `legal.html`, `v2.3.0` home sin secciones duplicadas y `v2.4.0` sectores y FAQ en la home.
 
 ## Calidad antes de commit
 

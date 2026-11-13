@@ -17,6 +17,7 @@ Objetivo: **WCAG 2.2 AA** en todas las páginas.
 - [ ] Errores descritos en texto y asociados con `aria-describedby`.
 - [ ] Estados de envío con `aria-live="polite"`.
 - [ ] Menú móvil con `aria-expanded`, foco atrapado y cierre con Escape.
+- [x] FAQ de la home con `<details>/<summary>` nativo, foco visible y sin dependencia de JavaScript.
 - [x] Animaciones siempre activas por decisión del cliente (excepción documentada en ADR-017).
 - [ ] Enlaces con texto descriptivo (evitar “clic aquí”).
 - [ ] Tablas con `<caption>` o título asociado.
@@ -26,6 +27,7 @@ Objetivo: **WCAG 2.2 AA** en todas las páginas.
 
 - Tab recorre en orden lógico.
 - Enter/Espacio activan botones.
+- Enter/Espacio abren y cierran los detalles de la FAQ.
 - Escape cierra menú y modales.
 - El foco regresa al disparador al cerrar.
 - No hay trampas de foco fuera de modales.

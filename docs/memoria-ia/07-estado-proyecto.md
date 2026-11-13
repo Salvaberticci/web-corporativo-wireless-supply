@@ -4,7 +4,7 @@
 
 ## Fase actual
 
-**Fase 12 — Home sin secciones duplicadas v2.3.0:** completada. La home queda con hero, marquee, métricas, proceso y CTA final; servicios, planes, misión/visión y formulario viven solo en sus páginas.
+**Fase 13 — Sectores y FAQ en la home v2.4.0:** completada. La home suma “Sectores atendidos” y “Preguntas frecuentes”, contenido propio que no duplica otras páginas.
 
 ## Hecho
 
@@ -35,6 +35,7 @@
 - **v2.2.0:** se elimina el modo de movimiento reducido, el botón “Activar”, `force-motion`, `ws-motion` y los bloques CSS de `prefers-reduced-motion`; las animaciones quedan activas siempre. Los assets pasan a `?v=2.2.0`.
 - **Producción v2.2.0:** 7 páginas 200 con assets `?v=2.2.0`; con `prefers-reduced-motion: reduce` no aparece el toggle y scanline, shimmer, marquee, cursor, progreso, canvas, parallax e image reveal siguen activos. 404 anidado con estado 404, glitch activo y assets versionados; sin overflow.
 - **v2.3.0:** se eliminan de la home `#sobre-nosotros`, `#servicios`, `#planes` y `#contacto`; el hero enlaza a `contacto.html#formulario` y `servicios.html`, y “Explorar” apunta a `#proceso`. Se retira `assets/js/cotizador.js` de la home y se elimina el archivo.
+- **v2.4.0:** la home incorpora “Sectores atendidos” (banca, salud, industria, educación, retail y corporativos) y “Preguntas frecuentes” con 6 `<details>` nativos; “Explorar” apunta a `#sectores` y los assets pasan a `?v=2.4.0`.
 
 ## QA ejecutada
 
@@ -61,6 +62,7 @@
 - **Producción v2.2.1:** home sin `#politicas` ni “Términos Legales”, enlace con pestaña nueva y ancla legal con scroll; legal conserva privacidad, Meta API, términos y ARCO. 7 páginas × 320/390/1280 sin overflow, assets `?v=2.2.1` y 404 anidado correcto; solo el 404 esperado en consola.
 - **v2.3.0:** home con hero, marquee, métricas, proceso y CTA; sin las 4 secciones duplicadas ni enlaces internos a sus anclas. Enlaces del hero a `contacto.html#formulario` y `servicios.html`, “Explorar” a `#proceso`; 7 páginas × 320/390/768/1280/1920 sin overflow y assets `?v=2.3.0`.
 - **Producción v2.3.0:** home con 4 secciones (`#inicio`, métricas, `#proceso`, CTA final), sin formulario ni `cotizador.js`; el CTA del hero abre `contacto.html#formulario` y “Explorar” baja al proceso. 7 páginas × 320/390/1280 sin overflow ni imágenes rotas, assets `?v=2.3.0`, 404 anidado correcto y solo el 404 esperado en consola.
+- **v2.4.0:** home con 6 secciones (hero, métricas, sectores, proceso, FAQ y CTA); 6 tarjetas de sectores y 6 preguntas frecuentes. FAQ abierta y cerrada con ratón y teclado, respuestas ocultas al cerrar, “Explorar” a `#sectores`; 7 páginas × 320/390/768/1280/1920 sin overflow, sin imágenes rotas y sin errores de consola.
 
 ## Siguiente
 

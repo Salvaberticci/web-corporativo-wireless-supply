@@ -49,6 +49,7 @@
 | Brillo de botón secundario | CTAs secundarios | Barrido con `transform` al hover | Baja |
 | Glitch RGB | 404 | `drop-shadow` cian/magenta 5.5 s | Baja |
 | Entrada al filtrar planes | Planes | Keyframe CSS + delay de 35 ms por card | Baja |
+| Despliegue de FAQ | Home | `<details>` nativo + rotación 45° del icono y fade de 350 ms | Baja |
 
 ## Implementación actual
 
@@ -60,6 +61,8 @@
 - El canvas usa entre 18 y 46 nodos, DPR máximo 2, y se pausa al salir del viewport o con la pestaña oculta.
 - El tilt y los botones magnéticos solo se activan con `pointer: fine`.
 - El marquee se pausa al hover.
+- La FAQ usa `<details>/<summary>` nativo: el icono rota 45° y la respuesta entra con un fade de 350 ms. No requiere JavaScript.
+- Los sectores de la home reutilizan las tarjetas con tilt, spotlight y stagger existentes.
 - Los contadores emiten un destello al llegar al valor final.
 - El header cambia de estado (`is-scrolled`) a partir de 20 px de scroll.
 - En móvil (<768 px) se desactivan el barrido de métricas, el borde cónico y la scanline para aligerar el pintado; el resto de efectos se mantiene.

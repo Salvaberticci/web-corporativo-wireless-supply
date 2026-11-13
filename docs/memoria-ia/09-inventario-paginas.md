@@ -2,15 +2,17 @@
 
 ## index.html — Inicio
 
-La home no replica secciones de otras páginas: servicios, planes, misión/visión y formulario viven en sus propias páginas.
+La home no replica secciones de otras páginas: servicios, planes, misión/visión y formulario viven en sus propias páginas. Sectores y FAQ son contenido propio de inicio.
 
 1. Header sticky + menú móvil.
 2. Hero: badge, H1 con gradiente, subtítulo, CTAs y sellos RIF / Meta API.
 3. Marquee de tecnologías.
 4. Banda de métricas: SLA, simetría 1:1, NOC 24/7 y km de fibra.
-5. Proceso de contratación en 4 pasos.
-6. CTA final.
-7. Footer.
+5. Sectores atendidos: banca, salud, industria, educación, retail y corporativos (6 tarjetas).
+6. Proceso de contratación en 4 pasos.
+7. Preguntas frecuentes: 6 respuestas con `<details>/<summary>` nativo.
+8. CTA final.
+9. Footer.
 
 ## sobre-nosotros.html — Empresa
 

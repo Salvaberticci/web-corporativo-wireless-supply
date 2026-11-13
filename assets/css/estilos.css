@@ -653,6 +653,105 @@ button.bg-light-primary:hover {
   pointer-events: none;
 }
 
+/* FAQ: disclosure nativo, sin dependencia de JavaScript */
+.faq-list {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.faq-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  border: 1px solid rgba(125, 211, 252, 0.14);
+  background: linear-gradient(160deg, rgba(19, 45, 82, 0.42), rgba(10, 22, 40, 0.72));
+  transition: border-color 0.35s ease, background 0.35s ease;
+}
+
+.faq-item::before {
+  content: '';
+  position: absolute;
+  top: 1rem;
+  bottom: 1rem;
+  left: 0;
+  width: 2px;
+  border-radius: 2px;
+  background: linear-gradient(to bottom, var(--glow), rgba(0, 210, 255, 0));
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.faq-item[open] {
+  border-color: rgba(0, 210, 255, 0.32);
+  background: linear-gradient(160deg, rgba(19, 45, 82, 0.62), rgba(10, 22, 40, 0.82));
+}
+
+.faq-item[open]::before {
+  opacity: 1;
+}
+
+.faq-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.15rem 1.4rem;
+  cursor: pointer;
+  list-style: none;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.45;
+  color: var(--white);
+}
+
+.faq-question::-webkit-details-marker {
+  display: none;
+}
+
+.faq-question:focus-visible {
+  outline: 2px solid var(--glow);
+  outline-offset: -2px;
+  border-radius: 1rem;
+}
+
+.faq-icon {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 210, 255, 0.3);
+  color: var(--glow);
+  transition: transform 0.3s var(--ease-premium), background-color 0.3s ease;
+}
+
+.faq-item[open] .faq-icon {
+  transform: rotate(45deg);
+  background-color: rgba(0, 210, 255, 0.12);
+}
+
+.faq-answer {
+  padding: 0 1.4rem 1.3rem;
+  color: var(--muted);
+  font-size: 0.94rem;
+  line-height: 1.7;
+}
+
+.faq-answer a {
+  color: var(--glow);
+}
+
+.faq-item[open] .faq-answer {
+  animation: faq-reveal 0.35s var(--ease-premium);
+}
+
+@keyframes faq-reveal {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 .cta-panel {
   position: relative;
   overflow: hidden;

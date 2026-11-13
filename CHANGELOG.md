@@ -2,6 +2,25 @@
 
 Todas las versiones relevantes de este proyecto se documentan aquí. El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y el versionado semántico.
 
+## [2.4.0] — 2026-11-12
+
+### Añadido
+
+- Nueva sección “Sectores atendidos” en la home: banca, salud, industria, educación, retail y corporativos, con seis tarjetas propias.
+- Nueva sección “Preguntas frecuentes” en la home con seis respuestas sobre enlace dedicado, factibilidad, SLA, IP pública, instalación y proceso de contratación.
+- La FAQ usa `<details>/<summary>` nativo, funciona sin JavaScript y abre/cierra con ratón o teclado.
+
+### Cambiado
+
+- “Explorar” en el hero ahora baja a `#sectores`.
+- Assets CSS/JS/vendor actualizados a `?v=2.4.0`.
+
+### QA
+
+- Home con 6 secciones: hero, métricas, sectores, proceso, FAQ y CTA final.
+- FAQ abierta y cerrada con ratón y teclado; las respuestas permanecen ocultas cuando el detalle está cerrado.
+- 7 páginas × 320/390/768/1280/1920 sin overflow, sin imágenes rotas y sin errores de consola.
+
 ## [2.3.0] — 2026-11-12
 
 ### Cambiado
