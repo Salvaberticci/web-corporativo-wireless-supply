@@ -21,6 +21,11 @@ Todas las versiones relevantes de este proyecto se documentan aquí. El formato 
 - FAQ abierta y cerrada con ratón y teclado; las respuestas permanecen ocultas cuando el detalle está cerrado.
 - 7 páginas × 320/390/768/1280/1920 sin overflow, sin imágenes rotas y sin errores de consola.
 
+### Despliegue
+
+- Producción verificada: home con 6 secciones, 6 tarjetas de sectores y 6 FAQ; “Explorar” baja a `#sectores`, FAQ abre/cierra con ratón y teclado y el CTA sigue abriendo `contacto.html#formulario`.
+- 7 páginas × 320/390/1280 sin overflow ni imágenes rotas, assets `?v=2.4.0` y 404 anidado correcto; solo el 404 esperado en consola.
+
 ## [2.3.0] — 2026-11-12
 
 ### Cambiado

@@ -63,6 +63,7 @@
 - **v2.3.0:** home con hero, marquee, métricas, proceso y CTA; sin las 4 secciones duplicadas ni enlaces internos a sus anclas. Enlaces del hero a `contacto.html#formulario` y `servicios.html`, “Explorar” a `#proceso`; 7 páginas × 320/390/768/1280/1920 sin overflow y assets `?v=2.3.0`.
 - **Producción v2.3.0:** home con 4 secciones (`#inicio`, métricas, `#proceso`, CTA final), sin formulario ni `cotizador.js`; el CTA del hero abre `contacto.html#formulario` y “Explorar” baja al proceso. 7 páginas × 320/390/1280 sin overflow ni imágenes rotas, assets `?v=2.3.0`, 404 anidado correcto y solo el 404 esperado en consola.
 - **v2.4.0:** home con 6 secciones (hero, métricas, sectores, proceso, FAQ y CTA); 6 tarjetas de sectores y 6 preguntas frecuentes. FAQ abierta y cerrada con ratón y teclado, respuestas ocultas al cerrar, “Explorar” a `#sectores`; 7 páginas × 320/390/768/1280/1920 sin overflow, sin imágenes rotas y sin errores de consola.
+- **Producción v2.4.0:** home con 6 secciones, 6 tarjetas de sectores y 6 FAQ; “Explorar” baja a `#sectores`, FAQ abre/cierra con ratón y teclado y el CTA abre `contacto.html#formulario`. 7 páginas × 320/390/1280 sin overflow ni imágenes rotas, assets `?v=2.4.0`, 404 anidado correcto y solo el 404 esperado en consola.
 
 ## Siguiente
 
