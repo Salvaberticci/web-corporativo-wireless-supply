@@ -17,7 +17,7 @@ Objetivo: **WCAG 2.2 AA** en todas las páginas.
 - [ ] Errores descritos en texto y asociados con `aria-describedby`.
 - [ ] Estados de envío con `aria-live="polite"`.
 - [ ] Menú móvil con `aria-expanded`, foco atrapado y cierre con Escape.
-- [ ] `prefers-reduced-motion` respetado.
+- [x] Animaciones siempre activas por decisión del cliente (excepción documentada en ADR-017).
 - [ ] Enlaces con texto descriptivo (evitar “clic aquí”).
 - [ ] Tablas con `<caption>` o título asociado.
 - [ ] Contraste de botones sobre gradientes verificado.
@@ -32,7 +32,7 @@ Objetivo: **WCAG 2.2 AA** en todas las páginas.
 
 ## Movimiento
 
-- Desactivar canvas, parallax, cursor y marquee con `prefers-reduced-motion`.
+- Las animaciones no se desactivan con `prefers-reduced-motion`; el canvas se pausa al salir del viewport o con la pestaña oculta.
 - No usar parpadeos rápidos ni animaciones que impidan leer.
 - Las transiciones de página no deben retrasar la navegación.
 

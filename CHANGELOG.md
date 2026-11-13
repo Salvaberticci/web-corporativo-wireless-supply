@@ -2,6 +2,19 @@
 
 Todas las versiones relevantes de este proyecto se documentan aquí. El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y el versionado semántico.
 
+## [2.2.0] — 2026-11-12
+
+### Cambiado
+
+- Las animaciones quedan activas siempre, también con `prefers-reduced-motion: reduce`.
+- Se elimina el botón flotante “Activar”, la lógica `ws-motion`/`force-motion` y los bloques CSS de movimiento reducido.
+- Assets CSS/JS/vendor actualizados a `?v=2.2.0` para invalidar caché.
+
+### QA
+
+- Con movimiento reducido simulado: scanline, shimmer, cursor, progreso, canvas, parallax, reveals y marquesina activos; sin botón `.motion-toggle`.
+- Sin errores de consola ni overflow.
+
 ## [2.1.3] — 2026-11-12
 
 ### Añadido

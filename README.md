@@ -106,7 +106,7 @@ Busca `584120000000` en todo el proyecto y reemplázalo por el número oficial a
 - **Prefill por URL**: `contacto.html?plan=Fibra%20Start%20100M` o `contacto.html?servicio=GPON` preselecciona el servicio.
 - **Filtros de planes**: Todos / Pymes / Corporativo en `planes.html`, con `aria-pressed`.
 - **Página 404** con diagnóstico de ruta y recuperación.
-- **Animaciones** respetando `prefers-reduced-motion`.
+- **Animaciones** siempre activas por decisión del cliente (ADR-017).
 - **SEO**: metadatos, Open Graph, JSON-LD, `robots.txt` y `sitemap.xml`.
 
 ## Créditos de imágenes

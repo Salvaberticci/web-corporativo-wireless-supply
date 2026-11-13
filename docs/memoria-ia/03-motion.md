@@ -5,7 +5,7 @@
 - El movimiento explica jerarquía, no decora por decorar.
 - Animar solo `transform` y `opacity`; evitar `width`, `height`, `top` y `left`.
 - Nada de animaciones infinitas pesadas en móvil.
-- Todo debe funcionar con `prefers-reduced-motion: reduce`.
+- Las animaciones están activas por defecto; no se consulta `prefers-reduced-motion` (ADR-017).
 - El contenido debe ser visible si JavaScript falla.
 
 ## Tokens
@@ -57,18 +57,18 @@
 - La intro del hero y el parallax usan GSAP/ScrollTrigger; el resto de efectos ambientales son CSS o `requestAnimationFrame` para no añadir dependencias.
 - El revelado de imágenes observa el contenedor padre: el `clip-path` del propio elemento hace que `IntersectionObserver` lo considere no visible. Incluye un fallback de 3 s para no ocultar contenido.
 - El texto “decode” se ejecuta una sola vez por etiqueta al entrar en viewport y restaura el texto final al terminar.
-- El canvas usa entre 18 y 46 nodos, DPR máximo 2, se pausa al salir del viewport o con la pestaña oculta y dibuja un solo frame con movimiento reducido.
-- El tilt y los botones magnéticos solo se activan con `pointer: fine` y sin movimiento reducido.
-- El marquee se pausa al hover y se detiene por completo con `prefers-reduced-motion`.
-- Los contadores saltan al valor final con movimiento reducido y emiten un destello al llegar al valor final.
+- El canvas usa entre 18 y 46 nodos, DPR máximo 2, y se pausa al salir del viewport o con la pestaña oculta.
+- El tilt y los botones magnéticos solo se activan con `pointer: fine`.
+- El marquee se pausa al hover.
+- Los contadores emiten un destello al llegar al valor final.
 - El header cambia de estado (`is-scrolled`) a partir de 20 px de scroll.
 - En móvil (<768 px) se desactivan el barrido de métricas, el borde cónico y la scanline para aligerar el pintado; el resto de efectos se mantiene.
-- Con `prefers-reduced-motion: reduce`, un botón “Activar” permite el opt-in explícito; la preferencia se guarda en `localStorage` (`ws-motion=full`) y activa la clase `force-motion`.
+- Todas las animaciones están activas siempre; no hay botón ni opción de reducirlas (decisión del cliente, ADR-017).
 
 ## Reglas de rendimiento
 
 - El canvas del hero se pausa con `document.hidden` y al salir del viewport.
-- Limitar el canvas a ~46 nodos y DPR 2; desactivar la animación con `prefers-reduced-motion`.
+- Limitar el canvas a ~46 nodos y DPR 2; se pausa al salir del viewport o con la pestaña oculta.
 - No usar `backdrop-filter` en listas largas; solo en cards, header y menú móvil.
 - Evitar `will-change` permanente; aplicarlo solo durante la animación.
 - Las animaciones de scroll se activan una sola vez (`once: true`).
@@ -77,8 +77,8 @@
 
 ## Accesibilidad
 
-- Por defecto se respeta `prefers-reduced-motion: reduce`: sin intro, parallax, scramble, cursor, marquee, scanline, glitch, shimmer, borde cónico ni transiciones no esenciales; el canvas queda estático y el contenido visible.
-- Si el sistema pide movimiento reducido, aparece un botón discreto “Activar” que guarda `ws-motion=full` en `localStorage`, recarga y añade `force-motion` para habilitar la experiencia completa. Es un opt-in explícito, no una imposición.
+- Las animaciones están siempre activas, incluso si el sistema tiene `prefers-reduced-motion: reduce`; es una decisión explícita del cliente (ADR-017) y no hay botón para reducirlas.
+- La renuncia a respetar la preferencia del sistema queda documentada; el resto de requisitos de accesibilidad (foco, contraste, teclado, `aria-live`) se mantiene.
 - Nunca mover el foco ni bloquear la lectura por una animación.
 - Los estados de carga y éxito deben anunciarse con `aria-live`.
 - El texto “decode” conserva el texto final accesible y no se usa en contenido crítico.

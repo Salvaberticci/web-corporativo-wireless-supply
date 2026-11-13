@@ -4,7 +4,7 @@
 
 ## Fase actual
 
-**Fase 9 — Impacto visual v2.1:** completada. `v2.1.0`, `v2.1.1`, `v2.1.2` y `v2.1.3` desplegadas y verificadas en producción. `v2.1.3` añade el botón “Activar animaciones” para equipos con movimiento reducido.
+**Fase 10 — Animaciones siempre activas v2.2:** completada. `v2.2.0` retira el modo de movimiento reducido y el botón “Activar”; todas las animaciones quedan activas por defecto.
 
 ## Hecho
 
@@ -20,7 +20,7 @@
 - `contacto.html` e `index.html`: formularios con `autocomplete`, `inputmode`, estados `role="status"` y `aria-live`, y prefill por `?plan=`/`?servicio=`.
 - `404.html`: concepto “señal perdida”, diagnóstico de ruta, canvas y barras de señal. Sin botón flotante para no tapar la tarjeta.
 - `assets/js/main.js`: menú móvil con focus trap, bloqueo de scroll, cierre con Escape, clic fuera y cambio a escritorio en 1024 px.
-- Accesibilidad: `aria-current`, `aria-hidden` en iconos, alt en imágenes, labels, foco visible, touch targets de 44 px y `prefers-reduced-motion`.
+- Accesibilidad: `aria-current`, `aria-hidden` en iconos, alt en imágenes, labels, foco visible y touch targets de 44 px. Las animaciones quedan siempre activas por decisión del cliente (ADR-017).
 - Memoria IA completa en `docs/memoria-ia/`, `AGENTS.md` y `CHANGELOG.md`.
 - Repositorio Git inicializado: baseline `v1.0.0` en `main`, rama activa `feature/redesign-v2`.
 - Remoto GitHub: `https://github.com/Salvaberticci/web-corporativo-wireless-supply`.
@@ -31,10 +31,8 @@
 - **v2.1:** hooks `data-hero`, `data-hero-item`, `data-scramble`, `data-image-reveal` y `data-parallax` aplicados en las 7 páginas.
 - **v2.1.1:** el 404 calcula una base dinámica en el HTML fuente y el build de Vercel inyecta `<base href="/">` para que las rutas anidadas carguen CSS, JS, logo y enlaces desde la raíz.
 - **v2.1.2:** assets CSS/JS/vendor versionados con `?v=2.1.2` en las 7 páginas para invalidar cachés de navegador y CDN.
-- **v2.1.3:** botón “Activar” cuando el sistema pide movimiento reducido; guarda `ws-motion=full`, recarga y activa `force-motion`. Los assets pasan a `?v=2.1.3`.
-- **Producción v2.1.2:** 7 páginas 200 con assets `?v=2.1.2`, CSS/JS nuevos cargados, sin overflow ni errores de consola ni requests fallidos; 404 anidado con estado 404 y assets versionados.
-- **v2.1.3:** con `prefers-reduced-motion: reduce`, el 404, home y páginas muestran el botón “Activar”; al pulsarlo se guarda `ws-motion=full`, se recarga y se habilitan scanline, shimmer, cursor, progreso, canvas, parallax e image reveal. En modo normal el botón no aparece y las animaciones siguen activas.
-- **Producción v2.1.3:** botón verificado en la home con movimiento reducido; tras activarlo, `force-motion`, scanline, shimmer, cursor y progreso quedan activos. En modo normal no aparece el botón y el sitio sigue animado, sin overflow ni errores.
+- **v2.2.0:** se elimina el modo de movimiento reducido, el botón “Activar”, `force-motion`, `ws-motion` y los bloques CSS de `prefers-reduced-motion`; las animaciones quedan activas siempre. Los assets pasan a `?v=2.2.0`.
+- **Producción v2.2.0:** pendiente de verificar tras el despliegue.
 
 ## QA ejecutada
 
@@ -46,7 +44,7 @@
 - Filtros de planes: 4 cards, segmentos pymes/corporativo, `aria-pressed` correcto, tabs de 44 px y animación de entrada al filtrar.
 - Formularios: prefill `?plan=500M`, payload completo y número placeholder `584120000000` intacto.
 - 404: título, `noindex`, ruta dinámica, 5 barras de señal y glitch RGB.
-- `prefers-reduced-motion`: sin scanline, cursor, parallax, glitch, shimmer ni progreso; reveals visibles, canvas estático y contadores en valor final.
+- Con `prefers-reduced-motion: reduce` simulado: sin botón `.motion-toggle`, animaciones activas (scanline, shimmer, cursor, progreso, parallax, reveals y canvas), sin overflow ni errores.
 - `npm run build` y `node --check` en los 5 scripts sin errores.
 - Producción verificada a 390 y 1280 px: 7 páginas 200, sin errores de consola, sin requests fallidos, sin overflow y sin imágenes rotas.
 - 404 real de Vercel: devuelve estado 404 y sirve la página “señal perdida” con ruta dinámica y `noindex`.
@@ -56,6 +54,7 @@
 - **v2.1:** consola y red limpias en las 7 páginas; menú, filtros, prefill y 404 verificados con navegador headless.
 - **v2.1.1:** 404 con rutas anidadas (`/foo/bar`) y de un segmento, con estado 404, CSS/JS/logo cargados y sin errores de recursos.
 - **Producción v2.1.1:** 7 páginas 200; 404 anidado real con estado 404, `base` raíz, assets, logo y scripts cargados; sin errores de assets.
+- **v2.2:** 7 páginas × 320/390/768/1280/1920 sin overflow, assets `?v=2.2.0` y sin errores de consola; con `prefers-reduced-motion: reduce` simulado no aparece el toggle y las animaciones siguen activas.
 
 ## Siguiente
 
@@ -75,5 +74,5 @@
 
 - La home es larga (incluye contenido legal); revisar si el cliente prefiere moverlo solo a `legal.html`.
 - Los formularios dependen de `window.open`; algunos navegadores pueden bloquear la pestaña si el usuario tarda en interactuar.
-- El canvas y los blurs pueden penalizar equipos de gama baja; `prefers-reduced-motion` es el fallback actual.
+- El canvas y los blurs pueden penalizar equipos de gama baja; no hay fallback automático de movimiento reducido (ADR-017).
 - La tabla de planes requiere scroll horizontal interno en móvil; está señalizado, pero conviene validarlo con usuarios.

@@ -28,7 +28,7 @@
 - No contaminar `window` salvo funciones que deban llamarse desde `onclick`.
 - Guardas tempranas (`if (!el) return;`).
 - Comentarios solo para lógica no obvia.
-- Respetar `prefers-reduced-motion` antes de animar.
+- Las animaciones están activas por defecto; el modo reducido se retiró por decisión del cliente (ADR-017).
 
 ## Nombres
 
@@ -47,7 +47,7 @@
 - Alcance entre paréntesis: `feat(home): hero animado`.
 - Un commit por unidad lógica; no mezclar rediseño y limpieza.
 - Ramas: `feature/...`, `fix/...`, `docs/...`.
-- Tags: `v1.0.0` baseline, `v2.0.0` rediseño, `v2.0.1` logo, `v2.1.0` impacto visual, `v2.1.1` 404 anidado, `v2.1.2` cache busting y `v2.1.3` opt-in de movimiento.
+- Tags: `v1.0.0` baseline, `v2.0.0` rediseño, `v2.0.1` logo, `v2.1.0` impacto visual, `v2.1.1` 404 anidado, `v2.1.2` cache busting, `v2.1.3` opt-in de movimiento y `v2.2.0` animaciones siempre activas.
 
 ## Calidad antes de commit
 
