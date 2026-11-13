@@ -4,11 +4,12 @@
 
 ## Fase actual
 
-**Fase 10 — Animaciones siempre activas v2.2:** completada. `v2.2.0` retira el modo de movimiento reducido y el botón “Activar”; todas las animaciones quedan activas por defecto.
+**Fase 11 — Legal en página aparte v2.2.1:** completada. `v2.2.1` retira el marco legal de la home; las políticas viven solo en `legal.html` y el consentimiento del formulario enlaza allí.
 
 ## Hecho
 
 - 7 páginas en la raíz: inicio, sobre nosotros, servicios, planes, contacto, legal y 404.
+- La home no incluye el marco legal; las políticas y términos están solo en `legal.html`, con ancla `#politicas`. El checkbox del formulario abre esa página en una pestaña nueva.
 - Tailwind CLI compilado a `assets/css/tailwind.css`; sin CDN en producción.
 - Capa visual cyber-premium en `assets/css/estilos.css`: fondos, rejilla, ruido, cristal, botones, cards, formularios, tabla y estados de foco.
 - Remapeo de los tokens heredados `light-*` a la paleta oscura sin reescribir todo el HTML.
@@ -55,6 +56,7 @@
 - **v2.1.1:** 404 con rutas anidadas (`/foo/bar`) y de un segmento, con estado 404, CSS/JS/logo cargados y sin errores de recursos.
 - **Producción v2.1.1:** 7 páginas 200; 404 anidado real con estado 404, `base` raíz, assets, logo y scripts cargados; sin errores de assets.
 - **v2.2:** 7 páginas × 320/390/768/1280/1920 sin overflow, assets `?v=2.2.0` y sin errores de consola; con `prefers-reduced-motion: reduce` simulado no aparece el toggle y las animaciones siguen activas.
+- **v2.2.1:** la home ya no contiene la sección legal; el enlace del formulario apunta a `legal.html#politicas` con `target="_blank"` y `rel="noopener noreferrer"`. La página legal conserva privacidad, Meta API, términos y ARCO; 7 páginas × 320/390/768/1280/1920 sin overflow y assets `?v=2.2.1`.
 
 ## Siguiente
 
@@ -72,7 +74,6 @@
 
 ## Riesgos
 
-- La home es larga (incluye contenido legal); revisar si el cliente prefiere moverlo solo a `legal.html`.
 - Los formularios dependen de `window.open`; algunos navegadores pueden bloquear la pestaña si el usuario tarda en interactuar.
 - El canvas y los blurs pueden penalizar equipos de gama baja; no hay fallback automático de movimiento reducido (ADR-017).
 - La tabla de planes requiere scroll horizontal interno en móvil; está señalizado, pero conviene validarlo con usuarios.

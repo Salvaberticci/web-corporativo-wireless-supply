@@ -55,6 +55,8 @@
 
 ## legal.html — Legal
 
+Único lugar del sitio con el contenido legal; ancla `#politicas` desde el consentimiento del formulario de la home.
+
 1. Hero legal.
 2. Índice sticky.
 3. Política de privacidad.

@@ -77,6 +77,13 @@
 - **Decisión:** quitar el fondo, borde y sombra del contenedor, subir la imagen a 56 px en móvil y 64 px en desktop, y añadir un `drop-shadow` cian sutil para separarla del fondo oscuro.
 - **Consecuencias:** el logo gana presencia sin aumentar el ancho del header; el footer conserva su tratamiento aclarado. Si el cliente entrega un logo para fondos oscuros, sustituir el PNG y revisar el glow.
 
+## ADR-018 — Contenido legal solo en `legal.html`
+
+- **Fecha:** 2026-11-12
+- **Contexto:** la home incluía una sección de términos y privacidad que alargaba la página y duplicaba el contenido de `legal.html`; el cliente pidió que las políticas no aparecieran en inicio.
+- **Decisión:** eliminar la sección `#politicas` de `index.html` y mantener el contenido legal solo en `legal.html`, con ancla `#politicas`. El checkbox de consentimiento del formulario de la home enlaza a `legal.html#politicas` y abre en una pestaña nueva para no perder los datos introducidos.
+- **Consecuencias:** la home es más corta y no duplica políticas; los enlaces externos antiguos a `index.html#politicas` ya no tienen destino. Los enlaces internos del sitio apuntan a `legal.html`.
+
 ## ADR-017 — Animaciones siempre activas
 
 - **Fecha:** 2026-11-12
