@@ -15,6 +15,10 @@ Todas las versiones relevantes de este proyecto se documentan aquí. El formato 
 - Con movimiento reducido simulado: scanline, shimmer, cursor, progreso, canvas, parallax, reveals y marquesina activos; sin botón `.motion-toggle`.
 - Sin errores de consola ni overflow.
 
+### Despliegue
+
+- Producción verificada con `prefers-reduced-motion: reduce`: animaciones activas, sin toggle y sin overflow; 404 anidado con glitch activo.
+
 ## [2.1.3] — 2026-11-12
 
 ### Añadido

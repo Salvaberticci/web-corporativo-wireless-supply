@@ -32,7 +32,7 @@
 - **v2.1.1:** el 404 calcula una base dinámica en el HTML fuente y el build de Vercel inyecta `<base href="/">` para que las rutas anidadas carguen CSS, JS, logo y enlaces desde la raíz.
 - **v2.1.2:** assets CSS/JS/vendor versionados con `?v=2.1.2` en las 7 páginas para invalidar cachés de navegador y CDN.
 - **v2.2.0:** se elimina el modo de movimiento reducido, el botón “Activar”, `force-motion`, `ws-motion` y los bloques CSS de `prefers-reduced-motion`; las animaciones quedan activas siempre. Los assets pasan a `?v=2.2.0`.
-- **Producción v2.2.0:** pendiente de verificar tras el despliegue.
+- **Producción v2.2.0:** 7 páginas 200 con assets `?v=2.2.0`; con `prefers-reduced-motion: reduce` no aparece el toggle y scanline, shimmer, marquee, cursor, progreso, canvas, parallax e image reveal siguen activos. 404 anidado con estado 404, glitch activo y assets versionados; sin overflow.
 
 ## QA ejecutada
 
