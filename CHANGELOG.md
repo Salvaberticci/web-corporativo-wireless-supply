@@ -16,6 +16,10 @@ Todas las versiones relevantes de este proyecto se documentan aquí. El formato 
 - `legal.html#politicas` contiene privacidad, estándares Meta API, términos y derechos ARCO.
 - Sin errores de consola ni overflow.
 
+### Despliegue
+
+- Producción verificada: home sin sección legal, enlace a `legal.html#politicas` y ancla con scroll; 404 anidado con assets `?v=2.2.1`.
+
 ## [2.2.0] — 2026-11-12
 
 ### Cambiado

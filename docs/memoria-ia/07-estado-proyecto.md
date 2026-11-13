@@ -57,6 +57,7 @@
 - **Producción v2.1.1:** 7 páginas 200; 404 anidado real con estado 404, `base` raíz, assets, logo y scripts cargados; sin errores de assets.
 - **v2.2:** 7 páginas × 320/390/768/1280/1920 sin overflow, assets `?v=2.2.0` y sin errores de consola; con `prefers-reduced-motion: reduce` simulado no aparece el toggle y las animaciones siguen activas.
 - **v2.2.1:** la home ya no contiene la sección legal; el enlace del formulario apunta a `legal.html#politicas` con `target="_blank"` y `rel="noopener noreferrer"`. La página legal conserva privacidad, Meta API, términos y ARCO; 7 páginas × 320/390/768/1280/1920 sin overflow y assets `?v=2.2.1`.
+- **Producción v2.2.1:** home sin `#politicas` ni “Términos Legales”, enlace con pestaña nueva y ancla legal con scroll; legal conserva privacidad, Meta API, términos y ARCO. 7 páginas × 320/390/1280 sin overflow, assets `?v=2.2.1` y 404 anidado correcto; solo el 404 esperado en consola.
 
 ## Siguiente
 
