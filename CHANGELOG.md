@@ -18,6 +18,11 @@ Todas las versiones relevantes de este proyecto se documentan aquí. El formato 
 - Hero, métricas, proceso y CTA final se mantienen; enlaces del hero verificados.
 - Sin overflow ni errores de consola en local y producción.
 
+### Despliegue
+
+- Producción verificada: home con hero, marquee, métricas, proceso y CTA final; CTA del hero abre `contacto.html#formulario`, “Explorar” baja al proceso y `cotizador.js` devuelve 404.
+- 7 páginas × 320/390/1280 sin overflow ni imágenes rotas, assets `?v=2.3.0` y 404 anidado con estado 404; solo el 404 esperado en consola.
+
 ## [2.2.1] — 2026-11-12
 
 ### Cambiado

@@ -60,6 +60,7 @@
 - **v2.2.1:** la home ya no contiene la sección legal; el enlace del formulario apunta a `legal.html#politicas` con `target="_blank"` y `rel="noopener noreferrer"`. La página legal conserva privacidad, Meta API, términos y ARCO; 7 páginas × 320/390/768/1280/1920 sin overflow y assets `?v=2.2.1`.
 - **Producción v2.2.1:** home sin `#politicas` ni “Términos Legales”, enlace con pestaña nueva y ancla legal con scroll; legal conserva privacidad, Meta API, términos y ARCO. 7 páginas × 320/390/1280 sin overflow, assets `?v=2.2.1` y 404 anidado correcto; solo el 404 esperado en consola.
 - **v2.3.0:** home con hero, marquee, métricas, proceso y CTA; sin las 4 secciones duplicadas ni enlaces internos a sus anclas. Enlaces del hero a `contacto.html#formulario` y `servicios.html`, “Explorar” a `#proceso`; 7 páginas × 320/390/768/1280/1920 sin overflow y assets `?v=2.3.0`.
+- **Producción v2.3.0:** home con 4 secciones (`#inicio`, métricas, `#proceso`, CTA final), sin formulario ni `cotizador.js`; el CTA del hero abre `contacto.html#formulario` y “Explorar” baja al proceso. 7 páginas × 320/390/1280 sin overflow ni imágenes rotas, assets `?v=2.3.0`, 404 anidado correcto y solo el 404 esperado en consola.
 
 ## Siguiente
 
